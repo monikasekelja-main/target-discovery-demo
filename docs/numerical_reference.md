@@ -19,10 +19,10 @@ KD-A is the primary RNA knockdown method; KD-B is corroborating CRISPRi expressi
 | `runtime/initial_evidence.json` | Sixteen synthetic evidence, limitation and challenge records; not sixteen independent studies. |
 | `runtime/policy.json` | Scientist-authored criteria, exact hypothesis context and measurement definitions. These criteria are visible to agents. |
 | `runtime/experiments/X*.json` | Neutral experiment IDs, measured values and QC metadata. The runtime receives the selected experiment only. |
-| `evaluate.py` | Fixed arithmetic and transparent action-eligibility checks; standard-library Python only. |
+| `target_discovery/workflow/evaluate.py` | Fixed arithmetic and transparent action-eligibility checks; standard-library Python only. |
 | `evaluation/expected.json` | Reference actions and required scientific qualifications; NEVER include in agent prompts, search tools or retrieval indices. |
 | `evaluation/calculated_summaries.json` | Computed reference metrics for development and audit; do not use as a runtime answer source. |
-| `verify.py` | Numerical, branching and boundary regression checks. Run offline during development. |
+| `tests/test_numerics.py` | Numerical, branching and boundary regression checks. Run offline during development. |
 
 Do not let the runtime enumerate all alternative experiment fixtures. A demo controller selects an outcome and exposes only that record. Filenames and IDs are for provenance, not decision labels. For a stronger evaluation later, change IDs and reserve unseen measurement variants.
 
@@ -87,8 +87,8 @@ Handoffs stay specific: antibody specialists evaluate access and whether binding
 From the package root, with Python 3.10 or later:
 
 ```bash
-python verify.py
-python evaluate.py runtime/experiments/X101.json
+python -m tests.test_numerics
+python -m target_discovery.workflow.evaluate runtime/experiments/X101.json
 ```
 
 Checks establish arithmetic and rule consistency only. They do not establish biological validity, agent accuracy or confidence calibration.

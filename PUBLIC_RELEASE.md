@@ -12,7 +12,7 @@ This is a standalone synthetic target-discovery demonstration, with neutral proj
 - Added a visible public-replay disclosure and a replay/rebuild guide. Fixed the ignore rule so nested saved exports are included by Git.
 - Excluded original databases, private report captures, visual-QA captures, slides, conversations, repository history, credentials, caches and environments. Public scientific citations retain their authors and links.
 
-The source checkout and original private bundle were left intact. This copy has no Git history and has not been published. `SOURCE_MANIFEST.json` records the packaged file hashes, excluding itself.
+The source checkout and original private bundle were left intact. This prepared restructuring copy has no Git history and has not been pushed. `SOURCE_MANIFEST.json` records the packaged file hashes, excluding itself.
 
 ## Boundaries
 
@@ -20,4 +20,4 @@ Published disease background, fictional target evidence, frozen predictions and 
 
 A public repository makes the material readable; no open-source reuse licence is supplied in this package.
 
-Verification for this release is recorded in `PUBLIC_VERIFICATION.md`. Older development notes describe earlier local checks; they are not evidence that live model behaviour was evaluated in this public copy.
+Earlier sanitisation verification is recorded in `PUBLIC_VERIFICATION.md`; current restructuring verification is in `RESTRUCTURE_NOTES.md`. Older development notes describe earlier local checks; they are not evidence that live model behaviour was evaluated in this public copy.

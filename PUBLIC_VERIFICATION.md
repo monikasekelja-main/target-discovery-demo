@@ -1,4 +1,6 @@
-# Public-copy verification — 16 October 2026
+# Earlier public-copy verification — 16 October 2026
+
+For verification after the package restructure, see [RESTRUCTURE_NOTES.md](RESTRUCTURE_NOTES.md).
 
 - Full offline suite: **173 tests passed** under Python 3.12 with the installed pinned dependencies.
 - Saved replay: **nine runs across three workspaces, four views each** rendered in Streamlit AppTest. Model, retrieval and socket connections were blocked. Saved file hashes were unchanged by navigation.
@@ -13,8 +15,8 @@
 Re-run the offline suite from this folder:
 
 ```sh
-python -m unittest verify verify_contracts verify_workflow verify_agents verify_advanced_probes verify_ui verify_reviews verify_advisor verify_followups verify_evidence_assistant verify_evidence_relevance
-python verify_public_replay.py
+python -m unittest discover -s tests -t .
+python -m scripts.verify_public_replay
 ```
 
 Limits: tested on macOS with an existing Python environment, not on Windows/Linux or through a fresh dependency installation. Credential-pattern scanning cannot recognise every possible secret format. Scripted reports do not evaluate live AI reasoning. Optional live AI features were not exercised and are not necessary for replay.

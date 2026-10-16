@@ -30,7 +30,7 @@ Each command completes independently. You can close the terminal between command
 ### 1. Assemble evidence and expose the metadata dependency
 
 ```bash
-python demo.py start --run-id demo
+python -m target_discovery.cli.demo start --run-id demo
 ```
 
 The two differently shaped sources are normalized. The application target alias is resolved through the explicit mapping. The command stops at `NEEDS_METADATA`: no prediction has run. The source records E15 and E16 remain unresolved.
@@ -38,8 +38,8 @@ The two differently shaped sources are normalized. The application target alias 
 ### 2. Resolve the dependency and create the initial proposal
 
 ```bash
-python demo.py resume --run-id demo
-python demo.py --json show --run-id demo
+python -m target_discovery.cli.demo resume --run-id demo
+python -m target_discovery.cli.demo --json show --run-id demo
 ```
 
 This performs the manifest lookup, checks context attributes, selects the eligible capability and obtains the frozen signature response. It runs fixed evidence checks, makes one targeted source follow-up, compares the three experiment concepts under an explicit reference rule, and creates `demo-A001`.
@@ -51,13 +51,13 @@ The proposal is `EXPERIMENT_TO_RESOLVE_UNCERTAINTY`. Causal and intervention sup
 Inspect the proposal before issuing this command. This is a local demonstration approval only.
 
 ```bash
-python demo.py review --run-id demo --assessment demo-A001 --decision approve --reviewer "Demo reviewer" --rationale "The scoped experiment and proposed criteria are suitable for this synthetic demonstration."
+python -m target_discovery.cli.demo review --run-id demo --assessment demo-A001 --decision approve --reviewer "Demo reviewer" --rationale "The scoped experiment and proposed criteria are suitable for this synthetic demonstration."
 ```
 
 Use `--decision defer` to stop. To revise the next-action text while preserving the computed action and measurements:
 
 ```bash
-python demo.py amend --run-id demo --assessment demo-A001 --reviewer "Demo reviewer" --rationale "Make the donor-variability question explicit." --next-action "Discuss a prospective donor-variability plan with biology before the study."
+python -m target_discovery.cli.demo amend --run-id demo --assessment demo-A001 --reviewer "Demo reviewer" --rationale "Make the donor-variability question explicit." --next-action "Discuss a prospective donor-variability plan with biology before the study."
 ```
 
 An amendment creates a new assessment ID and requires its own review. Always use the current ID shown by `show`. The remaining example assumes no amendment, so the result assessment will be `demo-A002`.
@@ -65,7 +65,7 @@ An amendment creates a new assessment ID and requires its own review. Always use
 ### 4. Import one simulated experimental result
 
 ```bash
-python demo.py import-result --run-id demo --experiment X101
+python -m target_discovery.cli.demo import-result --run-id demo --experiment X101
 ```
 
 This requires the initial approval. Only the selected result file enters the run. The calculator derives 32.0% and 29.0% functional reductions with the specified intervals and passing prerequisites. The proposal becomes `ADVANCE_TO_REPLICATION`, meaning new donors/batches and specificity work, plus a conditional specialist discussion.
@@ -75,8 +75,8 @@ The previous approval is no longer effective. A new assessment, `demo-A002`, is 
 ### 5. Review the updated assessment and generate the handoff
 
 ```bash
-python demo.py review --run-id demo --assessment demo-A002 --decision approve --reviewer "Demo reviewer" --rationale "The synthetic result supports replication and a conditional feasibility discussion; modality equivalence and systemic safety remain unresolved."
-python demo.py handoff --run-id demo --assessment demo-A002
+python -m target_discovery.cli.demo review --run-id demo --assessment demo-A002 --decision approve --reviewer "Demo reviewer" --rationale "The synthetic result supports replication and a conditional feasibility discussion; modality equivalence and systemic safety remain unresolved."
+python -m target_discovery.cli.demo handoff --run-id demo --assessment demo-A002
 ```
 
 The handoff carries the full reviewed assessment, evidence, uncertainty and input versions. The local antibody-response template is bound to the actual handoff and assessment digest. It returns `NEEDS_INFORMATION`: does blockade reproduce the expression-reduction phenotype? Biology and antibody specialists own the next study concept.
@@ -86,8 +86,8 @@ No message, experiment order or programme advancement is issued. Approving an in
 ### 6. Inspect the trace and export
 
 ```bash
-python demo.py replay --run-id demo
-python demo.py export --run-id demo
+python -m target_discovery.cli.demo replay --run-id demo
+python -m target_discovery.cli.demo export --run-id demo
 ```
 
 Exports appear under `demo-runs/exports/demo/`:
@@ -122,14 +122,14 @@ Start a new run and repeat the review sequence, selecting a different experiment
 Use a new run ID for each scenario:
 
 ```bash
-python demo.py start --run-id missing --scenario metadata-unresolved
-python demo.py resume --run-id missing
-python demo.py start --run-id unsupported --scenario prediction-unsupported
-python demo.py resume --run-id unsupported
-python demo.py start --run-id retry --scenario transient-once
-python demo.py resume --run-id retry
-python demo.py start --run-id blocked --scenario transient-always
-python demo.py resume --run-id blocked
+python -m target_discovery.cli.demo start --run-id missing --scenario metadata-unresolved
+python -m target_discovery.cli.demo resume --run-id missing
+python -m target_discovery.cli.demo start --run-id unsupported --scenario prediction-unsupported
+python -m target_discovery.cli.demo resume --run-id unsupported
+python -m target_discovery.cli.demo start --run-id retry --scenario transient-once
+python -m target_discovery.cli.demo resume --run-id retry
+python -m target_discovery.cli.demo start --run-id blocked --scenario transient-always
+python -m target_discovery.cli.demo resume --run-id blocked
 ```
 
 | Scenario | Expected behaviour |
@@ -142,8 +142,8 @@ python demo.py resume --run-id blocked
 These are explicit controller fault simulations, not observed service outages. Repeated `resume` cannot restart an exhausted or non-retryable operation. Retry/follow-up bounds apply within a recorded revision. A deliberate correction uses a new revision:
 
 ```bash
-python demo.py refresh --run-id missing --scenario standard
-python demo.py resume --run-id missing
+python -m target_discovery.cli.demo refresh --run-id missing --scenario standard
+python -m target_discovery.cli.demo resume --run-id missing
 ```
 
 ## Changed inputs and reviews
@@ -159,8 +159,8 @@ After an intentional source correction, run `refresh` and `resume`. A selected e
 `recorded_examples/supportive/` contains outputs captured from the implemented workflow. Its reviews are explicitly simulated. Inspect its readable brief or replay the included database:
 
 ```bash
-python demo.py --workspace recorded_examples/state replay --run-id recorded-supportive
-python demo.py --workspace recorded_examples/state show --run-id recorded-supportive
+python -m target_discovery.cli.demo --workspace recorded_examples/state replay --run-id recorded-supportive
+python -m target_discovery.cli.demo --workspace recorded_examples/state show --run-id recorded-supportive
 ```
 
 Use a fresh default workspace for your own runs. The captured example is not an answer source for runtime tools or future agents.

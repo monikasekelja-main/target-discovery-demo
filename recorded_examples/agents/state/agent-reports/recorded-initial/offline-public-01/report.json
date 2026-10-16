@@ -7,7 +7,7 @@
     "run_id": "recorded-initial",
     "revision": 1,
     "assessment_id": "recorded-initial-A001",
-    "assessment_sha256": "e1c3f0a90fa55a6a144396456719d17d90af9da66e2c95c9f3faebf39c2c945c",
+    "assessment_sha256": "f43e75334cca1bfc744216fec4cc1d2224ab947ea870c752d68e931fc72c9d7d",
     "input_hashes": {
       "runtime/capability_registry.json": "9de92358b6bd5b081896ce101f23548443d526fb31ced17caf444a65cea83d23",
       "runtime/confidence_rubric.json": "8904b88d4f83af96ab3b399ec463a4ddf6a22930f03a55009228f88768aa04f1",
@@ -24,25 +24,27 @@
       "runtime/workflow_contract.json": "680c7c03de89a5ec9012667a60cf0174a3fa02b172e230711982fdfe9b6526c8"
     },
     "reference_implementation": {
-      "implementation/contracts.py": "01348d479b95ca3344f3c5cbded16fb2114435c7ee67c473bd90db6b48bde768",
-      "implementation/decision_compiler.py": "d59f6a9c9a737d5fc918d9e94bfa808ca7ae25515f072941532123436d633b75",
-      "implementation/demo.py": "680f0eaa85c14f96ba0b40d647d6a6e12a3fdb2037721f5d955f6bc1b60f91a5",
-      "implementation/evaluate.py": "3725ee519acc89a770dfa14d0ae72430455387f78a7568d97e1f88b27bfd21bb",
-      "implementation/local_tools.py": "e67644a3a7299f84700c01212d3b525dde5421c4cd1b9a9967741b03c1463dd6",
-      "implementation/workflow.py": "90e5505e75a79cb890aa416e56076ef538d0b4a6c053e44ae66a88c093212e7a",
-      "implementation/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b"
+      "implementation/target_discovery/cli/demo.py": "4bda66c78d613fb2990debf9e99c368fbc3cfb4ed758c296cca7ba5418df442c",
+      "implementation/target_discovery/paths.py": "e269994b0cdbbc5e4da9a037273e5f76a9549c2e968c40f8d57be8950fb0dcb5",
+      "implementation/target_discovery/workflow/contracts.py": "1e622125fcee5990db4eaf134ca8b45e5abb2a5a49819bf059df1e9742a1c0f3",
+      "implementation/target_discovery/workflow/decision_compiler.py": "bda93c181fcb81d9046b664564fd1e53efd87622902868312b04d8d93ae41246",
+      "implementation/target_discovery/workflow/evaluate.py": "bc2ebe5cc30025cef49c93c22f4f7968d72b37c71a0a80d61d05c1c8be491b86",
+      "implementation/target_discovery/workflow/local_tools.py": "a3d36b04472f553962c71d134f02fe87abc7d4f4bfd658547657e5e59e2250ad",
+      "implementation/target_discovery/workflow/workflow.py": "2a93c52287693ee1e20e8b4e92a259c8caceb45936f678e7eec9ae45c5835b5d",
+      "implementation/target_discovery/workflow/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b"
     },
     "agent_implementation": {
-      "agent_contracts.py": "52bd1b9e371ea77b25e3f3b138020f88eab8e46b5938bba63ca0d184663409e4",
-      "agent_prompts.py": "73ef4a580d1700e1d381f4c77baa66dc555eb02e074039b76de4fb11e7186f43",
-      "agent_provider.py": "e4920690812e5431c864e70f2f4973f3d19cd616660971fe3849172ca7becf67",
-      "agent_layer.py": "deaee5c168d404fbe3aafb7eba2406b7f89ab268c89ffd4fef870998785acfb6",
-      "agent_demo.py": "e60e9427da49b91fd8067462fb3f81743436aa35338e5f374d0845a86189e61e",
-      "agent_offline.py": "c2372872f46f3d9e3dd0740d116520e569bb78e7d5e0b9be878736433e813779"
+      "target_discovery/paths.py": "e269994b0cdbbc5e4da9a037273e5f76a9549c2e968c40f8d57be8950fb0dcb5",
+      "target_discovery/agents/agent_contracts.py": "52bd1b9e371ea77b25e3f3b138020f88eab8e46b5938bba63ca0d184663409e4",
+      "target_discovery/agents/agent_prompts.py": "73ef4a580d1700e1d381f4c77baa66dc555eb02e074039b76de4fb11e7186f43",
+      "target_discovery/agents/agent_provider.py": "e4920690812e5431c864e70f2f4973f3d19cd616660971fe3849172ca7becf67",
+      "target_discovery/agents/agent_layer.py": "aa5cf63aa632137680cab19a659481f6c272eca169ca12bf2f0f0dae36bc9382",
+      "target_discovery/cli/agent_demo.py": "416d922109a22f0f513cf14333f395d07904fa3fd3d4b425f804f7c7a9502540",
+      "target_discovery/agents/agent_offline.py": "9eedfefa0ca26c69eeb14b35d3b7d25730a492c6deb64dbc8110d9cf20b09a76"
     },
     "prompt_version": "bounded-evidence-roles-v2"
   },
-  "created_at": "2026-10-16T09:10:21.645034+00:00",
+  "created_at": "2026-10-16T09:43:14.804533+00:00",
   "status": "ADVISORY_READY_FOR_REVIEW",
   "human_review_required": true,
   "approval_effective": false,

@@ -2,7 +2,7 @@
 
 The demo uses four read-only tool names and a code-owned calculation/review/handoff path. No external service, production system, assay order or message is involved.
 
-`contracts.py` is the executable definition; `schemas/*.schema.json` are generated from it. Strict Pydantic models reject extra fields and coerced numeric strings and check finite numeric measurements. JSON schemas communicate structure. Python validators and exchange checks also enforce cross-field and cross-record rules. Passing these checks does not validate a biological claim.
+`target_discovery/workflow/contracts.py` is the executable definition; `schemas/*.schema.json` are generated from it. Strict Pydantic models reject extra fields and coerced numeric strings and check finite numeric measurements. JSON schemas communicate structure. Python validators and exchange checks also enforce cross-field and cross-record rules. Passing these checks does not validate a biological claim.
 
 ## Common envelope
 
@@ -120,7 +120,7 @@ Antibody specialists own modality/mechanism feasibility; small-molecule speciali
 
 ## Verification and remaining implementation
 
-`validate_contracts.py` checks schemas, source preservation, identity/context, prediction scope, numerical branches, citations and review binding. `verify_contracts.py` includes malformed inputs and stale reviews. Numerical tests remain in `verify.py`.
+`scripts/validate_contracts.py` checks schemas, source preservation, identity/context, prediction scope, numerical branches, citations and review binding. `tests/test_contracts.py` includes malformed inputs and stale reviews. Numerical tests remain in `tests/test_numerics.py`.
 
 The package now implements local tool handlers, a deterministic controller, bounded immediate retries, durable events, CLI review capture and exports. See `cli_run_guide.md`. Live agents and UI are not included. The planned 28/56-trial LLM evaluation has not run; CLI integration checks do not replace it.
 

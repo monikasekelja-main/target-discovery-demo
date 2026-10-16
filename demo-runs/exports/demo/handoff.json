@@ -92,13 +92,14 @@
       "contract_version": "tools-v1",
       "evidence_snapshot_id": "EV-INITIAL-003+evidence-v2-X101",
       "input_content_sha256": {
-        "implementation/contracts.py": "01348d479b95ca3344f3c5cbded16fb2114435c7ee67c473bd90db6b48bde768",
-        "implementation/decision_compiler.py": "d59f6a9c9a737d5fc918d9e94bfa808ca7ae25515f072941532123436d633b75",
-        "implementation/demo.py": "680f0eaa85c14f96ba0b40d647d6a6e12a3fdb2037721f5d955f6bc1b60f91a5",
-        "implementation/evaluate.py": "3725ee519acc89a770dfa14d0ae72430455387f78a7568d97e1f88b27bfd21bb",
-        "implementation/local_tools.py": "e67644a3a7299f84700c01212d3b525dde5421c4cd1b9a9967741b03c1463dd6",
-        "implementation/workflow.py": "90e5505e75a79cb890aa416e56076ef538d0b4a6c053e44ae66a88c093212e7a",
-        "implementation/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b",
+        "implementation/target_discovery/cli/demo.py": "4bda66c78d613fb2990debf9e99c368fbc3cfb4ed758c296cca7ba5418df442c",
+        "implementation/target_discovery/paths.py": "e269994b0cdbbc5e4da9a037273e5f76a9549c2e968c40f8d57be8950fb0dcb5",
+        "implementation/target_discovery/workflow/contracts.py": "1e622125fcee5990db4eaf134ca8b45e5abb2a5a49819bf059df1e9742a1c0f3",
+        "implementation/target_discovery/workflow/decision_compiler.py": "bda93c181fcb81d9046b664564fd1e53efd87622902868312b04d8d93ae41246",
+        "implementation/target_discovery/workflow/evaluate.py": "bc2ebe5cc30025cef49c93c22f4f7968d72b37c71a0a80d61d05c1c8be491b86",
+        "implementation/target_discovery/workflow/local_tools.py": "a3d36b04472f553962c71d134f02fe87abc7d4f4bfd658547657e5e59e2250ad",
+        "implementation/target_discovery/workflow/workflow.py": "2a93c52287693ee1e20e8b4e92a259c8caceb45936f678e7eec9ae45c5835b5d",
+        "implementation/target_discovery/workflow/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b",
         "runtime/capability_registry.json": "9de92358b6bd5b081896ce101f23548443d526fb31ced17caf444a65cea83d23",
         "runtime/confidence_rubric.json": "8904b88d4f83af96ab3b399ec463a4ddf6a22930f03a55009228f88768aa04f1",
         "runtime/experiment_options.response.json": "c6027d25618e787a24035e90d7889c49560896fba8b57a44329282013df83fcf",
@@ -123,7 +124,7 @@
         "mock-signature-adapter": "synthetic-model-v2"
       },
       "policy_version": "demo-policy-v1",
-      "prompt_version": "no-LLM-reference-cli-v1-b2d84e5fb927",
+      "prompt_version": "no-LLM-reference-cli-v1-44d83a09d54e",
       "registry_version": "registry-v1"
     },
     "workflow_status": "READY_FOR_BIOLOGY_REVIEW"
@@ -142,7 +143,7 @@
     "decision": "APPROVE",
     "rationale": "Scripted example: approve new-donor/batch replication and target-specificity work only. The two methods clear the provisional useful-effect criterion but share the same eight donors. Independent replication, specificity, antibody blockade equivalence and systemic safety remain unestablished. This is not target validation or programme approval.",
     "review_id": "demo-R003",
-    "reviewed_content_sha256": "34de16e1d7bfd080e0245c8bf2601da0196eeeee89f0e4c647b35824b5806dfa",
+    "reviewed_content_sha256": "eab052526109fad99e3020f7a1a543e7ef2c6b2e21575522e135872f01858e6b",
     "reviewer_role": "Demo biology reviewer (scripted)",
     "synthetic": true
   },

@@ -11,7 +11,7 @@
   "platform": "antibody",
   "reason": "Expression reduction does not establish that receptor blockade gives the same functional result.",
   "response_id": "recorded-supportive-H001-response",
-  "reviewed_content_sha256": "61443703ce92ad0a9c3213f26dab51cf78ea25892394f9abc65d3546211a5e61",
+  "reviewed_content_sha256": "02e3d563da78f4f58a80f540307c7915c7a69cacdf44f6dc2ea92b41db9e6aef",
   "status": "NEEDS_INFORMATION",
   "synthetic": true
 }

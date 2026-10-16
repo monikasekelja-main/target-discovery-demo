@@ -55,8 +55,8 @@ override of the missing AI review before saving.
 
 ## Audit and compatibility
 
-`rationale_advisor.py` defines the advisory prompt, strict output schema and limited
-local checks. `review_service.py` persists check requests before calling a model,
+`target_discovery/review/rationale_advisor.py` defines the advisory prompt, strict output schema and limited
+local checks. `target_discovery/review/review_service.py` persists check requests before calling a model,
 then stores completed, failed or stale results separately. The network call runs
 outside the database transaction. Interrupted requests remain recorded without an
 accepted result and cannot authorize a save.

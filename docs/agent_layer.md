@@ -18,7 +18,7 @@ Only two logical roles exist. The controller, calculator and validator are ordin
 
 ## Install on your Mac
 
-Keep your existing `demo-runs/` directory. Copy the new `agent_*.py` files and `verify_agents.py` from this package into your existing `decision-fixtures` directory, alongside `demo.py`. These additions require no new dependency. The original runtime files and baseline Python implementation have not changed, so existing approvals are not invalidated by adding these files.
+Keep your existing `demo-runs/` directory. Copy the new `agent_*.py` files and `tests/test_agents.py` from this package into your existing `decision-fixtures` directory, alongside `target_discovery/cli/demo.py`. These additions require no new dependency. The original runtime files and baseline Python implementation have not changed, so existing approvals are not invalidated by adding these files.
 
 If starting fresh, extract the whole package, then:
 
@@ -26,8 +26,8 @@ If starting fresh, extract the whole package, then:
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-python demo.py start --run-id agent-case
-python demo.py resume --run-id agent-case
+python -m target_discovery.cli.demo start --run-id agent-case
+python -m target_discovery.cli.demo resume --run-id agent-case
 ```
 
 If the virtual environment already exists, just activate it. The new CLI gives a clear version error on Python 3.9.
@@ -37,8 +37,8 @@ If the virtual environment already exists, just activate it. The new CLI gives a
 For your existing `demo` run:
 
 ```bash
-python agent_demo.py run --run-id demo --attempt-id offline-01 --provider offline
-python agent_demo.py show --run-id demo --attempt-id offline-01
+python -m target_discovery.cli.agent_demo run --run-id demo --attempt-id offline-01 --provider offline
+python -m target_discovery.cli.agent_demo show --run-id demo --attempt-id offline-01
 ```
 
 Offline mode uses scripted responses and tests orchestration, citations, retrieval, reporting and immutability. It does **not** show live agent reasoning or establish scientific quality. Its labels and reports say `scripted_offline_test` and `model: none`.
@@ -50,9 +50,9 @@ If `demo` is already at the handoff stage, this reviews its current post-result 
 The live adapter uses the OpenAI Responses API with strict structured outputs. Both roles use the model you explicitly select; the API response's resolved model ID and token usage are recorded. A separate API key and model access are needed. Set `OPENAI_API_KEY` in your local environment without placing it in source code or reports, and set `OPENAI_MODEL` to a Structured Outputs compatible model ID available to your account.
 
 ```bash
-python agent_demo.py run --run-id demo --attempt-id live-01 \
+python -m target_discovery.cli.agent_demo run --run-id demo --attempt-id live-01 \
   --provider openai --model "$OPENAI_MODEL"
-python agent_demo.py show --run-id demo --attempt-id live-01
+python -m target_discovery.cli.agent_demo show --run-id demo --attempt-id live-01
 ```
 
 Live mode sends the current synthetic source packet and role prompts to the API; `store` is false. It enables no hosted tools, shell, browsing or arbitrary endpoints. Keys are read from the environment and are not written into traces. **Live API execution and biological reasoning quality were not verified in this build.** The HTTP request/response handling is tested with mocked responses; offline tests are not substitutes for a real provider smoke test.
@@ -119,7 +119,7 @@ Implementation follows the official [Structured Outputs guide](https://developer
 
 ## Version 2 upgrade: hypothesis versus finding
 
-Copy all `agent_*.py` files, `challenger_probe.py` and `verify_agents.py` into your
+Copy all `agent_*.py` files, `target_discovery/agents/challenger_probe.py` and `tests/test_agents.py` into your
 existing project. Keep `demo-runs/` and `.venv/`. No baseline workflow Python file,
 fixture, calculation or approval rule changed. Default API timeout is now 120 seconds,
 preserving the adjustment that worked on your Mac.
@@ -141,7 +141,7 @@ change and can still render the old schema; it does not rewrite them. Your refer
 assessments and approvals remain valid. Use a new attempt ID for a revised live run:
 
 ```bash
-python agent_demo.py run --run-id test-initial --attempt-id live-v2 \
+python -m target_discovery.cli.agent_demo run --run-id test-initial --attempt-id live-v2 \
   --provider openai --model "$OPENAI_MODEL"
 ```
 
@@ -153,7 +153,7 @@ unsupported antibody-blockade equivalence claim. It uses your existing supportiv
 and cell-loss `test-cell-loss` assessments. Calls incur normal API usage.
 
 ```bash
-python challenger_probe.py --supportive-run demo --cell-loss-run test-cell-loss \
+python -m target_discovery.agents.challenger_probe --supportive-run demo --cell-loss-run test-cell-loss \
   --attempt-id challenger-v2 --model "$OPENAI_MODEL"
 ```
 
@@ -177,7 +177,7 @@ not the v2 fix. This focused probe set is a diagnostic, not a reliability benchm
 
 ## Four additional challenging cases: executable advanced suite
 
-Upgrade only `challenger_probe.py` from the newest package; the live role prompts,
+Upgrade only `target_discovery/agents/challenger_probe.py` from the newest package; the live role prompts,
 agent schemas and reference workflow are unchanged. This avoids teaching the model
 these exact new answers before testing them. The basic suite remains the default.
 
@@ -185,18 +185,18 @@ From your existing project with `.venv` activated, create the missing imprecise
 reference case (the other runs already exist from the earlier tests):
 
 ```bash
-python demo.py start --run-id test-imprecise
-python demo.py resume --run-id test-imprecise
-python demo.py review --run-id test-imprecise --assessment test-imprecise-A001 \
+python -m target_discovery.cli.demo start --run-id test-imprecise
+python -m target_discovery.cli.demo resume --run-id test-imprecise
+python -m target_discovery.cli.demo review --run-id test-imprecise --assessment test-imprecise-A001 \
   --decision approve --reviewer "Demo reviewer — simulated test" \
   --rationale "Approve solely to import the synthetic imprecise outcome." --simulated
-python demo.py import-result --run-id test-imprecise --experiment X103
+python -m target_discovery.cli.demo import-result --run-id test-imprecise --experiment X103
 ```
 
 Then execute the four new challenger-only tests:
 
 ```bash
-python challenger_probe.py --suite advanced \
+python -m target_discovery.agents.challenger_probe --suite advanced \
   --supportive-run demo \
   --disagreement-run test-disagreement \
   --imprecise-run test-imprecise \

@@ -18,30 +18,32 @@
     "runtime/sources/cro_export.json": "cd4a685c3f79ea45626c52b2dd4f3eeb2d8ee506d41a649d5d61b38bfdf80de1",
     "runtime/sources/internal_evidence.json": "1b76edad6f1982c52b0f85ac8a543b077ae74ea69eae0ba2eba41964f1bfa1d2",
     "runtime/workflow_contract.json": "680c7c03de89a5ec9012667a60cf0174a3fa02b172e230711982fdfe9b6526c8",
-    "implementation/contracts.py": "01348d479b95ca3344f3c5cbded16fb2114435c7ee67c473bd90db6b48bde768",
-    "implementation/decision_compiler.py": "d59f6a9c9a737d5fc918d9e94bfa808ca7ae25515f072941532123436d633b75",
-    "implementation/demo.py": "680f0eaa85c14f96ba0b40d647d6a6e12a3fdb2037721f5d955f6bc1b60f91a5",
-    "implementation/evaluate.py": "3725ee519acc89a770dfa14d0ae72430455387f78a7568d97e1f88b27bfd21bb",
-    "implementation/local_tools.py": "e67644a3a7299f84700c01212d3b525dde5421c4cd1b9a9967741b03c1463dd6",
-    "implementation/workflow.py": "90e5505e75a79cb890aa416e56076ef538d0b4a6c053e44ae66a88c093212e7a",
-    "implementation/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b"
+    "implementation/target_discovery/cli/demo.py": "4bda66c78d613fb2990debf9e99c368fbc3cfb4ed758c296cca7ba5418df442c",
+    "implementation/target_discovery/paths.py": "e269994b0cdbbc5e4da9a037273e5f76a9549c2e968c40f8d57be8950fb0dcb5",
+    "implementation/target_discovery/workflow/contracts.py": "1e622125fcee5990db4eaf134ca8b45e5abb2a5a49819bf059df1e9742a1c0f3",
+    "implementation/target_discovery/workflow/decision_compiler.py": "bda93c181fcb81d9046b664564fd1e53efd87622902868312b04d8d93ae41246",
+    "implementation/target_discovery/workflow/evaluate.py": "bc2ebe5cc30025cef49c93c22f4f7968d72b37c71a0a80d61d05c1c8be491b86",
+    "implementation/target_discovery/workflow/local_tools.py": "a3d36b04472f553962c71d134f02fe87abc7d4f4bfd658547657e5e59e2250ad",
+    "implementation/target_discovery/workflow/workflow.py": "2a93c52287693ee1e20e8b4e92a259c8caceb45936f678e7eec9ae45c5835b5d",
+    "implementation/target_discovery/workflow/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b"
   },
   "live_inputs_match": true,
   "events": [
     {
       "event_id": 108,
-      "created_at": "2026-10-16T09:10:21.526242+00:00",
+      "created_at": "2026-10-16T09:43:14.700145+00:00",
       "kind": "RUN_STARTED",
       "payload": {
         "execution_mode": "deterministic_reference_no_agents",
         "input_hashes": {
-          "implementation/contracts.py": "01348d479b95ca3344f3c5cbded16fb2114435c7ee67c473bd90db6b48bde768",
-          "implementation/decision_compiler.py": "d59f6a9c9a737d5fc918d9e94bfa808ca7ae25515f072941532123436d633b75",
-          "implementation/demo.py": "680f0eaa85c14f96ba0b40d647d6a6e12a3fdb2037721f5d955f6bc1b60f91a5",
-          "implementation/evaluate.py": "3725ee519acc89a770dfa14d0ae72430455387f78a7568d97e1f88b27bfd21bb",
-          "implementation/local_tools.py": "e67644a3a7299f84700c01212d3b525dde5421c4cd1b9a9967741b03c1463dd6",
-          "implementation/workflow.py": "90e5505e75a79cb890aa416e56076ef538d0b4a6c053e44ae66a88c093212e7a",
-          "implementation/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b",
+          "implementation/target_discovery/cli/demo.py": "4bda66c78d613fb2990debf9e99c368fbc3cfb4ed758c296cca7ba5418df442c",
+          "implementation/target_discovery/paths.py": "e269994b0cdbbc5e4da9a037273e5f76a9549c2e968c40f8d57be8950fb0dcb5",
+          "implementation/target_discovery/workflow/contracts.py": "1e622125fcee5990db4eaf134ca8b45e5abb2a5a49819bf059df1e9742a1c0f3",
+          "implementation/target_discovery/workflow/decision_compiler.py": "bda93c181fcb81d9046b664564fd1e53efd87622902868312b04d8d93ae41246",
+          "implementation/target_discovery/workflow/evaluate.py": "bc2ebe5cc30025cef49c93c22f4f7968d72b37c71a0a80d61d05c1c8be491b86",
+          "implementation/target_discovery/workflow/local_tools.py": "a3d36b04472f553962c71d134f02fe87abc7d4f4bfd658547657e5e59e2250ad",
+          "implementation/target_discovery/workflow/workflow.py": "2a93c52287693ee1e20e8b4e92a259c8caceb45936f678e7eec9ae45c5835b5d",
+          "implementation/target_discovery/workflow/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b",
           "runtime/capability_registry.json": "9de92358b6bd5b081896ce101f23548443d526fb31ced17caf444a65cea83d23",
           "runtime/confidence_rubric.json": "8904b88d4f83af96ab3b399ec463a4ddf6a22930f03a55009228f88768aa04f1",
           "runtime/experiment_options.response.json": "c6027d25618e787a24035e90d7889c49560896fba8b57a44329282013df83fcf",
@@ -62,7 +64,7 @@
     },
     {
       "event_id": 109,
-      "created_at": "2026-10-16T09:10:21.526349+00:00",
+      "created_at": "2026-10-16T09:43:14.700231+00:00",
       "kind": "TOOL_REQUEST",
       "payload": {
         "arguments": {
@@ -85,7 +87,7 @@
     },
     {
       "event_id": 110,
-      "created_at": "2026-10-16T09:10:21.526566+00:00",
+      "created_at": "2026-10-16T09:43:14.700419+00:00",
       "kind": "TOOL_RESULT",
       "payload": {
         "attempt": 1,
@@ -677,7 +679,7 @@
     },
     {
       "event_id": 111,
-      "created_at": "2026-10-16T09:10:21.526634+00:00",
+      "created_at": "2026-10-16T09:43:14.700483+00:00",
       "kind": "DEPENDENCY_BLOCKED",
       "payload": {
         "dependent_tool": "get_prediction",
@@ -690,7 +692,7 @@
     },
     {
       "event_id": 112,
-      "created_at": "2026-10-16T09:10:21.529718+00:00",
+      "created_at": "2026-10-16T09:43:14.703434+00:00",
       "kind": "TOOL_REQUEST",
       "payload": {
         "arguments": {
@@ -710,7 +712,7 @@
     },
     {
       "event_id": 113,
-      "created_at": "2026-10-16T09:10:21.529866+00:00",
+      "created_at": "2026-10-16T09:43:14.703551+00:00",
       "kind": "TOOL_RESULT",
       "payload": {
         "attempt": 1,
@@ -755,7 +757,7 @@
     },
     {
       "event_id": 114,
-      "created_at": "2026-10-16T09:10:21.529910+00:00",
+      "created_at": "2026-10-16T09:43:14.703586+00:00",
       "kind": "METADATA_RESOLVED",
       "payload": {
         "context": {
@@ -774,7 +776,7 @@
     },
     {
       "event_id": 115,
-      "created_at": "2026-10-16T09:10:21.529995+00:00",
+      "created_at": "2026-10-16T09:43:14.703660+00:00",
       "kind": "CAPABILITY_SELECTION",
       "payload": {
         "candidates": [
@@ -832,7 +834,7 @@
     },
     {
       "event_id": 116,
-      "created_at": "2026-10-16T09:10:21.530014+00:00",
+      "created_at": "2026-10-16T09:43:14.703676+00:00",
       "kind": "TOOL_REQUEST",
       "payload": {
         "arguments": {
@@ -865,7 +867,7 @@
     },
     {
       "event_id": 117,
-      "created_at": "2026-10-16T09:10:21.530117+00:00",
+      "created_at": "2026-10-16T09:43:14.703768+00:00",
       "kind": "TOOL_RESULT",
       "payload": {
         "attempt": 1,
@@ -925,7 +927,7 @@
     },
     {
       "event_id": 118,
-      "created_at": "2026-10-16T09:10:21.530136+00:00",
+      "created_at": "2026-10-16T09:43:14.703785+00:00",
       "kind": "REFERENCE_CHECKS",
       "payload": {
         "evidence_families": {
@@ -1011,7 +1013,7 @@
     },
     {
       "event_id": 119,
-      "created_at": "2026-10-16T09:10:21.530152+00:00",
+      "created_at": "2026-10-16T09:43:14.703799+00:00",
       "kind": "TOOL_REQUEST",
       "payload": {
         "arguments": {
@@ -1039,7 +1041,7 @@
     },
     {
       "event_id": 120,
-      "created_at": "2026-10-16T09:10:21.530288+00:00",
+      "created_at": "2026-10-16T09:43:14.703911+00:00",
       "kind": "TOOL_RESULT",
       "payload": {
         "attempt": 1,
@@ -1236,7 +1238,7 @@
     },
     {
       "event_id": 121,
-      "created_at": "2026-10-16T09:10:21.530342+00:00",
+      "created_at": "2026-10-16T09:43:14.703958+00:00",
       "kind": "TOOL_REQUEST",
       "payload": {
         "arguments": {
@@ -1263,7 +1265,7 @@
     },
     {
       "event_id": 122,
-      "created_at": "2026-10-16T09:10:21.530446+00:00",
+      "created_at": "2026-10-16T09:43:14.704051+00:00",
       "kind": "TOOL_RESULT",
       "payload": {
         "attempt": 1,
@@ -1386,7 +1388,7 @@
     },
     {
       "event_id": 123,
-      "created_at": "2026-10-16T09:10:21.530465+00:00",
+      "created_at": "2026-10-16T09:43:14.704069+00:00",
       "kind": "NEXT_ACTION_PROPOSED",
       "payload": {
         "formal_optimality_claimed": false,
@@ -1397,11 +1399,11 @@
     },
     {
       "event_id": 124,
-      "created_at": "2026-10-16T09:10:21.530646+00:00",
+      "created_at": "2026-10-16T09:43:14.704199+00:00",
       "kind": "ASSESSMENT_CREATED",
       "payload": {
         "assessment_id": "test-imprecise-A001",
-        "content_sha256": "05b7c735247b0a43b1e95125b3d0543626a2ade6a2d3f69b353fc592f2029844",
+        "content_sha256": "8f72e0e5c46830d8cd740860fad09286dab6631f8a433f95f5b54f2d12c5bd40",
         "proposed_action": "EXPERIMENT_TO_RESOLVE_UNCERTAINTY",
         "review_required": true,
         "workflow_status": "READY_FOR_BIOLOGY_REVIEW"
@@ -1409,7 +1411,7 @@
     },
     {
       "event_id": 125,
-      "created_at": "2026-10-16T09:10:21.534703+00:00",
+      "created_at": "2026-10-16T09:43:14.707217+00:00",
       "kind": "REVIEW_RECORDED",
       "payload": {
         "actor_mode": "simulated_human",
@@ -1418,14 +1420,14 @@
         "decision": "APPROVE",
         "rationale": "Scripted example: approve the scoped synthetic experiment under the provisional criteria.",
         "review_id": "test-imprecise-R001",
-        "reviewed_content_sha256": "05b7c735247b0a43b1e95125b3d0543626a2ade6a2d3f69b353fc592f2029844",
+        "reviewed_content_sha256": "8f72e0e5c46830d8cd740860fad09286dab6631f8a433f95f5b54f2d12c5bd40",
         "reviewer_role": "Demo biology reviewer (scripted)",
         "synthetic": true
       }
     },
     {
       "event_id": 126,
-      "created_at": "2026-10-16T09:10:21.540581+00:00",
+      "created_at": "2026-10-16T09:43:14.714250+00:00",
       "kind": "RESULT_IMPORTED",
       "payload": {
         "experiment_id": "X103",
@@ -1437,7 +1439,7 @@
     },
     {
       "event_id": 127,
-      "created_at": "2026-10-16T09:10:21.541027+00:00",
+      "created_at": "2026-10-16T09:43:14.714490+00:00",
       "kind": "CALCULATION",
       "payload": {
         "mode": "fixed_code",
@@ -1530,11 +1532,11 @@
     },
     {
       "event_id": 128,
-      "created_at": "2026-10-16T09:10:21.541224+00:00",
+      "created_at": "2026-10-16T09:43:14.714625+00:00",
       "kind": "ASSESSMENT_CREATED",
       "payload": {
         "assessment_id": "test-imprecise-A002",
-        "content_sha256": "eb88ddad17b38b6809fe2450d15b6efc893c396e29185afa9668e8f3302b8baa",
+        "content_sha256": "67b536fddcb0ac9e9dc211d6482ae3b8440e2bd42acbd4911b311d10e874f5e8",
         "proposed_action": "INCONCLUSIVE",
         "review_required": true,
         "workflow_status": "BIOLOGY_UNRESOLVED"
@@ -1708,13 +1710,14 @@
         "contract_version": "tools-v1",
         "evidence_snapshot_id": "EV-INITIAL-003",
         "input_content_sha256": {
-          "implementation/contracts.py": "01348d479b95ca3344f3c5cbded16fb2114435c7ee67c473bd90db6b48bde768",
-          "implementation/decision_compiler.py": "d59f6a9c9a737d5fc918d9e94bfa808ca7ae25515f072941532123436d633b75",
-          "implementation/demo.py": "680f0eaa85c14f96ba0b40d647d6a6e12a3fdb2037721f5d955f6bc1b60f91a5",
-          "implementation/evaluate.py": "3725ee519acc89a770dfa14d0ae72430455387f78a7568d97e1f88b27bfd21bb",
-          "implementation/local_tools.py": "e67644a3a7299f84700c01212d3b525dde5421c4cd1b9a9967741b03c1463dd6",
-          "implementation/workflow.py": "90e5505e75a79cb890aa416e56076ef538d0b4a6c053e44ae66a88c093212e7a",
-          "implementation/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b",
+          "implementation/target_discovery/cli/demo.py": "4bda66c78d613fb2990debf9e99c368fbc3cfb4ed758c296cca7ba5418df442c",
+          "implementation/target_discovery/paths.py": "e269994b0cdbbc5e4da9a037273e5f76a9549c2e968c40f8d57be8950fb0dcb5",
+          "implementation/target_discovery/workflow/contracts.py": "1e622125fcee5990db4eaf134ca8b45e5abb2a5a49819bf059df1e9742a1c0f3",
+          "implementation/target_discovery/workflow/decision_compiler.py": "bda93c181fcb81d9046b664564fd1e53efd87622902868312b04d8d93ae41246",
+          "implementation/target_discovery/workflow/evaluate.py": "bc2ebe5cc30025cef49c93c22f4f7968d72b37c71a0a80d61d05c1c8be491b86",
+          "implementation/target_discovery/workflow/local_tools.py": "a3d36b04472f553962c71d134f02fe87abc7d4f4bfd658547657e5e59e2250ad",
+          "implementation/target_discovery/workflow/workflow.py": "2a93c52287693ee1e20e8b4e92a259c8caceb45936f678e7eec9ae45c5835b5d",
+          "implementation/target_discovery/workflow/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b",
           "runtime/capability_registry.json": "9de92358b6bd5b081896ce101f23548443d526fb31ced17caf444a65cea83d23",
           "runtime/confidence_rubric.json": "8904b88d4f83af96ab3b399ec463a4ddf6a22930f03a55009228f88768aa04f1",
           "runtime/experiment_options.response.json": "c6027d25618e787a24035e90d7889c49560896fba8b57a44329282013df83fcf",
@@ -1738,7 +1741,7 @@
           "mock-signature-adapter": "synthetic-model-v2"
         },
         "policy_version": "demo-policy-v1",
-        "prompt_version": "no-LLM-reference-cli-v1-b2d84e5fb927",
+        "prompt_version": "no-LLM-reference-cli-v1-44d83a09d54e",
         "registry_version": "registry-v1"
       },
       "workflow_status": "READY_FOR_BIOLOGY_REVIEW"
@@ -1835,13 +1838,14 @@
         "contract_version": "tools-v1",
         "evidence_snapshot_id": "EV-INITIAL-003+evidence-v2-X103",
         "input_content_sha256": {
-          "implementation/contracts.py": "01348d479b95ca3344f3c5cbded16fb2114435c7ee67c473bd90db6b48bde768",
-          "implementation/decision_compiler.py": "d59f6a9c9a737d5fc918d9e94bfa808ca7ae25515f072941532123436d633b75",
-          "implementation/demo.py": "680f0eaa85c14f96ba0b40d647d6a6e12a3fdb2037721f5d955f6bc1b60f91a5",
-          "implementation/evaluate.py": "3725ee519acc89a770dfa14d0ae72430455387f78a7568d97e1f88b27bfd21bb",
-          "implementation/local_tools.py": "e67644a3a7299f84700c01212d3b525dde5421c4cd1b9a9967741b03c1463dd6",
-          "implementation/workflow.py": "90e5505e75a79cb890aa416e56076ef538d0b4a6c053e44ae66a88c093212e7a",
-          "implementation/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b",
+          "implementation/target_discovery/cli/demo.py": "4bda66c78d613fb2990debf9e99c368fbc3cfb4ed758c296cca7ba5418df442c",
+          "implementation/target_discovery/paths.py": "e269994b0cdbbc5e4da9a037273e5f76a9549c2e968c40f8d57be8950fb0dcb5",
+          "implementation/target_discovery/workflow/contracts.py": "1e622125fcee5990db4eaf134ca8b45e5abb2a5a49819bf059df1e9742a1c0f3",
+          "implementation/target_discovery/workflow/decision_compiler.py": "bda93c181fcb81d9046b664564fd1e53efd87622902868312b04d8d93ae41246",
+          "implementation/target_discovery/workflow/evaluate.py": "bc2ebe5cc30025cef49c93c22f4f7968d72b37c71a0a80d61d05c1c8be491b86",
+          "implementation/target_discovery/workflow/local_tools.py": "a3d36b04472f553962c71d134f02fe87abc7d4f4bfd658547657e5e59e2250ad",
+          "implementation/target_discovery/workflow/workflow.py": "2a93c52287693ee1e20e8b4e92a259c8caceb45936f678e7eec9ae45c5835b5d",
+          "implementation/target_discovery/workflow/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b",
           "runtime/capability_registry.json": "9de92358b6bd5b081896ce101f23548443d526fb31ced17caf444a65cea83d23",
           "runtime/confidence_rubric.json": "8904b88d4f83af96ab3b399ec463a4ddf6a22930f03a55009228f88768aa04f1",
           "runtime/experiment_options.response.json": "c6027d25618e787a24035e90d7889c49560896fba8b57a44329282013df83fcf",
@@ -1866,7 +1870,7 @@
           "mock-signature-adapter": "synthetic-model-v2"
         },
         "policy_version": "demo-policy-v1",
-        "prompt_version": "no-LLM-reference-cli-v1-b2d84e5fb927",
+        "prompt_version": "no-LLM-reference-cli-v1-44d83a09d54e",
         "registry_version": "registry-v1"
       },
       "workflow_status": "BIOLOGY_UNRESOLVED"
@@ -1880,7 +1884,7 @@
       "decision": "APPROVE",
       "rationale": "Scripted example: approve the scoped synthetic experiment under the provisional criteria.",
       "review_id": "test-imprecise-R001",
-      "reviewed_content_sha256": "05b7c735247b0a43b1e95125b3d0543626a2ade6a2d3f69b353fc592f2029844",
+      "reviewed_content_sha256": "8f72e0e5c46830d8cd740860fad09286dab6631f8a433f95f5b54f2d12c5bd40",
       "reviewer_role": "Demo biology reviewer (scripted)",
       "synthetic": true
     }

@@ -54,8 +54,8 @@ platform. Saved consultation provenance is inspectable separately from the packe
 
 ## Storage and compatibility
 
-`review_service.py` layers the new commands over the unchanged reference workflow.
-`ui_reviews.py` supplies the preview/forms. The original workflow, store, compiler,
+`target_discovery/review/review_service.py` layers the new commands over the unchanged reference workflow.
+`target_discovery/ui/ui_reviews.py` supplies the preview/forms. The original workflow, store, compiler,
 agent prompts, fixtures and version bindings are unchanged. The legacy CLI remains
 available with its existing semantics; these additional preview/receipt guarantees
 apply to the new UI service commands.

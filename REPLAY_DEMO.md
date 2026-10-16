@@ -26,7 +26,7 @@ For a read-only replay, use navigation and expanders only. Review, follow-up, ha
 To create another fresh offline replay without overwriting the supplied records:
 
 ```sh
-python seed_public_demo.py --output public-replay-new --bundled-reference
+python -m scripts.seed_public_demo --output public-replay-new --bundled-reference
 ```
 
 Choose **Other local directory** in the UI and enter `public-replay-new/demo-runs`. Timestamps and generated follow-up identifiers differ; scientific calculations are the same. No model or retrieval calls are made by this command.

@@ -19,8 +19,8 @@ call an LLM, perform a review, import an outcome, modify a run or create a hando
 
 ## Updating your existing project
 
-Copy `streamlit_app.py`, `ui_service.py`, `ui_charts.py`, `requirements-ui.txt`,
-`verify_ui.py` and the packaged `.streamlit/config.toml` into your existing project.
+Copy `streamlit_app.py`, `target_discovery/ui/ui_service.py`, `target_discovery/ui/ui_charts.py`, `requirements-ui.txt`,
+`tests/test_ui.py` and the packaged `.streamlit/config.toml` into your existing project.
 Keep your existing `demo-runs/` and virtual environment. Baseline workflow, agent
 files and runtime fixtures are unchanged by this release. The theme config is
 included in the ZIP; if not copied, Streamlit still runs with its default theme.
@@ -67,7 +67,7 @@ or agent adoption is implemented in this read-only slice.
 ## Verification
 
 ```bash
-python -m unittest verify verify_contracts verify_workflow verify_agents verify_advanced_probes verify_ui
+python -m unittest discover -s tests -t .
 ```
 
 100 tests passed: 84 existing tests and 16 UI tests. The UI tests exercise real Streamlit
@@ -131,7 +131,7 @@ Visually inspected `demo` / `demo-A002` / `live-02` at 1366 × 768. The UI shows
 the legacy-schema warning. Challenger cautions preserve same-donor limits and
 exclude therapeutic blockade equivalence, modality feasibility and systemic safety.
 The assessment content digest still matches. The binding differs in agent code
-(`agent_prompts.py`, `agent_offline.py`, `agent_layer.py`, `agent_contracts.py`) and
+(`target_discovery/agents/agent_prompts.py`, `target_discovery/agents/agent_offline.py`, `target_discovery/agents/agent_layer.py`, `target_discovery/agents/agent_contracts.py`) and
 prompt version (`bounded-evidence-roles-v1` versus installed v2).
 
 Six saved live reports are available across five runs; all currently evaluate as
