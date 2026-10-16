@@ -1,0 +1,174 @@
+{
+  "$defs": {
+    "Capability": {
+      "additionalProperties": false,
+      "properties": {
+        "capability_id": {
+          "minLength": 1,
+          "title": "Capability Id",
+          "type": "string"
+        },
+        "tool_name": {
+          "enum": [
+            "search_evidence",
+            "get_study_manifest",
+            "get_prediction",
+            "get_experiment_options"
+          ],
+          "title": "Tool Name",
+          "type": "string"
+        },
+        "owner_role": {
+          "minLength": 1,
+          "title": "Owner Role",
+          "type": "string"
+        },
+        "input_schema": {
+          "minLength": 1,
+          "title": "Input Schema",
+          "type": "string"
+        },
+        "output_schema": {
+          "minLength": 1,
+          "title": "Output Schema",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "tools-v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "supported_context_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supported Context Ids",
+          "type": "array"
+        },
+        "required_context_attributes": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Required Context Attributes",
+          "type": "object"
+        },
+        "supported_perturbations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supported Perturbations",
+          "type": "array"
+        },
+        "allowed_expression_changes_pct": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Allowed Expression Changes Pct",
+          "type": "array"
+        },
+        "required_data_references": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Required Data References",
+          "type": "array"
+        },
+        "model_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Model Id"
+        },
+        "model_version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Model Version"
+        },
+        "permitted_side_effects": {
+          "const": "none",
+          "title": "Permitted Side Effects",
+          "type": "string"
+        },
+        "max_transient_retries": {
+          "const": 1,
+          "title": "Max Transient Retries",
+          "type": "integer"
+        },
+        "retry_requires_identical_input_and_idempotency_key": {
+          "const": true,
+          "title": "Retry Requires Identical Input And Idempotency Key",
+          "type": "boolean"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "capability_id",
+        "tool_name",
+        "owner_role",
+        "input_schema",
+        "output_schema",
+        "schema_version",
+        "supported_context_ids",
+        "required_context_attributes",
+        "supported_perturbations",
+        "allowed_expression_changes_pct",
+        "required_data_references",
+        "model_id",
+        "model_version",
+        "permitted_side_effects",
+        "max_transient_retries",
+        "retry_requires_identical_input_and_idempotency_key",
+        "limitations"
+      ],
+      "title": "Capability",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "synthetic": {
+      "const": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "registry_version": {
+      "minLength": 1,
+      "title": "Registry Version",
+      "type": "string"
+    },
+    "capabilities": {
+      "items": {
+        "$ref": "#/$defs/Capability"
+      },
+      "title": "Capabilities",
+      "type": "array"
+    }
+  },
+  "required": [
+    "synthetic",
+    "registry_version",
+    "capabilities"
+  ],
+  "title": "Registry",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

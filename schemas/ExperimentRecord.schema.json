@@ -1,0 +1,238 @@
+{
+  "$defs": {
+    "AssayContext": {
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "minLength": 1,
+          "title": "Target",
+          "type": "string"
+        },
+        "disease_context": {
+          "minLength": 1,
+          "title": "Disease Context",
+          "type": "string"
+        },
+        "cell_context": {
+          "minLength": 1,
+          "title": "Cell Context",
+          "type": "string"
+        },
+        "intervention": {
+          "minLength": 1,
+          "title": "Intervention",
+          "type": "string"
+        },
+        "endpoint": {
+          "minLength": 1,
+          "title": "Endpoint",
+          "type": "string"
+        },
+        "endpoint_time_hours": {
+          "exclusiveMinimum": 0,
+          "title": "Endpoint Time Hours",
+          "type": "integer"
+        },
+        "assay_protocol_version": {
+          "minLength": 1,
+          "title": "Assay Protocol Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "target",
+        "disease_context",
+        "cell_context",
+        "intervention",
+        "endpoint",
+        "endpoint_time_hours",
+        "assay_protocol_version"
+      ],
+      "title": "AssayContext",
+      "type": "object"
+    },
+    "Measurement": {
+      "additionalProperties": false,
+      "properties": {
+        "measurement_id": {
+          "minLength": 1,
+          "title": "Measurement Id",
+          "type": "string"
+        },
+        "donor_id": {
+          "minLength": 1,
+          "title": "Donor Id",
+          "type": "string"
+        },
+        "technical_replicates": {
+          "exclusiveMinimum": 0,
+          "title": "Technical Replicates",
+          "type": "integer"
+        },
+        "min_live_cd4_events_per_well": {
+          "minimum": 0,
+          "title": "Min Live Cd4 Events Per Well",
+          "type": "integer"
+        },
+        "ntc_il17_positive_pct": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Ntc Il17 Positive Pct",
+          "type": "number"
+        },
+        "kd_il17_positive_pct": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Kd Il17 Positive Pct",
+          "type": "number"
+        },
+        "unstim_il17_positive_pct": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Unstim Il17 Positive Pct",
+          "type": "number"
+        },
+        "positive_control_il17_positive_pct": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Positive Control Il17 Positive Pct",
+          "type": "number"
+        },
+        "ntc_live_fraction_pct": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Ntc Live Fraction Pct",
+          "type": "number"
+        },
+        "kd_live_fraction_pct": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Kd Live Fraction Pct",
+          "type": "number"
+        },
+        "positive_control_live_fraction_pct": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Positive Control Live Fraction Pct",
+          "type": "number"
+        },
+        "positive_control_live_recovery_pct": {
+          "minimum": 0,
+          "title": "Positive Control Live Recovery Pct",
+          "type": "number"
+        },
+        "ntc_live_cells": {
+          "minimum": 0,
+          "title": "Ntc Live Cells",
+          "type": "integer"
+        },
+        "kd_live_cells": {
+          "minimum": 0,
+          "title": "Kd Live Cells",
+          "type": "integer"
+        },
+        "ntc_target_mfi": {
+          "minimum": 0,
+          "title": "Ntc Target Mfi",
+          "type": "number"
+        },
+        "kd_target_mfi": {
+          "minimum": 0,
+          "title": "Kd Target Mfi",
+          "type": "number"
+        },
+        "max_technical_cv_pct": {
+          "minimum": 0,
+          "title": "Max Technical Cv Pct",
+          "type": "number"
+        }
+      },
+      "required": [
+        "measurement_id",
+        "donor_id",
+        "technical_replicates",
+        "min_live_cd4_events_per_well",
+        "ntc_il17_positive_pct",
+        "kd_il17_positive_pct",
+        "unstim_il17_positive_pct",
+        "positive_control_il17_positive_pct",
+        "ntc_live_fraction_pct",
+        "kd_live_fraction_pct",
+        "positive_control_live_fraction_pct",
+        "positive_control_live_recovery_pct",
+        "ntc_live_cells",
+        "kd_live_cells",
+        "ntc_target_mfi",
+        "kd_target_mfi",
+        "max_technical_cv_pct"
+      ],
+      "title": "Measurement",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "synthetic": {
+      "const": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "experiment_id": {
+      "minLength": 1,
+      "title": "Experiment Id",
+      "type": "string"
+    },
+    "evidence_version": {
+      "minLength": 1,
+      "title": "Evidence Version",
+      "type": "string"
+    },
+    "policy_version": {
+      "minLength": 1,
+      "title": "Policy Version",
+      "type": "string"
+    },
+    "context": {
+      "$ref": "#/$defs/AssayContext"
+    },
+    "measurement_status": {
+      "minLength": 1,
+      "title": "Measurement Status",
+      "type": "string"
+    },
+    "design": {
+      "minLength": 1,
+      "title": "Design",
+      "type": "string"
+    },
+    "assays": {
+      "additionalProperties": {
+        "items": {
+          "$ref": "#/$defs/Measurement"
+        },
+        "type": "array"
+      },
+      "propertyNames": {
+        "enum": [
+          "KD-A",
+          "KD-B"
+        ]
+      },
+      "title": "Assays",
+      "type": "object"
+    }
+  },
+  "required": [
+    "synthetic",
+    "experiment_id",
+    "evidence_version",
+    "policy_version",
+    "context",
+    "measurement_status",
+    "design",
+    "assays"
+  ],
+  "title": "ExperimentRecord",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

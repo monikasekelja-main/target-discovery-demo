@@ -1,0 +1,404 @@
+{
+  "$defs": {
+    "ConfidenceProfile": {
+      "additionalProperties": false,
+      "properties": {
+        "rubric_version": {
+          "const": "ordinal-rubric-v1",
+          "title": "Rubric Version",
+          "type": "string"
+        },
+        "interpretation": {
+          "const": "proposed_ordinal_support_not_probability",
+          "title": "Interpretation",
+          "type": "string"
+        },
+        "causal": {
+          "$ref": "#/$defs/SupportGrade"
+        },
+        "intervention": {
+          "$ref": "#/$defs/SupportGrade"
+        },
+        "modality_feasibility": {
+          "additionalProperties": {
+            "enum": [
+              "conditional",
+              "unknown"
+            ],
+            "type": "string"
+          },
+          "propertyNames": {
+            "enum": [
+              "antibody",
+              "small_molecule",
+              "oligonucleotide"
+            ]
+          },
+          "title": "Modality Feasibility",
+          "type": "object"
+        },
+        "systemic_safety": {
+          "const": "unassessed",
+          "title": "Systemic Safety",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rubric_version",
+        "interpretation",
+        "causal",
+        "intervention",
+        "modality_feasibility",
+        "systemic_safety"
+      ],
+      "title": "ConfidenceProfile",
+      "type": "object"
+    },
+    "EffectInterval": {
+      "additionalProperties": false,
+      "properties": {
+        "mean": {
+          "title": "Mean",
+          "type": "number"
+        },
+        "lower_95": {
+          "title": "Lower 95",
+          "type": "number"
+        },
+        "upper_95": {
+          "title": "Upper 95",
+          "type": "number"
+        },
+        "n_donors": {
+          "exclusiveMinimum": 1,
+          "title": "N Donors",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "mean",
+        "lower_95",
+        "upper_95",
+        "n_donors"
+      ],
+      "title": "EffectInterval",
+      "type": "object"
+    },
+    "SupportGrade": {
+      "additionalProperties": false,
+      "properties": {
+        "ordinal": {
+          "anyOf": [
+            {
+              "maximum": 3,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Ordinal"
+        },
+        "status": {
+          "enum": [
+            "ASSESSED",
+            "UNKNOWN"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "title": "Scope",
+          "type": "string"
+        },
+        "rationale": {
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "ordinal",
+        "status",
+        "scope",
+        "rationale",
+        "evidence_ids"
+      ],
+      "title": "SupportGrade",
+      "type": "object"
+    },
+    "Versions": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_snapshot_id": {
+          "minLength": 1,
+          "title": "Evidence Snapshot Id",
+          "type": "string"
+        },
+        "metadata_snapshot_id": {
+          "minLength": 1,
+          "title": "Metadata Snapshot Id",
+          "type": "string"
+        },
+        "model_output_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Model Output Ids",
+          "type": "array"
+        },
+        "model_versions": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Model Versions",
+          "type": "object"
+        },
+        "policy_version": {
+          "minLength": 1,
+          "title": "Policy Version",
+          "type": "string"
+        },
+        "registry_version": {
+          "minLength": 1,
+          "title": "Registry Version",
+          "type": "string"
+        },
+        "alias_mapping_version": {
+          "minLength": 1,
+          "title": "Alias Mapping Version",
+          "type": "string"
+        },
+        "prompt_version": {
+          "minLength": 1,
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "contract_version": {
+          "const": "tools-v1",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "input_content_sha256": {
+          "additionalProperties": {
+            "pattern": "^[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "propertyNames": {
+            "minLength": 1
+          },
+          "title": "Input Content Sha256",
+          "type": "object"
+        }
+      },
+      "required": [
+        "evidence_snapshot_id",
+        "metadata_snapshot_id",
+        "model_output_ids",
+        "model_versions",
+        "policy_version",
+        "registry_version",
+        "alias_mapping_version",
+        "prompt_version",
+        "contract_version",
+        "input_content_sha256"
+      ],
+      "title": "Versions",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "synthetic": {
+      "const": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "assessment_id": {
+      "minLength": 1,
+      "title": "Assessment Id",
+      "type": "string"
+    },
+    "author_mode": {
+      "enum": [
+        "hand_authored_reference",
+        "deterministic_reference",
+        "agent_proposed",
+        "human_amended"
+      ],
+      "title": "Author Mode",
+      "type": "string"
+    },
+    "hypothesis_id": {
+      "minLength": 1,
+      "title": "Hypothesis Id",
+      "type": "string"
+    },
+    "target_id": {
+      "minLength": 1,
+      "title": "Target Id",
+      "type": "string"
+    },
+    "context_id": {
+      "minLength": 1,
+      "title": "Context Id",
+      "type": "string"
+    },
+    "hypothesis": {
+      "minLength": 1,
+      "title": "Hypothesis",
+      "type": "string"
+    },
+    "intervention": {
+      "minLength": 1,
+      "title": "Intervention",
+      "type": "string"
+    },
+    "versions": {
+      "$ref": "#/$defs/Versions"
+    },
+    "workflow_status": {
+      "enum": [
+        "NEEDS_METADATA",
+        "MODEL_NOT_APPLICABLE",
+        "TECHNICAL_RETRY",
+        "SCHEMA_OR_QC_REVIEW",
+        "BIOLOGY_UNRESOLVED",
+        "READY_FOR_BIOLOGY_REVIEW",
+        "HANDOFF_NEEDS_INFORMATION"
+      ],
+      "title": "Workflow Status",
+      "type": "string"
+    },
+    "scientific_recommendation": {
+      "enum": [
+        "EXPERIMENT_TO_RESOLVE_UNCERTAINTY",
+        "ADVANCE_TO_REPLICATION",
+        "DEPRIORITIZE_TESTED_HYPOTHESIS",
+        "INCONCLUSIVE"
+      ],
+      "title": "Scientific Recommendation",
+      "type": "string"
+    },
+    "rationale": {
+      "minLength": 1,
+      "title": "Rationale",
+      "type": "string"
+    },
+    "supporting_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supporting Evidence Ids",
+      "type": "array"
+    },
+    "challenging_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Challenging Evidence Ids",
+      "type": "array"
+    },
+    "excluded_or_limited_evidence": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Excluded Or Limited Evidence",
+      "type": "object"
+    },
+    "functional_effects": {
+      "additionalProperties": {
+        "$ref": "#/$defs/EffectInterval"
+      },
+      "title": "Functional Effects",
+      "type": "object"
+    },
+    "functional_effect_units": {
+      "const": "relative_percent_reduction",
+      "title": "Functional Effect Units",
+      "type": "string"
+    },
+    "prerequisites_passed": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Prerequisites Passed"
+    },
+    "failed_gates": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Failed Gates",
+      "type": "array"
+    },
+    "confidence": {
+      "$ref": "#/$defs/ConfidenceProfile"
+    },
+    "remaining_uncertainties": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Remaining Uncertainties",
+      "type": "array"
+    },
+    "next_action": {
+      "minLength": 1,
+      "title": "Next Action",
+      "type": "string"
+    },
+    "next_owner_role": {
+      "minLength": 1,
+      "title": "Next Owner Role",
+      "type": "string"
+    },
+    "human_review_required": {
+      "const": true,
+      "title": "Human Review Required",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "synthetic",
+    "assessment_id",
+    "author_mode",
+    "hypothesis_id",
+    "target_id",
+    "context_id",
+    "hypothesis",
+    "intervention",
+    "versions",
+    "workflow_status",
+    "scientific_recommendation",
+    "rationale",
+    "supporting_evidence_ids",
+    "challenging_evidence_ids",
+    "excluded_or_limited_evidence",
+    "functional_effects",
+    "functional_effect_units",
+    "prerequisites_passed",
+    "failed_gates",
+    "confidence",
+    "remaining_uncertainties",
+    "next_action",
+    "next_owner_role",
+    "human_review_required"
+  ],
+  "title": "DecisionBrief",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

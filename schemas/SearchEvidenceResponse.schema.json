@@ -1,0 +1,306 @@
+{
+  "$defs": {
+    "EvidenceRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "synthetic": {
+          "const": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "evidence_family_id": {
+          "minLength": 1,
+          "title": "Evidence Family Id",
+          "type": "string"
+        },
+        "target_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Target Id"
+        },
+        "entity_status": {
+          "enum": [
+            "RESOLVED",
+            "UNRESOLVED"
+          ],
+          "title": "Entity Status",
+          "type": "string"
+        },
+        "record_type": {
+          "minLength": 1,
+          "title": "Record Type",
+          "type": "string"
+        },
+        "claim": {
+          "minLength": 1,
+          "title": "Claim",
+          "type": "string"
+        },
+        "context_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Context Id"
+        },
+        "endpoint_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Endpoint Id"
+        },
+        "units": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Units",
+          "type": "object"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceRef"
+        },
+        "raw_record": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Raw Record",
+          "type": "object"
+        }
+      },
+      "required": [
+        "synthetic",
+        "evidence_id",
+        "evidence_family_id",
+        "target_id",
+        "entity_status",
+        "record_type",
+        "claim",
+        "context_id",
+        "endpoint_id",
+        "units",
+        "source",
+        "raw_record"
+      ],
+      "title": "EvidenceRecord",
+      "type": "object"
+    },
+    "EvidenceSearchResult": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_snapshot_id": {
+          "minLength": 1,
+          "title": "Evidence Snapshot Id",
+          "type": "string"
+        },
+        "records": {
+          "items": {
+            "$ref": "#/$defs/EvidenceRecord"
+          },
+          "title": "Records",
+          "type": "array"
+        },
+        "notice": {
+          "minLength": 1,
+          "title": "Notice",
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_snapshot_id",
+        "records",
+        "notice"
+      ],
+      "title": "EvidenceSearchResult",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "SourceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_record_id": {
+          "minLength": 1,
+          "title": "Source Record Id",
+          "type": "string"
+        },
+        "study_id": {
+          "minLength": 1,
+          "title": "Study Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "minLength": 1,
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "locator": {
+          "minLength": 1,
+          "title": "Locator",
+          "type": "string"
+        },
+        "original_target_label": {
+          "minLength": 1,
+          "title": "Original Target Label",
+          "type": "string"
+        },
+        "mapping_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Mapping Id"
+        }
+      },
+      "required": [
+        "source_id",
+        "source_record_id",
+        "study_id",
+        "snapshot_id",
+        "locator",
+        "original_target_label",
+        "mapping_id"
+      ],
+      "title": "SourceRef",
+      "type": "object"
+    },
+    "ToolError": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "minLength": 1,
+          "title": "Code",
+          "type": "string"
+        },
+        "message": {
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "retryable": {
+          "title": "Retryable",
+          "type": "boolean"
+        },
+        "missing_fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Fields",
+          "type": "array"
+        },
+        "next_owner_role": {
+          "minLength": 1,
+          "title": "Next Owner Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "retryable",
+        "missing_fields",
+        "next_owner_role"
+      ],
+      "title": "ToolError",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "synthetic": {
+      "const": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "contract_version": {
+      "const": "tools-v1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "title": "Request Id",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "OK",
+        "NOT_FOUND",
+        "TECHNICAL_ERROR",
+        "INVALID_INPUT"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "source_snapshot_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Snapshot Ids",
+      "type": "array"
+    },
+    "data": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/EvidenceSearchResult"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "error": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ToolError"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "synthetic",
+    "contract_version",
+    "request_id",
+    "status",
+    "source_snapshot_ids",
+    "data",
+    "error"
+  ],
+  "title": "SearchEvidenceResponse",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

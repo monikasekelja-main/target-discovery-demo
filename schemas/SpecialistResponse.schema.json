@@ -1,0 +1,98 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "synthetic": {
+      "const": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "platform": {
+      "enum": [
+        "antibody",
+        "small_molecule",
+        "oligonucleotide"
+      ],
+      "title": "Platform",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ACCEPTED_FOR_REVIEW",
+        "NEEDS_INFORMATION",
+        "DECLINED"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "reason": {
+      "minLength": 1,
+      "title": "Reason",
+      "type": "string"
+    },
+    "missing_information": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Information",
+      "type": "array"
+    },
+    "next_action": {
+      "minLength": 1,
+      "title": "Next Action",
+      "type": "string"
+    },
+    "next_owner_role": {
+      "minLength": 1,
+      "title": "Next Owner Role",
+      "type": "string"
+    },
+    "delivery_mode": {
+      "const": "local_simulation",
+      "title": "Delivery Mode",
+      "type": "string"
+    },
+    "response_id": {
+      "minLength": 1,
+      "title": "Response Id",
+      "type": "string"
+    },
+    "handoff_id": {
+      "minLength": 1,
+      "title": "Handoff Id",
+      "type": "string"
+    },
+    "handoff_version": {
+      "const": "handoff-v1",
+      "title": "Handoff Version",
+      "type": "string"
+    },
+    "assessment_id": {
+      "minLength": 1,
+      "title": "Assessment Id",
+      "type": "string"
+    },
+    "reviewed_content_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Reviewed Content Sha256",
+      "type": "string"
+    }
+  },
+  "required": [
+    "synthetic",
+    "platform",
+    "status",
+    "reason",
+    "missing_information",
+    "next_action",
+    "next_owner_role",
+    "delivery_mode",
+    "response_id",
+    "handoff_id",
+    "handoff_version",
+    "assessment_id",
+    "reviewed_content_sha256"
+  ],
+  "title": "SpecialistResponse",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

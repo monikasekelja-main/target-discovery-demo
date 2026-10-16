@@ -1,0 +1,244 @@
+{
+  "$defs": {
+    "ExperimentOption": {
+      "additionalProperties": false,
+      "properties": {
+        "synthetic": {
+          "const": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "option_id": {
+          "minLength": 1,
+          "title": "Option Id",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "uncertainty_addressed": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Uncertainty Addressed",
+          "type": "array"
+        },
+        "readouts": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Readouts",
+          "type": "array"
+        },
+        "decision_consequences": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Decision Consequences",
+          "type": "object"
+        },
+        "effort_band": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "title": "Effort Band",
+          "type": "string"
+        },
+        "illustrative_turnaround_weeks": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Illustrative Turnaround Weeks",
+          "type": "array"
+        },
+        "relative_cost_units": {
+          "exclusiveMinimum": 0,
+          "title": "Relative Cost Units",
+          "type": "number"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "owner_role": {
+          "minLength": 1,
+          "title": "Owner Role",
+          "type": "string"
+        },
+        "scientific_review_status": {
+          "const": "illustrative_concept_requires_biology_review",
+          "title": "Scientific Review Status",
+          "type": "string"
+        },
+        "executable_lab_protocol": {
+          "const": false,
+          "title": "Executable Lab Protocol",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "synthetic",
+        "option_id",
+        "title",
+        "uncertainty_addressed",
+        "readouts",
+        "decision_consequences",
+        "effort_band",
+        "illustrative_turnaround_weeks",
+        "relative_cost_units",
+        "limitations",
+        "owner_role",
+        "scientific_review_status",
+        "executable_lab_protocol"
+      ],
+      "title": "ExperimentOption",
+      "type": "object"
+    },
+    "ExperimentOptionsResult": {
+      "additionalProperties": false,
+      "properties": {
+        "option_snapshot_id": {
+          "minLength": 1,
+          "title": "Option Snapshot Id",
+          "type": "string"
+        },
+        "options": {
+          "items": {
+            "$ref": "#/$defs/ExperimentOption"
+          },
+          "minItems": 1,
+          "title": "Options",
+          "type": "array"
+        },
+        "selection_method": {
+          "const": "qualitative_decision_relevance_no_formal_optimality",
+          "title": "Selection Method",
+          "type": "string"
+        }
+      },
+      "required": [
+        "option_snapshot_id",
+        "options",
+        "selection_method"
+      ],
+      "title": "ExperimentOptionsResult",
+      "type": "object"
+    },
+    "ToolError": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "minLength": 1,
+          "title": "Code",
+          "type": "string"
+        },
+        "message": {
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "retryable": {
+          "title": "Retryable",
+          "type": "boolean"
+        },
+        "missing_fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Fields",
+          "type": "array"
+        },
+        "next_owner_role": {
+          "minLength": 1,
+          "title": "Next Owner Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "retryable",
+        "missing_fields",
+        "next_owner_role"
+      ],
+      "title": "ToolError",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "synthetic": {
+      "const": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "contract_version": {
+      "const": "tools-v1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "title": "Request Id",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "OK",
+        "NOT_FOUND",
+        "TECHNICAL_ERROR",
+        "INVALID_INPUT"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "source_snapshot_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Snapshot Ids",
+      "type": "array"
+    },
+    "data": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ExperimentOptionsResult"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "error": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ToolError"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "synthetic",
+    "contract_version",
+    "request_id",
+    "status",
+    "source_snapshot_ids",
+    "data",
+    "error"
+  ],
+  "title": "GetExperimentOptionsResponse",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

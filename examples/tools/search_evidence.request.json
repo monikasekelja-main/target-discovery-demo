@@ -1,0 +1,10 @@
+{
+  "contract_version": "tools-v1",
+  "request_id": "Q001",
+  "idempotency_key": "IDEMP-Q001",
+  "target_id": "DEMO-R1",
+  "evidence_snapshot_id": "EV-INITIAL-003",
+  "query": "target evidence, limitations and unresolved candidates",
+  "evidence_ids": [],
+  "include_unresolved_candidates": true
+}

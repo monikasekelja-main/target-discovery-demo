@@ -1,0 +1,18 @@
+{
+  "synthetic": true,
+  "contract_version": "tools-v1",
+  "request_id": "Q005",
+  "status": "MODEL_NOT_APPLICABLE",
+  "source_snapshot_ids": [
+    "registry-v1",
+    "META-001-v1"
+  ],
+  "data": null,
+  "error": {
+    "code": "CONTEXT_NOT_SUPPORTED",
+    "message": "Resting-cell model version cannot serve the stimulated context. No scientific prediction returned.",
+    "retryable": false,
+    "missing_fields": [],
+    "next_owner_role": "specialist predictive-model team"
+  }
+}

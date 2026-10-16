@@ -1,0 +1,216 @@
+{
+  "synthetic": true,
+  "evidence_version": "evidence-v1",
+  "context": {
+    "target": "DEMO-R1 (fictional cell-surface receptor)",
+    "disease_context": "inflammatory skin disease-like assay; no patient-efficacy claim",
+    "cell_context": "stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)",
+    "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+    "endpoint": "relative reduction in fraction of live CD4 T cells that are IL-17A positive",
+    "endpoint_time_hours": 72,
+    "assay_protocol_version": "mock-assay-v1"
+  },
+  "notice": "All target-specific data and source IDs are invented. No source ID denotes a published study. Sixteen records are not sixteen independent studies.",
+  "records": [
+    {
+      "id": "E01",
+      "type": "synthetic_measurement",
+      "family": "G01",
+      "claim": "Disease-associated locus; not gene-level causality.",
+      "measurements": {
+        "disease_odds_ratio": 1.16,
+        "reported_95_ci": [
+          1.1,
+          1.22
+        ]
+      },
+      "independent_gene_assignment": false
+    },
+    {
+      "id": "E02",
+      "type": "synthetic_analysis",
+      "family": "G01",
+      "claim": "Fine-mapping leaves ambiguity.",
+      "measurements": {
+        "credible_set_variant_count": 7,
+        "largest_variant_posterior": 0.41
+      },
+      "scope": "Variant posterior, not target-causality probability."
+    },
+    {
+      "id": "E03",
+      "type": "synthetic_analysis",
+      "family": "G01",
+      "claim": "Shared-variant support under coloc assumptions; direction not harmonized.",
+      "measurements": {
+        "PP_H4": 0.86,
+        "PP_H3": 0.1,
+        "remaining_posterior": 0.04
+      },
+      "context": "resting CD4 T-cell eQTL",
+      "risk_allele_to_expression_direction": "unresolved",
+      "limitations": "Shares the GWAS evidence family with E01/E02; not three independent studies."
+    },
+    {
+      "id": "E04",
+      "type": "synthetic_measurement",
+      "family": "C01",
+      "claim": "Target is measurable in the chosen cell type.",
+      "measurements": {
+        "activated_surface_MFI": [
+          1050,
+          1120,
+          1180,
+          1260,
+          1310
+        ],
+        "resting_surface_MFI": [
+          360,
+          390,
+          410,
+          440,
+          470
+        ],
+        "n_paired_donors": 5
+      },
+      "scope": "Expression supports assay relevance, not causality or direction."
+    },
+    {
+      "id": "E05",
+      "type": "model_card",
+      "family": "M01",
+      "claim": "The model-output adapter is synthetic and has no measured predictive accuracy.",
+      "model_version": "synthetic-model-v1",
+      "supported_prediction_context": "resting CD4 T cells",
+      "scope": "Cannot provide an in-domain prediction for the chosen stimulated assay."
+    },
+    {
+      "id": "E06",
+      "type": "synthetic_prediction",
+      "family": "M01",
+      "claim": "Hypothetical transcriptomic signature response in a related context.",
+      "measurements": {
+        "expression_reduction_pct": 50,
+        "signature_change_standardized_units": -0.65
+      },
+      "context": "resting CD4 T cells",
+      "endpoint": "transcriptomic inflammatory-signature score",
+      "uncertainty": "not calibrated",
+      "scope": "Not an IL-17A functional-effect prediction or probability of target success."
+    },
+    {
+      "id": "E07",
+      "type": "synthetic_measurement",
+      "family": "P01",
+      "claim": "Earlier bulk secretion result is confounded by loss of live cells.",
+      "measurements": {
+        "ntc_secreted_IL17A_pg_ml": [
+          600,
+          720,
+          540
+        ],
+        "kd_secreted_IL17A_pg_ml": [
+          360,
+          432,
+          324
+        ],
+        "ntc_live_cell_count": [
+          100000,
+          100000,
+          100000
+        ],
+        "kd_live_cell_count": [
+          60000,
+          60000,
+          60000
+        ],
+        "kd_viable_fraction_pct": [
+          63,
+          66,
+          62
+        ],
+        "n_paired_donors": 3
+      },
+      "scope": "A 40% bulk readout reduction accompanies 40% fewer live cells; it does not establish beneficial function."
+    },
+    {
+      "id": "E08",
+      "type": "evidence_gap",
+      "family": "P02",
+      "claim": "No relevant-context, controlled, non-cytotoxic expression-reduction experiment yet.",
+      "measurements": null
+    },
+    {
+      "id": "E09",
+      "type": "linked_safety_observation",
+      "family": "P01",
+      "claim": "Investigate cell loss and whether it is on-target, off-target, or delivery-related.",
+      "source_ids": [
+        "E07"
+      ],
+      "independent_evidence": false
+    },
+    {
+      "id": "E10",
+      "type": "evidence_gap",
+      "family": "S01",
+      "claim": "Tissue and systemic safety are unassessed.",
+      "measurements": null
+    },
+    {
+      "id": "E11",
+      "type": "modality_constraint",
+      "family": "F01",
+      "claim": "Fictional surface localization permits an antibody feasibility question; binding, desired functional effect, pocket/chemistry and exposure are unknown.",
+      "modality_status": {
+        "antibody": "conditional",
+        "small_molecule": "unknown"
+      }
+    },
+    {
+      "id": "E12",
+      "type": "modality_constraint",
+      "family": "F02",
+      "claim": "Expression reduction is conceptually aligned with an oligonucleotide hypothesis; relevant-cell delivery, isoform coverage and tolerability are untested.",
+      "modality_status": {
+        "oligonucleotide": "conditional"
+      }
+    },
+    {
+      "id": "E13",
+      "type": "secondary_summary",
+      "family": "G01",
+      "claim": "This locus proves inhibiting DEMO-R1 will improve disease.",
+      "source_ids": [
+        "E01"
+      ]
+    },
+    {
+      "id": "E14",
+      "type": "duplicate_extract",
+      "family": "G01",
+      "claim": "Restates the disease-locus association from E01.",
+      "duplicate_of": "E01",
+      "independent_evidence": false
+    },
+    {
+      "id": "E15",
+      "type": "unresolved_entity",
+      "family": "U01",
+      "target_text": "DEMO-RI (letter I)",
+      "claim": "Alias is not verified against the DEMO-R1 identifier.",
+      "measurements": null
+    },
+    {
+      "id": "E16",
+      "type": "incomplete_record",
+      "family": "U02",
+      "claim": "A reported 22% response has no specified cell context or endpoint.",
+      "measurements": {
+        "reported_reduction_pct": 22
+      },
+      "cell_context": null,
+      "endpoint": null
+    }
+  ]
+}

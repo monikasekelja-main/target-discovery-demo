@@ -1,0 +1,40 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "tools-v1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "title": "Request Id",
+      "type": "string"
+    },
+    "idempotency_key": {
+      "minLength": 1,
+      "title": "Idempotency Key",
+      "type": "string"
+    },
+    "study_id": {
+      "minLength": 1,
+      "title": "Study Id",
+      "type": "string"
+    },
+    "snapshot_id": {
+      "minLength": 1,
+      "title": "Snapshot Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "request_id",
+    "idempotency_key",
+    "study_id",
+    "snapshot_id"
+  ],
+  "title": "GetStudyManifestRequest",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

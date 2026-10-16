@@ -1,0 +1,91 @@
+{
+  "policy_version": "demo-policy-v1",
+  "synthetic": true,
+  "status": "proposed illustrative policy, not an organisational standard or validated assay specification",
+  "context": {
+    "target": "DEMO-R1 (fictional cell-surface receptor)",
+    "disease_context": "inflammatory skin disease-like assay; no patient-efficacy claim",
+    "cell_context": "stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)",
+    "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+    "endpoint": "relative reduction in fraction of live CD4 T cells that are IL-17A positive",
+    "endpoint_time_hours": 72,
+    "assay_protocol_version": "mock-assay-v1"
+  },
+  "donor_ids": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08"
+  ],
+  "assay_ids": [
+    "KD-A",
+    "KD-B"
+  ],
+  "assay_descriptions": {
+    "KD-A": "RNA knockdown, primary assay",
+    "KD-B": "CRISPRi expression reduction, corroborating method; same donors"
+  },
+  "required_measurement_fields": [
+    "technical_replicates",
+    "min_live_cd4_events_per_well",
+    "ntc_il17_positive_pct",
+    "kd_il17_positive_pct",
+    "unstim_il17_positive_pct",
+    "positive_control_il17_positive_pct",
+    "ntc_live_fraction_pct",
+    "kd_live_fraction_pct",
+    "positive_control_live_fraction_pct",
+    "positive_control_live_recovery_pct",
+    "ntc_live_cells",
+    "kd_live_cells",
+    "ntc_target_mfi",
+    "kd_target_mfi",
+    "max_technical_cv_pct"
+  ],
+  "minimum_useful_reduction_pct": 20,
+  "protein_reduction_range_pct": [
+    40,
+    70
+  ],
+  "min_live_cd4_events": 5000,
+  "technical_replicates_per_condition": 3,
+  "qc_thresholds": {
+    "ntc_viable_fraction_min_pct": 90,
+    "dynamic_range_min_fold": 3,
+    "positive_control_reduction_min_pct": 40,
+    "positive_control_viable_fraction_min_pct": 85,
+    "positive_control_recovery_min_pct": 90,
+    "max_technical_cv_pct": 15
+  },
+  "tolerability_thresholds": {
+    "viable_fraction_min_pct": 85,
+    "per_donor_recovery_min_pct": 85,
+    "mean_recovery_lower_ci_min_pct": 90
+  },
+  "prerequisite_rules": {
+    "G0": "Exact hypothesis, endpoint, context and policy version match.",
+    "G1": "Eight complete donor pairs per method, three technical wells averaged per condition, at least 5000 live CD4 events per well. No outcome-driven exclusions.",
+    "G2": "Each donor/method: NTC viable fraction >=90%; stimulated/unstimulated IL-17A-positive fraction ratio >=3; positive control functional reduction >=40%, viable fraction >=85%, live-cell recovery >=90%; maximum technical CV <=15%.",
+    "G3": "Each donor/method: target surface-protein MFI reduction within 40-70% inclusive.",
+    "G4": "Each donor/method: viable fraction >=85% and live-cell recovery >=85% of paired NTC. Each method: lower 95% CI for mean live-cell recovery >=90% of NTC."
+  },
+  "action_rules": {
+    "ADVANCE_TO_REPLICATION": "G0-G4 pass; both methods lower 95% confidence bound >=20% functional reduction. New donors/batches plus target-specificity work; specialist feasibility discussion only.",
+    "DEPRIORITIZE_TESTED_HYPOTHESIS": "G0-G4 pass; both methods upper 95% confidence bound <20%. Applies to useful mean benefit at achieved expression reduction in this assay/context only.",
+    "INCONCLUSIVE": "Any prerequisite fails, a useful-effect boundary is crossed, or methods disagree. No automatic advance or target-wide rejection."
+  },
+  "analysis": "For each donor: d = 100*(1 - KD_IL17_positive_fraction / matched_NTC_fraction). Equal-weight donor mean +/- t(0.975,7)*sample_SD/sqrt(8). Technical wells and individual cells do not increase n. Analyze methods separately; do not pool correlated methods.",
+  "rounding": "Display one decimal place; apply criteria to unrounded computed values, allowing only 1e-9 absolute units for floating-point noise.",
+  "limitations": [
+    "Eight donors is a demo size, not a powered sample-size recommendation.",
+    "Confidence intervals assume appropriate independent donor sampling and approximate normality of donor effects; synthetic data validate arithmetic only.",
+    "These are per-method intervals, not a jointly calibrated target-success probability or a multiplicity-adjusted discovery claim.",
+    "Twenty percent is a provisional useful-effect threshold, not literature-derived or clinically validated.",
+    "Expression reduction in two methods does not establish equivalence to inhibition, antagonism or degradation.",
+    "A viability pass does not establish tissue or systemic safety."
+  ]
+}

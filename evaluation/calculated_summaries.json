@@ -1,0 +1,729 @@
+{
+  "X101": {
+    "experiment_id": "X101",
+    "policy_version": "demo-policy-v1",
+    "proposed_action": "ADVANCE_TO_REPLICATION",
+    "reason": "Both methods meet the useful-effect criterion with intact prerequisites.",
+    "prerequisites_passed": true,
+    "failed_gates": [],
+    "statistics": {
+      "KD-A": {
+        "functional_reduction_pct": {
+          "mean": 32.0,
+          "lower_95": 29.511922118076697,
+          "upper_95": 34.4880778819233,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 96.375,
+          "lower_95": 95.19797788816842,
+          "upper_95": 97.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          48.0,
+          62.0
+        ],
+        "viable_fraction_range_pct": [
+          91,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 32.00000000000001,
+          "D02": 31.000000000000007,
+          "D03": 35.00000000000001,
+          "D04": 28.000000000000004,
+          "D05": 28.999999999999993,
+          "D06": 37.0,
+          "D07": 32.99999999999999,
+          "D08": 31.000000000000007
+        }
+      },
+      "KD-B": {
+        "functional_reduction_pct": {
+          "mean": 29.0,
+          "lower_95": 26.95217532822033,
+          "upper_95": 31.04782467177967,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 95.375,
+          "lower_95": 94.19797788816842,
+          "upper_95": 96.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          46.00000000000001,
+          60.0
+        ],
+        "viable_fraction_range_pct": [
+          90,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 29.000000000000004,
+          "D02": 29.000000000000004,
+          "D03": 30.000000000000004,
+          "D04": 27.0,
+          "D05": 30.999999999999993,
+          "D06": 28.000000000000004,
+          "D07": 32.99999999999999,
+          "D08": 25.0
+        }
+      }
+    },
+    "human_review_required": true,
+    "claim_scope": {
+      "target": "DEMO-R1 (fictional cell-surface receptor)",
+      "disease_context": "inflammatory skin disease-like assay; no patient-efficacy claim",
+      "cell_context": "stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)",
+      "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+      "endpoint": "relative reduction in fraction of live CD4 T cells that are IL-17A positive",
+      "endpoint_time_hours": 72,
+      "assay_protocol_version": "mock-assay-v1"
+    }
+  },
+  "X102": {
+    "experiment_id": "X102",
+    "policy_version": "demo-policy-v1",
+    "proposed_action": "DEPRIORITIZE_TESTED_HYPOTHESIS",
+    "reason": "Both methods exclude the predefined useful mean effect in this tested setting.",
+    "prerequisites_passed": true,
+    "failed_gates": [],
+    "statistics": {
+      "KD-A": {
+        "functional_reduction_pct": {
+          "mean": 2.9999999999999982,
+          "lower_95": 0.8107833400050475,
+          "upper_95": 5.189216659994949,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 96.375,
+          "lower_95": 95.19797788816842,
+          "upper_95": 97.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          48.0,
+          62.0
+        ],
+        "viable_fraction_range_pct": [
+          91,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 1.9999999999999907,
+          "D02": 4.999999999999993,
+          "D03": -1.0000000000000009,
+          "D04": 3.9999999999999925,
+          "D05": 7.000000000000006,
+          "D06": 0.0,
+          "D07": 3.0000000000000027,
+          "D08": 4.0000000000000036
+        }
+      },
+      "KD-B": {
+        "functional_reduction_pct": {
+          "mean": 2.0000000000000018,
+          "lower_95": 0.10408275805625355,
+          "upper_95": 3.89591724194375,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 95.375,
+          "lower_95": 94.19797788816842,
+          "upper_95": 96.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          46.00000000000001,
+          60.0
+        ],
+        "viable_fraction_range_pct": [
+          90,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 1.0000000000000009,
+          "D02": 4.0000000000000036,
+          "D03": 0.0,
+          "D04": 2.0000000000000018,
+          "D05": 5.000000000000004,
+          "D06": -2.0000000000000018,
+          "D07": 3.0000000000000027,
+          "D08": 3.0000000000000027
+        }
+      }
+    },
+    "human_review_required": true,
+    "claim_scope": {
+      "target": "DEMO-R1 (fictional cell-surface receptor)",
+      "disease_context": "inflammatory skin disease-like assay; no patient-efficacy claim",
+      "cell_context": "stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)",
+      "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+      "endpoint": "relative reduction in fraction of live CD4 T cells that are IL-17A positive",
+      "endpoint_time_hours": 72,
+      "assay_protocol_version": "mock-assay-v1"
+    }
+  },
+  "X103": {
+    "experiment_id": "X103",
+    "policy_version": "demo-policy-v1",
+    "proposed_action": "INCONCLUSIVE",
+    "reason": "At least one interval crosses the useful-effect boundary, or the methods disagree.",
+    "prerequisites_passed": true,
+    "failed_gates": [],
+    "statistics": {
+      "KD-A": {
+        "functional_reduction_pct": {
+          "mean": 23.0,
+          "lower_95": 5.181067372974798,
+          "upper_95": 40.818932627025205,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 96.375,
+          "lower_95": 95.19797788816842,
+          "upper_95": 97.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          48.0,
+          62.0
+        ],
+        "viable_fraction_range_pct": [
+          91,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": -8.000000000000007,
+          "D02": 4.0000000000000036,
+          "D03": 12.0,
+          "D04": 16.999999999999993,
+          "D05": 24.0,
+          "D06": 32.99999999999999,
+          "D07": 47.0,
+          "D08": 55.00000000000001
+        }
+      },
+      "KD-B": {
+        "functional_reduction_pct": {
+          "mean": 24.0,
+          "lower_95": 8.062262143793099,
+          "upper_95": 39.9377378562069,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 95.375,
+          "lower_95": 94.19797788816842,
+          "upper_95": 96.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          46.00000000000001,
+          60.0
+        ],
+        "viable_fraction_range_pct": [
+          90,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": -2.0000000000000018,
+          "D02": 8.000000000000007,
+          "D03": 13.0,
+          "D04": 16.999999999999993,
+          "D05": 24.0,
+          "D06": 32.99999999999999,
+          "D07": 43.99999999999999,
+          "D08": 55.00000000000001
+        }
+      }
+    },
+    "human_review_required": true,
+    "claim_scope": {
+      "target": "DEMO-R1 (fictional cell-surface receptor)",
+      "disease_context": "inflammatory skin disease-like assay; no patient-efficacy claim",
+      "cell_context": "stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)",
+      "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+      "endpoint": "relative reduction in fraction of live CD4 T cells that are IL-17A positive",
+      "endpoint_time_hours": 72,
+      "assay_protocol_version": "mock-assay-v1"
+    }
+  },
+  "X104": {
+    "experiment_id": "X104",
+    "policy_version": "demo-policy-v1",
+    "proposed_action": "INCONCLUSIVE",
+    "reason": "A prerequisite failed; effect estimates are diagnostic only. Investigate the failed gate.",
+    "prerequisites_passed": false,
+    "failed_gates": [
+      "G4:KD-A/D01: cell-loss/viability requirement failed",
+      "G4:KD-A/D02: cell-loss/viability requirement failed",
+      "G4:KD-A/D03: cell-loss/viability requirement failed",
+      "G4:KD-A/D04: cell-loss/viability requirement failed",
+      "G4:KD-A/D05: cell-loss/viability requirement failed",
+      "G4:KD-A/D06: cell-loss/viability requirement failed",
+      "G4:KD-A/D07: cell-loss/viability requirement failed",
+      "G4:KD-A/D08: cell-loss/viability requirement failed",
+      "G4:KD-A: lower 95% bound on mean live-cell recovery below policy threshold",
+      "G4:KD-B/D01: cell-loss/viability requirement failed",
+      "G4:KD-B/D02: cell-loss/viability requirement failed",
+      "G4:KD-B/D03: cell-loss/viability requirement failed",
+      "G4:KD-B/D04: cell-loss/viability requirement failed",
+      "G4:KD-B/D05: cell-loss/viability requirement failed",
+      "G4:KD-B/D06: cell-loss/viability requirement failed",
+      "G4:KD-B/D07: cell-loss/viability requirement failed",
+      "G4:KD-B/D08: cell-loss/viability requirement failed",
+      "G4:KD-B: lower 95% bound on mean live-cell recovery below policy threshold"
+    ],
+    "statistics": {
+      "KD-A": {
+        "functional_reduction_pct": {
+          "mean": 32.0,
+          "lower_95": 29.511922118076697,
+          "upper_95": 34.4880778819233,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 61.875,
+          "lower_95": 59.45043637181555,
+          "upper_95": 64.29956362818444,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          48.0,
+          62.0
+        ],
+        "viable_fraction_range_pct": [
+          60,
+          68
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 32.00000000000001,
+          "D02": 31.000000000000007,
+          "D03": 35.00000000000001,
+          "D04": 28.000000000000004,
+          "D05": 28.999999999999993,
+          "D06": 37.0,
+          "D07": 32.99999999999999,
+          "D08": 31.000000000000007
+        }
+      },
+      "KD-B": {
+        "functional_reduction_pct": {
+          "mean": 29.0,
+          "lower_95": 26.95217532822033,
+          "upper_95": 31.04782467177967,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 61.875,
+          "lower_95": 59.45043637181555,
+          "upper_95": 64.29956362818444,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          46.00000000000001,
+          60.0
+        ],
+        "viable_fraction_range_pct": [
+          60,
+          68
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 29.000000000000004,
+          "D02": 29.000000000000004,
+          "D03": 30.000000000000004,
+          "D04": 27.0,
+          "D05": 30.999999999999993,
+          "D06": 28.000000000000004,
+          "D07": 32.99999999999999,
+          "D08": 25.0
+        }
+      }
+    },
+    "human_review_required": true,
+    "claim_scope": {
+      "target": "DEMO-R1 (fictional cell-surface receptor)",
+      "disease_context": "inflammatory skin disease-like assay; no patient-efficacy claim",
+      "cell_context": "stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)",
+      "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+      "endpoint": "relative reduction in fraction of live CD4 T cells that are IL-17A positive",
+      "endpoint_time_hours": 72,
+      "assay_protocol_version": "mock-assay-v1"
+    }
+  },
+  "X105": {
+    "experiment_id": "X105",
+    "policy_version": "demo-policy-v1",
+    "proposed_action": "INCONCLUSIVE",
+    "reason": "A prerequisite failed; effect estimates are diagnostic only. Investigate the failed gate.",
+    "prerequisites_passed": false,
+    "failed_gates": [
+      "G2:KD-A/D01: assay-control/QC requirement failed",
+      "G2:KD-A/D02: assay-control/QC requirement failed",
+      "G2:KD-A/D03: assay-control/QC requirement failed",
+      "G2:KD-A/D04: assay-control/QC requirement failed",
+      "G2:KD-A/D05: assay-control/QC requirement failed",
+      "G2:KD-A/D06: assay-control/QC requirement failed",
+      "G2:KD-A/D07: assay-control/QC requirement failed",
+      "G2:KD-A/D08: assay-control/QC requirement failed",
+      "G2:KD-B/D01: assay-control/QC requirement failed",
+      "G2:KD-B/D02: assay-control/QC requirement failed",
+      "G2:KD-B/D03: assay-control/QC requirement failed",
+      "G2:KD-B/D04: assay-control/QC requirement failed",
+      "G2:KD-B/D05: assay-control/QC requirement failed",
+      "G2:KD-B/D06: assay-control/QC requirement failed",
+      "G2:KD-B/D07: assay-control/QC requirement failed",
+      "G2:KD-B/D08: assay-control/QC requirement failed"
+    ],
+    "statistics": {
+      "KD-A": {
+        "functional_reduction_pct": {
+          "mean": 2.9999999999999982,
+          "lower_95": 0.8107833400050475,
+          "upper_95": 5.189216659994949,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 96.375,
+          "lower_95": 95.19797788816842,
+          "upper_95": 97.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          48.0,
+          62.0
+        ],
+        "viable_fraction_range_pct": [
+          91,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 1.9999999999999907,
+          "D02": 4.999999999999993,
+          "D03": -1.0000000000000009,
+          "D04": 3.9999999999999925,
+          "D05": 7.000000000000006,
+          "D06": 0.0,
+          "D07": 3.0000000000000027,
+          "D08": 4.0000000000000036
+        }
+      },
+      "KD-B": {
+        "functional_reduction_pct": {
+          "mean": 2.0000000000000018,
+          "lower_95": 0.10408275805625355,
+          "upper_95": 3.89591724194375,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 95.375,
+          "lower_95": 94.19797788816842,
+          "upper_95": 96.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          46.00000000000001,
+          60.0
+        ],
+        "viable_fraction_range_pct": [
+          90,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 1.0000000000000009,
+          "D02": 4.0000000000000036,
+          "D03": 0.0,
+          "D04": 2.0000000000000018,
+          "D05": 5.000000000000004,
+          "D06": -2.0000000000000018,
+          "D07": 3.0000000000000027,
+          "D08": 3.0000000000000027
+        }
+      }
+    },
+    "human_review_required": true,
+    "claim_scope": {
+      "target": "DEMO-R1 (fictional cell-surface receptor)",
+      "disease_context": "inflammatory skin disease-like assay; no patient-efficacy claim",
+      "cell_context": "stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)",
+      "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+      "endpoint": "relative reduction in fraction of live CD4 T cells that are IL-17A positive",
+      "endpoint_time_hours": 72,
+      "assay_protocol_version": "mock-assay-v1"
+    }
+  },
+  "X106": {
+    "experiment_id": "X106",
+    "policy_version": "demo-policy-v1",
+    "proposed_action": "INCONCLUSIVE",
+    "reason": "A prerequisite failed; effect estimates are diagnostic only. Investigate the failed gate.",
+    "prerequisites_passed": false,
+    "failed_gates": [
+      "G3:KD-A/D01: protein reduction outside specified range",
+      "G3:KD-A/D02: protein reduction outside specified range",
+      "G3:KD-A/D03: protein reduction outside specified range",
+      "G3:KD-A/D04: protein reduction outside specified range",
+      "G3:KD-A/D05: protein reduction outside specified range",
+      "G3:KD-A/D06: protein reduction outside specified range",
+      "G3:KD-A/D07: protein reduction outside specified range",
+      "G3:KD-A/D08: protein reduction outside specified range",
+      "G3:KD-B/D01: protein reduction outside specified range",
+      "G3:KD-B/D02: protein reduction outside specified range",
+      "G3:KD-B/D03: protein reduction outside specified range",
+      "G3:KD-B/D04: protein reduction outside specified range",
+      "G3:KD-B/D05: protein reduction outside specified range",
+      "G3:KD-B/D06: protein reduction outside specified range",
+      "G3:KD-B/D07: protein reduction outside specified range",
+      "G3:KD-B/D08: protein reduction outside specified range"
+    ],
+    "statistics": {
+      "KD-A": {
+        "functional_reduction_pct": {
+          "mean": 2.9999999999999982,
+          "lower_95": 0.8107833400050475,
+          "upper_95": 5.189216659994949,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 96.375,
+          "lower_95": 95.19797788816842,
+          "upper_95": 97.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          18.000000000000004,
+          18.000000000000004
+        ],
+        "viable_fraction_range_pct": [
+          91,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 1.9999999999999907,
+          "D02": 4.999999999999993,
+          "D03": -1.0000000000000009,
+          "D04": 3.9999999999999925,
+          "D05": 7.000000000000006,
+          "D06": 0.0,
+          "D07": 3.0000000000000027,
+          "D08": 4.0000000000000036
+        }
+      },
+      "KD-B": {
+        "functional_reduction_pct": {
+          "mean": 2.0000000000000018,
+          "lower_95": 0.10408275805625355,
+          "upper_95": 3.89591724194375,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 95.375,
+          "lower_95": 94.19797788816842,
+          "upper_95": 96.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          18.000000000000004,
+          18.000000000000004
+        ],
+        "viable_fraction_range_pct": [
+          90,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 1.0000000000000009,
+          "D02": 4.0000000000000036,
+          "D03": 0.0,
+          "D04": 2.0000000000000018,
+          "D05": 5.000000000000004,
+          "D06": -2.0000000000000018,
+          "D07": 3.0000000000000027,
+          "D08": 3.0000000000000027
+        }
+      }
+    },
+    "human_review_required": true,
+    "claim_scope": {
+      "target": "DEMO-R1 (fictional cell-surface receptor)",
+      "disease_context": "inflammatory skin disease-like assay; no patient-efficacy claim",
+      "cell_context": "stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)",
+      "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+      "endpoint": "relative reduction in fraction of live CD4 T cells that are IL-17A positive",
+      "endpoint_time_hours": 72,
+      "assay_protocol_version": "mock-assay-v1"
+    }
+  },
+  "X107": {
+    "experiment_id": "X107",
+    "policy_version": "demo-policy-v1",
+    "proposed_action": "INCONCLUSIVE",
+    "reason": "At least one interval crosses the useful-effect boundary, or the methods disagree.",
+    "prerequisites_passed": true,
+    "failed_gates": [],
+    "statistics": {
+      "KD-A": {
+        "functional_reduction_pct": {
+          "mean": 32.0,
+          "lower_95": 29.511922118076697,
+          "upper_95": 34.4880778819233,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 96.375,
+          "lower_95": 95.19797788816842,
+          "upper_95": 97.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          48.0,
+          62.0
+        ],
+        "viable_fraction_range_pct": [
+          91,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 32.00000000000001,
+          "D02": 31.000000000000007,
+          "D03": 35.00000000000001,
+          "D04": 28.000000000000004,
+          "D05": 28.999999999999993,
+          "D06": 37.0,
+          "D07": 32.99999999999999,
+          "D08": 31.000000000000007
+        }
+      },
+      "KD-B": {
+        "functional_reduction_pct": {
+          "mean": 2.0000000000000018,
+          "lower_95": 0.10408275805625355,
+          "upper_95": 3.89591724194375,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 95.375,
+          "lower_95": 94.19797788816842,
+          "upper_95": 96.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          46.00000000000001,
+          60.0
+        ],
+        "viable_fraction_range_pct": [
+          90,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 1.0000000000000009,
+          "D02": 4.0000000000000036,
+          "D03": 0.0,
+          "D04": 2.0000000000000018,
+          "D05": 5.000000000000004,
+          "D06": -2.0000000000000018,
+          "D07": 3.0000000000000027,
+          "D08": 3.0000000000000027
+        }
+      }
+    },
+    "human_review_required": true,
+    "claim_scope": {
+      "target": "DEMO-R1 (fictional cell-surface receptor)",
+      "disease_context": "inflammatory skin disease-like assay; no patient-efficacy claim",
+      "cell_context": "stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)",
+      "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+      "endpoint": "relative reduction in fraction of live CD4 T cells that are IL-17A positive",
+      "endpoint_time_hours": 72,
+      "assay_protocol_version": "mock-assay-v1"
+    }
+  },
+  "X108": {
+    "experiment_id": "X108",
+    "policy_version": "demo-policy-v1",
+    "proposed_action": "INCONCLUSIVE",
+    "reason": "A prerequisite failed; effect estimates are diagnostic only. Investigate the failed gate.",
+    "prerequisites_passed": false,
+    "failed_gates": [
+      "G0: hypothesis/assay context mismatch"
+    ],
+    "statistics": {
+      "KD-A": {
+        "functional_reduction_pct": {
+          "mean": 32.0,
+          "lower_95": 29.511922118076697,
+          "upper_95": 34.4880778819233,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 96.375,
+          "lower_95": 95.19797788816842,
+          "upper_95": 97.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          48.0,
+          62.0
+        ],
+        "viable_fraction_range_pct": [
+          91,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 32.00000000000001,
+          "D02": 31.000000000000007,
+          "D03": 35.00000000000001,
+          "D04": 28.000000000000004,
+          "D05": 28.999999999999993,
+          "D06": 37.0,
+          "D07": 32.99999999999999,
+          "D08": 31.000000000000007
+        }
+      },
+      "KD-B": {
+        "functional_reduction_pct": {
+          "mean": 29.0,
+          "lower_95": 26.95217532822033,
+          "upper_95": 31.04782467177967,
+          "n_donors": 8
+        },
+        "live_cell_recovery_pct": {
+          "mean": 95.375,
+          "lower_95": 94.19797788816842,
+          "upper_95": 96.55202211183158,
+          "n_donors": 8
+        },
+        "protein_reduction_range_pct": [
+          46.00000000000001,
+          60.0
+        ],
+        "viable_fraction_range_pct": [
+          90,
+          94
+        ],
+        "donor_functional_reductions_pct": {
+          "D01": 29.000000000000004,
+          "D02": 29.000000000000004,
+          "D03": 30.000000000000004,
+          "D04": 27.0,
+          "D05": 30.999999999999993,
+          "D06": 28.000000000000004,
+          "D07": 32.99999999999999,
+          "D08": 25.0
+        }
+      }
+    },
+    "human_review_required": true,
+    "claim_scope": {
+      "target": "DEMO-R1 (fictional cell-surface receptor)",
+      "disease_context": "inflammatory skin disease-like assay; no patient-efficacy claim",
+      "cell_context": "stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)",
+      "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+      "endpoint": "relative reduction in fraction of live CD4 T cells that are IL-17A positive",
+      "endpoint_time_hours": 72,
+      "assay_protocol_version": "mock-assay-v1"
+    }
+  }
+}

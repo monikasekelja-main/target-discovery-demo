@@ -1,0 +1,118 @@
+{
+  "synthetic": true,
+  "source_id": "SRC-CRO",
+  "export_version": "CRO-v1",
+  "derivation": "View of initial_evidence.json evidence-v1; no independent new support.",
+  "rows": [
+    {
+      "row_id": "CRO-E07",
+      "analyte": "DEMO-R1",
+      "study_code": "S-P01",
+      "unit_map": {
+        "ntc_secreted_IL17A_pg_ml": "pg/ml",
+        "kd_secreted_IL17A_pg_ml": "pg/ml",
+        "ntc_live_cell_count": "cells",
+        "kd_live_cell_count": "cells",
+        "kd_viable_fraction_pct": "percent",
+        "n_paired_donors": "count"
+      },
+      "report": {
+        "id": "E07",
+        "type": "synthetic_measurement",
+        "family": "P01",
+        "claim": "Earlier bulk secretion result is confounded by loss of live cells.",
+        "measurements": {
+          "ntc_secreted_IL17A_pg_ml": [
+            600,
+            720,
+            540
+          ],
+          "kd_secreted_IL17A_pg_ml": [
+            360,
+            432,
+            324
+          ],
+          "ntc_live_cell_count": [
+            100000,
+            100000,
+            100000
+          ],
+          "kd_live_cell_count": [
+            60000,
+            60000,
+            60000
+          ],
+          "kd_viable_fraction_pct": [
+            63,
+            66,
+            62
+          ],
+          "n_paired_donors": 3
+        },
+        "scope": "A 40% bulk readout reduction accompanies 40% fewer live cells; it does not establish beneficial function."
+      }
+    },
+    {
+      "row_id": "CRO-E08",
+      "analyte": "DEMO-R1",
+      "study_code": "S-P02",
+      "unit_map": {},
+      "report": {
+        "id": "E08",
+        "type": "evidence_gap",
+        "family": "P02",
+        "claim": "No relevant-context, controlled, non-cytotoxic expression-reduction experiment yet.",
+        "measurements": null
+      }
+    },
+    {
+      "row_id": "CRO-E09",
+      "analyte": "DEMO-R1",
+      "study_code": "S-P01",
+      "unit_map": {},
+      "report": {
+        "id": "E09",
+        "type": "linked_safety_observation",
+        "family": "P01",
+        "claim": "Investigate cell loss and whether it is on-target, off-target, or delivery-related.",
+        "source_ids": [
+          "E07"
+        ],
+        "independent_evidence": false
+      }
+    },
+    {
+      "row_id": "CRO-E15",
+      "analyte": "DEMO-RI",
+      "study_code": "S-U01",
+      "unit_map": {},
+      "report": {
+        "id": "E15",
+        "type": "unresolved_entity",
+        "family": "U01",
+        "target_text": "DEMO-RI (letter I)",
+        "claim": "Alias is not verified against the DEMO-R1 identifier.",
+        "measurements": null
+      }
+    },
+    {
+      "row_id": "CRO-E16",
+      "analyte": "DEMO-R1",
+      "study_code": "S-U02",
+      "unit_map": {
+        "reported_reduction_pct": "percent_unspecified_denominator"
+      },
+      "report": {
+        "id": "E16",
+        "type": "incomplete_record",
+        "family": "U02",
+        "claim": "A reported 22% response has no specified cell context or endpoint.",
+        "measurements": {
+          "reported_reduction_pct": 22
+        },
+        "cell_context": null,
+        "endpoint": null
+      }
+    }
+  ]
+}

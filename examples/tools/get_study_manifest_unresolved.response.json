@@ -1,0 +1,21 @@
+{
+  "synthetic": true,
+  "contract_version": "tools-v1",
+  "request_id": "Q003",
+  "status": "NEEDS_METADATA",
+  "source_snapshot_ids": [
+    "CRO-v1"
+  ],
+  "data": null,
+  "error": {
+    "code": "INCOMPLETE_SOURCE_METADATA",
+    "message": "E16 still lacks cell context, endpoint and denominator; the target-study manifest cannot fill these fields.",
+    "retryable": false,
+    "missing_fields": [
+      "cell_context",
+      "endpoint",
+      "denominator"
+    ],
+    "next_owner_role": "CRO data owner"
+  }
+}

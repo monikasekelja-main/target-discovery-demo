@@ -1,0 +1,41 @@
+{
+  "synthetic": true,
+  "workflow_contract_version": "workflow-v1",
+  "initial_metadata_calls_max": 1,
+  "post_challenge_followups_max": 1,
+  "transient_retries_per_call_max": 1,
+  "retry_rule": "Same semantic input, request ID and idempotency key; attempt number belongs in the event log.",
+  "technical_retry_exhausted": "Persist blocked/partial status and assign service owner; no new scientific result.",
+  "context_rule": "Registry, manifest and canonical attributes must agree before prediction.",
+  "approval_binding": "SHA-256 of complete DecisionBrief including version bundle; changed content requires new assessment and review.",
+  "ownership": {
+    "scientific_decision": "biology reviewer",
+    "workflow": "DDS workflow lead",
+    "model_validity": "specialist predictive-model team",
+    "infrastructure": "technology/platform partners"
+  },
+  "states": {
+    "NEEDS_METADATA": "Query exact manifest once; if unresolved, stop dependent calls and ask data owner.",
+    "MODEL_NOT_APPLICABLE": "Abstain or select a registered eligible alternative; not a negative biological result.",
+    "TECHNICAL_RETRY": "Retry transient error at most once; preserve same inputs/key.",
+    "SCHEMA_OR_QC_REVIEW": "Review invalid input, context, controls or failed intended perturbation; do not rerun until favourable.",
+    "BIOLOGY_UNRESOLVED": "Valid imprecision, disagreement or cell-loss confound; retain specific reasons for biology.",
+    "READY_FOR_BIOLOGY_REVIEW": "Complete proposal awaiting human review, not authorization to act.",
+    "HANDOFF_NEEDS_INFORMATION": "Specialist requests a specific missing item and next owner; preserve biology assessment."
+  },
+  "response_to_state": {
+    "NEEDS_METADATA": "NEEDS_METADATA",
+    "MODEL_NOT_APPLICABLE": "MODEL_NOT_APPLICABLE",
+    "TECHNICAL_ERROR": "TECHNICAL_RETRY",
+    "INVALID_INPUT": "SCHEMA_OR_QC_REVIEW"
+  },
+  "not_found_rule": "No result; retain a source gap. Missing manifest blocks prediction. Do not infer lack of biological effect.",
+  "scientific_actions": [
+    "EXPERIMENT_TO_RESOLVE_UNCERTAINTY",
+    "ADVANCE_TO_REPLICATION",
+    "DEPRIORITIZE_TESTED_HYPOTHESIS",
+    "INCONCLUSIVE"
+  ],
+  "technical_state_is_not_scientific_action": true,
+  "implementation_status": "Implemented by reference CLI v1: local adapters, bounded retries, SQLite history, review/resume and simulated handoff. Agents, UI and production deployment remain later work."
+}

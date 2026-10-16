@@ -1,0 +1,64 @@
+{
+  "typed_json_files": 35,
+  "json_schemas": 16,
+  "preserved_evidence_records": 16,
+  "experimental_cases": 8,
+  "reference_briefs": 4,
+  "status": "PASS",
+  "scope": "Structure, provenance, applicability, arithmetic, branching and review binding only. No LLM or biological evaluation.",
+  "package_version": "demo-fixtures-v3",
+  "implementation_version": "reference-cli-v1",
+  "verification_date": "2026-10-13",
+  "regression_tests_passed": 46,
+  "regression_command": "python -m unittest -v verify verify_contracts verify_workflow",
+  "targeted_followup": "Readable handoff export with review status and owner also verified after final formatting change.",
+  "cli_integration_tests": 20,
+  "llm_trials_executed": 0,
+  "real_predictive_models_executed": 0,
+  "captured_example": {
+    "path": "recorded_examples/supportive",
+    "event_count": 24,
+    "reviews": "explicitly simulated",
+    "final_status": "HANDOFF_NEEDS_INFORMATION"
+  },
+  "prior_archive_comparison": "Original 11 evidence/policy/calculator/experimental files preserved byte-for-byte.",
+  "agent_layer_verification": {
+    "date": "2026-10-14",
+    "suite": "python -m unittest verify verify_contracts verify_workflow verify_agents",
+    "total_tests_passed": 71,
+    "original_tests": 46,
+    "new_agent_tests": 25,
+    "live_api_executed": false,
+    "live_scientific_quality_evaluated": false,
+    "offline_captures": [
+      "agent-initial",
+      "agent-supportive"
+    ],
+    "note": "Scripted/fault-injected providers and mocked HTTP transport; not the planned 28/56 live trials."
+  },
+  "agent_layer_v2_verification": {
+    "tests_passed": 79,
+    "new_regression_tests": 8,
+    "v2_live_calls_executed": false,
+    "scope": "Schema, fixed status consistency, failed-check enforcement, historical rendering and probe construction/grading; not live semantic performance."
+  },
+  "advanced_probe_verification": {
+    "date": "2026-10-15",
+    "total_tests_passed": 84,
+    "added_tests": 5,
+    "advanced_live_calls_executed": false,
+    "agent_prompts_changed": false
+  },
+  "streamlit_slice1": {
+    "date": "2026-10-15",
+    "tests_passed": 98,
+    "new_ui_tests": 14,
+    "streamlit_version": "1.66.0",
+    "plotly_version": "7.1.0",
+    "startup_http_checked": true,
+    "browser_visual_checked": false,
+    "browser_limitation": "Remote browser cannot reach local server; local browser binary download failed.",
+    "ui_model_calls": false,
+    "ui_workflow_mutations": false
+  }
+}

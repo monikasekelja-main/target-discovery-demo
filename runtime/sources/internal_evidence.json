@@ -1,0 +1,236 @@
+{
+  "synthetic": true,
+  "source_id": "SRC-INTERNAL",
+  "snapshot_id": "INTERNAL-v1",
+  "derivation": "View of initial_evidence.json evidence-v1; no independent new support.",
+  "analysis_request": {
+    "study_id": "S-TARGET-001",
+    "metadata_snapshot_id": "META-001-v1",
+    "target_label": "DEMO_R1",
+    "species": "human",
+    "cell_type": "CD4 T cell",
+    "cell_state": null,
+    "context_id": null,
+    "input_snapshot_id": "SC-STIM-001-v1",
+    "status": "NEEDS_METADATA",
+    "required_missing_fields": [
+      "cell_state",
+      "context_id"
+    ],
+    "note": "Missing application-input metadata; not the historical resting-cell model record."
+  },
+  "items": [
+    {
+      "record_key": "INT-E01",
+      "target_label": "DEMO_R1",
+      "study_ref": "S-G01",
+      "units": {
+        "disease_odds_ratio": "dimensionless",
+        "reported_95_ci": "odds_ratio"
+      },
+      "record_payload": {
+        "id": "E01",
+        "type": "synthetic_measurement",
+        "family": "G01",
+        "claim": "Disease-associated locus; not gene-level causality.",
+        "measurements": {
+          "disease_odds_ratio": 1.16,
+          "reported_95_ci": [
+            1.1,
+            1.22
+          ]
+        },
+        "independent_gene_assignment": false
+      }
+    },
+    {
+      "record_key": "INT-E02",
+      "target_label": "DEMO_R1",
+      "study_ref": "S-G01",
+      "units": {
+        "credible_set_variant_count": "count",
+        "largest_variant_posterior": "probability_of_variant_assignment"
+      },
+      "record_payload": {
+        "id": "E02",
+        "type": "synthetic_analysis",
+        "family": "G01",
+        "claim": "Fine-mapping leaves ambiguity.",
+        "measurements": {
+          "credible_set_variant_count": 7,
+          "largest_variant_posterior": 0.41
+        },
+        "scope": "Variant posterior, not target-causality probability."
+      }
+    },
+    {
+      "record_key": "INT-E03",
+      "target_label": "DEMO_R1",
+      "study_ref": "S-G01",
+      "units": {
+        "PP_H4": "posterior_under_coloc_assumptions",
+        "PP_H3": "posterior_under_coloc_assumptions",
+        "remaining_posterior": "posterior_under_coloc_assumptions"
+      },
+      "record_payload": {
+        "id": "E03",
+        "type": "synthetic_analysis",
+        "family": "G01",
+        "claim": "Shared-variant support under coloc assumptions; direction not harmonized.",
+        "measurements": {
+          "PP_H4": 0.86,
+          "PP_H3": 0.1,
+          "remaining_posterior": 0.04
+        },
+        "context": "resting CD4 T-cell eQTL",
+        "risk_allele_to_expression_direction": "unresolved",
+        "limitations": "Shares the GWAS evidence family with E01/E02; not three independent studies."
+      }
+    },
+    {
+      "record_key": "INT-E04",
+      "target_label": "DEMO_R1",
+      "study_ref": "S-C01",
+      "units": {
+        "activated_surface_MFI": "arbitrary_fluorescence_units",
+        "resting_surface_MFI": "arbitrary_fluorescence_units",
+        "n_paired_donors": "count"
+      },
+      "record_payload": {
+        "id": "E04",
+        "type": "synthetic_measurement",
+        "family": "C01",
+        "claim": "Target is measurable in the chosen cell type.",
+        "measurements": {
+          "activated_surface_MFI": [
+            1050,
+            1120,
+            1180,
+            1260,
+            1310
+          ],
+          "resting_surface_MFI": [
+            360,
+            390,
+            410,
+            440,
+            470
+          ],
+          "n_paired_donors": 5
+        },
+        "scope": "Expression supports assay relevance, not causality or direction."
+      }
+    },
+    {
+      "record_key": "INT-E05",
+      "target_label": "DEMO_R1",
+      "study_ref": "S-M01",
+      "units": {},
+      "record_payload": {
+        "id": "E05",
+        "type": "model_card",
+        "family": "M01",
+        "claim": "The model-output adapter is synthetic and has no measured predictive accuracy.",
+        "model_version": "synthetic-model-v1",
+        "supported_prediction_context": "resting CD4 T cells",
+        "scope": "Cannot provide an in-domain prediction for the chosen stimulated assay."
+      }
+    },
+    {
+      "record_key": "INT-E06",
+      "target_label": "DEMO_R1",
+      "study_ref": "S-M01",
+      "units": {
+        "expression_reduction_pct": "relative_percent_reduction",
+        "signature_change_standardized_units": "standardized_signature_units"
+      },
+      "record_payload": {
+        "id": "E06",
+        "type": "synthetic_prediction",
+        "family": "M01",
+        "claim": "Hypothetical transcriptomic signature response in a related context.",
+        "measurements": {
+          "expression_reduction_pct": 50,
+          "signature_change_standardized_units": -0.65
+        },
+        "context": "resting CD4 T cells",
+        "endpoint": "transcriptomic inflammatory-signature score",
+        "uncertainty": "not calibrated",
+        "scope": "Not an IL-17A functional-effect prediction or probability of target success."
+      }
+    },
+    {
+      "record_key": "INT-E10",
+      "target_label": "DEMO_R1",
+      "study_ref": "S-S01",
+      "units": {},
+      "record_payload": {
+        "id": "E10",
+        "type": "evidence_gap",
+        "family": "S01",
+        "claim": "Tissue and systemic safety are unassessed.",
+        "measurements": null
+      }
+    },
+    {
+      "record_key": "INT-E11",
+      "target_label": "DEMO_R1",
+      "study_ref": "S-F01",
+      "units": {},
+      "record_payload": {
+        "id": "E11",
+        "type": "modality_constraint",
+        "family": "F01",
+        "claim": "Fictional surface localization permits an antibody feasibility question; binding, desired functional effect, pocket/chemistry and exposure are unknown.",
+        "modality_status": {
+          "antibody": "conditional",
+          "small_molecule": "unknown"
+        }
+      }
+    },
+    {
+      "record_key": "INT-E12",
+      "target_label": "DEMO_R1",
+      "study_ref": "S-F02",
+      "units": {},
+      "record_payload": {
+        "id": "E12",
+        "type": "modality_constraint",
+        "family": "F02",
+        "claim": "Expression reduction is conceptually aligned with an oligonucleotide hypothesis; relevant-cell delivery, isoform coverage and tolerability are untested.",
+        "modality_status": {
+          "oligonucleotide": "conditional"
+        }
+      }
+    },
+    {
+      "record_key": "INT-E13",
+      "target_label": "DEMO_R1",
+      "study_ref": "S-G01",
+      "units": {},
+      "record_payload": {
+        "id": "E13",
+        "type": "secondary_summary",
+        "family": "G01",
+        "claim": "This locus proves inhibiting DEMO-R1 will improve disease.",
+        "source_ids": [
+          "E01"
+        ]
+      }
+    },
+    {
+      "record_key": "INT-E14",
+      "target_label": "DEMO_R1",
+      "study_ref": "S-G01",
+      "units": {},
+      "record_payload": {
+        "id": "E14",
+        "type": "duplicate_extract",
+        "family": "G01",
+        "claim": "Restates the disease-locus association from E01.",
+        "duplicate_of": "E01",
+        "independent_evidence": false
+      }
+    }
+  ]
+}

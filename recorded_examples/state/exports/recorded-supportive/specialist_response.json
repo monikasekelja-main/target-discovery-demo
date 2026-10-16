@@ -1,0 +1,17 @@
+{
+  "assessment_id": "recorded-supportive-A002",
+  "delivery_mode": "local_simulation",
+  "handoff_id": "recorded-supportive-H001",
+  "handoff_version": "handoff-v1",
+  "missing_information": [
+    "Whether receptor blockade reproduces the non-cytotoxic expression-reduction phenotype."
+  ],
+  "next_action": "Agree a mechanism-equivalence study concept with biology and antibody specialists.",
+  "next_owner_role": "biology assay lead with antibody specialists",
+  "platform": "antibody",
+  "reason": "Expression reduction does not establish that receptor blockade gives the same functional result.",
+  "response_id": "recorded-supportive-H001-response",
+  "reviewed_content_sha256": "61443703ce92ad0a9c3213f26dab51cf78ea25892394f9abc65d3546211a5e61",
+  "status": "NEEDS_INFORMATION",
+  "synthetic": true
+}

@@ -1,0 +1,198 @@
+{
+  "$defs": {
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "quote": {
+          "maxLength": 1000,
+          "minLength": 8,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "quote"
+      ],
+      "title": "Citation",
+      "type": "object"
+    },
+    "ConsistencyChecks": {
+      "additionalProperties": false,
+      "properties": {
+        "hypothesis_and_finding": {
+          "enum": [
+            "PASS",
+            "FAIL"
+          ],
+          "title": "Hypothesis And Finding",
+          "type": "string"
+        },
+        "cell_loss_and_qc": {
+          "enum": [
+            "PASS",
+            "FAIL"
+          ],
+          "title": "Cell Loss And Qc",
+          "type": "string"
+        },
+        "replication_independence": {
+          "enum": [
+            "PASS",
+            "FAIL"
+          ],
+          "title": "Replication Independence",
+          "type": "string"
+        },
+        "modality_equivalence": {
+          "enum": [
+            "PASS",
+            "FAIL"
+          ],
+          "title": "Modality Equivalence",
+          "type": "string"
+        }
+      },
+      "required": [
+        "hypothesis_and_finding",
+        "cell_loss_and_qc",
+        "replication_independence",
+        "modality_equivalence"
+      ],
+      "title": "ConsistencyChecks",
+      "type": "object"
+    },
+    "Finding": {
+      "additionalProperties": false,
+      "properties": {
+        "severity": {
+          "enum": [
+            "blocking",
+            "caution"
+          ],
+          "title": "Severity",
+          "type": "string"
+        },
+        "claim_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Claim Id"
+        },
+        "issue": {
+          "maxLength": 1500,
+          "minLength": 1,
+          "title": "Issue",
+          "type": "string"
+        },
+        "required_change": {
+          "maxLength": 1500,
+          "minLength": 1,
+          "title": "Required Change",
+          "type": "string"
+        },
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "maxItems": 6,
+          "minItems": 1,
+          "title": "Citations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "severity",
+        "claim_id",
+        "issue",
+        "required_change",
+        "citations"
+      ],
+      "title": "Finding",
+      "type": "object"
+    },
+    "Retrieval": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4,
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "question": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Question",
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_ids",
+        "question"
+      ],
+      "title": "Retrieval",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "checks": {
+      "$ref": "#/$defs/ConsistencyChecks"
+    },
+    "verdict": {
+      "enum": [
+        "READY_FOR_HUMAN_REVIEW",
+        "REVISE",
+        "ABSTAIN"
+      ],
+      "title": "Verdict",
+      "type": "string"
+    },
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/Finding"
+      },
+      "maxItems": 16,
+      "title": "Findings",
+      "type": "array"
+    },
+    "retrieval": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Retrieval"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "rationale": {
+      "maxLength": 1500,
+      "minLength": 1,
+      "title": "Rationale",
+      "type": "string"
+    }
+  },
+  "required": [
+    "checks",
+    "verdict",
+    "findings",
+    "retrieval",
+    "rationale"
+  ],
+  "title": "ChallengerOutput",
+  "type": "object"
+}

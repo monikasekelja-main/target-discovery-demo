@@ -1,0 +1,112 @@
+{
+  "synthetic": true,
+  "contract_version": "tools-v1",
+  "request_id": "Q008",
+  "status": "OK",
+  "source_snapshot_ids": [
+    "OPTIONS-v1",
+    "demo-policy-v1"
+  ],
+  "data": {
+    "option_snapshot_id": "OPTIONS-v1",
+    "options": [
+      {
+        "synthetic": true,
+        "option_id": "OPT-REVIEW",
+        "title": "Focused genetics and metadata review",
+        "uncertainty_addressed": [
+          "gene assignment",
+          "genetic direction",
+          "missing source metadata"
+        ],
+        "readouts": [
+          "harmonised allele-to-expression direction if available",
+          "source-level context checks"
+        ],
+        "decision_consequences": {
+          "resolved": "Refine causal/intervention hypothesis; functional validation may still be required.",
+          "unresolved": "Keep ambiguity explicit and request a relevant functional test."
+        },
+        "effort_band": "low",
+        "illustrative_turnaround_weeks": [
+          0.5,
+          1.0
+        ],
+        "relative_cost_units": 1.0,
+        "limitations": [
+          "May find no new evidence; does not replace functional perturbation."
+        ],
+        "owner_role": "genetics specialist and data owner",
+        "scientific_review_status": "illustrative_concept_requires_biology_review",
+        "executable_lab_protocol": false
+      },
+      {
+        "synthetic": true,
+        "option_id": "OPT-FUNCTION",
+        "title": "Relevant-context expression-reduction experiment",
+        "uncertainty_addressed": [
+          "functional effect of partial expression reduction",
+          "cell-loss confound",
+          "method disagreement"
+        ],
+        "readouts": [
+          "live-cell IL-17A-positive fraction",
+          "live-cell count and viable fraction",
+          "target surface protein",
+          "assay controls"
+        ],
+        "decision_consequences": {
+          "supportive": "Propose independent replication and specificity work.",
+          "useful_effect_excluded": "Deprioritize this useful-benefit hypothesis in the tested context.",
+          "uncertain_or_invalid": "Preserve reason and agree a focused follow-up with biology."
+        },
+        "effort_band": "medium",
+        "illustrative_turnaround_weeks": [
+          3.0,
+          5.0
+        ],
+        "relative_cost_units": 5.0,
+        "limitations": [
+          "Demo assumes the perturbation and assay are feasible; confirm with biology.",
+          "Eight paired donors; two methods on the same donors; no independent cohort replication.",
+          "Demo thresholds are scientist-reviewable assumptions, not organisational standards."
+        ],
+        "owner_role": "biology assay lead",
+        "scientific_review_status": "illustrative_concept_requires_biology_review",
+        "executable_lab_protocol": false
+      },
+      {
+        "synthetic": true,
+        "option_id": "OPT-OMICS",
+        "title": "Broader perturbation transcriptomics screen",
+        "uncertainty_addressed": [
+          "pathway context",
+          "possible response mechanisms"
+        ],
+        "readouts": [
+          "transcriptomic signatures",
+          "cell-state composition"
+        ],
+        "decision_consequences": {
+          "signature_change": "Generate mechanistic hypotheses; functional confirmation remains necessary.",
+          "no_change": "May reflect scope or sensitivity; does not alone exclude the functional hypothesis."
+        },
+        "effort_band": "high",
+        "illustrative_turnaround_weeks": [
+          6.0,
+          10.0
+        ],
+        "relative_cost_units": 15.0,
+        "limitations": [
+          "Illustrative effort only; no formal value-of-information optimum.",
+          "Less direct for the predefined functional decision than OPT-FUNCTION."
+        ],
+        "owner_role": "biology and single-cell specialists",
+        "scientific_review_status": "illustrative_concept_requires_biology_review",
+        "executable_lab_protocol": false
+      }
+    ],
+    "selection_method": "qualitative_decision_relevance_no_formal_optimality"
+  },
+  "error": null
+}

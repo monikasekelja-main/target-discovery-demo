@@ -1,0 +1,59 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "tools-v1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "title": "Request Id",
+      "type": "string"
+    },
+    "idempotency_key": {
+      "minLength": 1,
+      "title": "Idempotency Key",
+      "type": "string"
+    },
+    "target_id": {
+      "minLength": 1,
+      "title": "Target Id",
+      "type": "string"
+    },
+    "evidence_snapshot_id": {
+      "minLength": 1,
+      "title": "Evidence Snapshot Id",
+      "type": "string"
+    },
+    "query": {
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "include_unresolved_candidates": {
+      "title": "Include Unresolved Candidates",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "contract_version",
+    "request_id",
+    "idempotency_key",
+    "target_id",
+    "evidence_snapshot_id",
+    "query",
+    "evidence_ids",
+    "include_unresolved_candidates"
+  ],
+  "title": "SearchEvidenceRequest",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

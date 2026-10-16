@@ -1,0 +1,195 @@
+{
+  "package_version": "demo-fixtures-v3",
+  "plan_alignment": "consolidated plan version 3, 13 October 2026",
+  "synthetic": true,
+  "typed_files": [
+    {
+      "path": "examples/tools/search_evidence.request.json",
+      "model": "SearchEvidenceRequest",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/tools/search_evidence.response.json",
+      "model": "SearchEvidenceResponse",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "runtime/metadata/study_manifest.json",
+      "model": "Manifest",
+      "boundary": "runtime"
+    },
+    {
+      "path": "examples/tools/get_study_manifest.request.json",
+      "model": "GetStudyManifestRequest",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/tools/get_study_manifest.response.json",
+      "model": "GetStudyManifestResponse",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/tools/get_study_manifest_unresolved.request.json",
+      "model": "GetStudyManifestRequest",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/tools/get_study_manifest_unresolved.response.json",
+      "model": "GetStudyManifestResponse",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "runtime/capability_registry.json",
+      "model": "Registry",
+      "boundary": "runtime"
+    },
+    {
+      "path": "runtime/predictions/stimulated_signature.response.json",
+      "model": "GetPredictionResponse",
+      "boundary": "runtime"
+    },
+    {
+      "path": "examples/tools/get_prediction.request.json",
+      "model": "GetPredictionRequest",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/tools/get_prediction.response.json",
+      "model": "GetPredictionResponse",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/tools/get_prediction_unsupported.request.json",
+      "model": "GetPredictionRequest",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/tools/get_prediction_unsupported.response.json",
+      "model": "GetPredictionResponse",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/tools/get_prediction_missing_metadata.request.json",
+      "model": "GetPredictionRequest",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/tools/get_prediction_missing_metadata.response.json",
+      "model": "GetPredictionResponse",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/tools/get_prediction_transient_failure.request.json",
+      "model": "GetPredictionRequest",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/tools/get_prediction_transient_failure.response.json",
+      "model": "GetPredictionResponse",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "runtime/experiment_options.response.json",
+      "model": "GetExperimentOptionsResponse",
+      "boundary": "runtime"
+    },
+    {
+      "path": "examples/tools/get_experiment_options.request.json",
+      "model": "GetExperimentOptionsRequest",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/tools/get_experiment_options.response.json",
+      "model": "GetExperimentOptionsResponse",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "runtime/handoffs/antibody_response_template.json",
+      "model": "SpecialistResponseTemplate",
+      "boundary": "runtime"
+    },
+    {
+      "path": "evaluation/reference_briefs/initial.json",
+      "model": "DecisionBrief",
+      "boundary": "evaluation_only"
+    },
+    {
+      "path": "evaluation/reference_briefs/X101.json",
+      "model": "DecisionBrief",
+      "boundary": "evaluation_only"
+    },
+    {
+      "path": "evaluation/reference_briefs/X102.json",
+      "model": "DecisionBrief",
+      "boundary": "evaluation_only"
+    },
+    {
+      "path": "evaluation/reference_briefs/X103.json",
+      "model": "DecisionBrief",
+      "boundary": "evaluation_only"
+    },
+    {
+      "path": "examples/handoff/antibody_handoff.json",
+      "model": "Handoff",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "examples/handoff/antibody_response.json",
+      "model": "SpecialistResponse",
+      "boundary": "protocol_example"
+    },
+    {
+      "path": "runtime/experiments/X101.json",
+      "model": "ExperimentRecord",
+      "boundary": "runtime_selected_outcome_only"
+    },
+    {
+      "path": "runtime/experiments/X102.json",
+      "model": "ExperimentRecord",
+      "boundary": "runtime_selected_outcome_only"
+    },
+    {
+      "path": "runtime/experiments/X103.json",
+      "model": "ExperimentRecord",
+      "boundary": "runtime_selected_outcome_only"
+    },
+    {
+      "path": "runtime/experiments/X104.json",
+      "model": "ExperimentRecord",
+      "boundary": "runtime_selected_outcome_only"
+    },
+    {
+      "path": "runtime/experiments/X105.json",
+      "model": "ExperimentRecord",
+      "boundary": "runtime_selected_outcome_only"
+    },
+    {
+      "path": "runtime/experiments/X106.json",
+      "model": "ExperimentRecord",
+      "boundary": "runtime_selected_outcome_only"
+    },
+    {
+      "path": "runtime/experiments/X107.json",
+      "model": "ExperimentRecord",
+      "boundary": "runtime_selected_outcome_only"
+    },
+    {
+      "path": "runtime/experiments/X108.json",
+      "model": "ExperimentRecord",
+      "boundary": "runtime_selected_outcome_only"
+    }
+  ],
+  "preserved_base_files_sha256": {
+    "runtime/policy.json": "1531dacf1982e73e90c3abcb0b9b37291283e7dfd859e6e0f33035810f614b23",
+    "runtime/initial_evidence.json": "1d78b76f9105e373405ecc061936e3e3321328d899fbedf766fe9465f95847a6",
+    "runtime/experiments/X101.json": "398ce07c9571caad7deb4954be9f4c9b5fda434c3a7239bcf6aeaaad40647af2",
+    "runtime/experiments/X102.json": "76d8d4bc84b34db1eb5b0f5db34e4b17840efc563b691ffbf4507e407230cad3",
+    "runtime/experiments/X103.json": "abde9ec2cee5df91a1a762adc94faf2910bf0e8e630d1d55e6551cee8f0da41c",
+    "runtime/experiments/X104.json": "1d55b283c3557d77f805c3b87fe302c8c8bd95a15083cc342a229648a64fce97",
+    "runtime/experiments/X105.json": "ea6f5502737d97f32e8286110596c148feaba56783c804e68726320cc0d86a98",
+    "runtime/experiments/X106.json": "f142ce87b3b2d0672be6cc21727a0bd55531e83b5d6d5537fe086c66916973c2",
+    "runtime/experiments/X107.json": "5e0d2adcd96f0903dad8fe38690a43f353a9a6f37c2d7eaae9c6c404d319c273",
+    "runtime/experiments/X108.json": "4015c5266825b23a80f54e2142740b04331fc2c47af60ec8662fa8f582838794"
+  },
+  "agent_boundary": "Only selected runtime inputs and tool returns. Never expose evaluation/, examples/, or all alternative outcomes."
+}

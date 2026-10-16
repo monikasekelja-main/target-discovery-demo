@@ -1,0 +1,150 @@
+{
+  "synthetic": true,
+  "registry_version": "registry-v1",
+  "capabilities": [
+    {
+      "capability_id": "CAP-EVIDENCE",
+      "tool_name": "search_evidence",
+      "owner_role": "evidence data owner",
+      "input_schema": "schemas/SearchEvidenceRequest.schema.json",
+      "output_schema": "schemas/SearchEvidenceResponse.schema.json",
+      "schema_version": "tools-v1",
+      "supported_context_ids": [],
+      "required_context_attributes": {},
+      "supported_perturbations": [],
+      "allowed_expression_changes_pct": [],
+      "required_data_references": [
+        "EV-INITIAL-003"
+      ],
+      "model_id": null,
+      "model_version": null,
+      "permitted_side_effects": "none",
+      "max_transient_retries": 1,
+      "retry_requires_identical_input_and_idempotency_key": true,
+      "limitations": [
+        "All data and responses are synthetic; eligibility is not empirical validation."
+      ]
+    },
+    {
+      "capability_id": "CAP-METADATA",
+      "tool_name": "get_study_manifest",
+      "owner_role": "single-cell data owner",
+      "input_schema": "schemas/GetStudyManifestRequest.schema.json",
+      "output_schema": "schemas/GetStudyManifestResponse.schema.json",
+      "schema_version": "tools-v1",
+      "supported_context_ids": [],
+      "required_context_attributes": {},
+      "supported_perturbations": [],
+      "allowed_expression_changes_pct": [],
+      "required_data_references": [
+        "META-001-v1"
+      ],
+      "model_id": null,
+      "model_version": null,
+      "permitted_side_effects": "none",
+      "max_transient_retries": 1,
+      "retry_requires_identical_input_and_idempotency_key": true,
+      "limitations": [
+        "All data and responses are synthetic; eligibility is not empirical validation."
+      ]
+    },
+    {
+      "capability_id": "CAP-PRED-REST",
+      "tool_name": "get_prediction",
+      "owner_role": "specialist predictive-model team",
+      "input_schema": "schemas/GetPredictionRequest.schema.json",
+      "output_schema": "schemas/GetPredictionResponse.schema.json",
+      "schema_version": "tools-v1",
+      "supported_context_ids": [
+        "CTX-CD4-REST"
+      ],
+      "required_context_attributes": {
+        "context_id": "CTX-CD4-REST",
+        "species": "human",
+        "cell_type": "CD4 T cell",
+        "cell_state": "resting",
+        "disease_context_id": "DIS-SKIN-LIKE-001"
+      },
+      "supported_perturbations": [
+        "expression_change"
+      ],
+      "allowed_expression_changes_pct": [
+        -50.0
+      ],
+      "required_data_references": [
+        "SC-REST-001-v1"
+      ],
+      "model_id": "mock-signature-adapter",
+      "model_version": "synthetic-model-v1",
+      "permitted_side_effects": "none",
+      "max_transient_retries": 1,
+      "retry_requires_identical_input_and_idempotency_key": true,
+      "limitations": [
+        "All data and responses are synthetic; eligibility is not empirical validation."
+      ]
+    },
+    {
+      "capability_id": "CAP-PRED-STIM",
+      "tool_name": "get_prediction",
+      "owner_role": "specialist predictive-model team",
+      "input_schema": "schemas/GetPredictionRequest.schema.json",
+      "output_schema": "schemas/GetPredictionResponse.schema.json",
+      "schema_version": "tools-v1",
+      "supported_context_ids": [
+        "CTX-CD4-STIM-TH17"
+      ],
+      "required_context_attributes": {
+        "context_id": "CTX-CD4-STIM-TH17",
+        "species": "human",
+        "cell_type": "CD4 T cell",
+        "cell_state": "stimulated; Th17-enriched",
+        "disease_context_id": "DIS-SKIN-LIKE-001"
+      },
+      "supported_perturbations": [
+        "expression_change"
+      ],
+      "allowed_expression_changes_pct": [
+        -50.0,
+        0.0,
+        50.0
+      ],
+      "required_data_references": [
+        "SC-STIM-001-v1"
+      ],
+      "model_id": "mock-signature-adapter",
+      "model_version": "synthetic-model-v2",
+      "permitted_side_effects": "none",
+      "max_transient_retries": 1,
+      "retry_requires_identical_input_and_idempotency_key": true,
+      "limitations": [
+        "All data and responses are synthetic; eligibility is not empirical validation."
+      ]
+    },
+    {
+      "capability_id": "CAP-OPTIONS",
+      "tool_name": "get_experiment_options",
+      "owner_role": "biology assay lead",
+      "input_schema": "schemas/GetExperimentOptionsRequest.schema.json",
+      "output_schema": "schemas/GetExperimentOptionsResponse.schema.json",
+      "schema_version": "tools-v1",
+      "supported_context_ids": [
+        "CTX-CD4-STIM-TH17"
+      ],
+      "required_context_attributes": {},
+      "supported_perturbations": [],
+      "allowed_expression_changes_pct": [],
+      "required_data_references": [
+        "OPTIONS-v1",
+        "demo-policy-v1"
+      ],
+      "model_id": null,
+      "model_version": null,
+      "permitted_side_effects": "none",
+      "max_transient_retries": 1,
+      "retry_requires_identical_input_and_idempotency_key": true,
+      "limitations": [
+        "All data and responses are synthetic; eligibility is not empirical validation."
+      ]
+    }
+  ]
+}

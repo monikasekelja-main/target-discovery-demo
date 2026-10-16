@@ -1,0 +1,2 @@
+# Tested with Python 3.12. Numerical calculator uses the standard library only.
+pydantic==2.13.5

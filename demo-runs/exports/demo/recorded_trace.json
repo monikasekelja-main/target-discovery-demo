@@ -1,0 +1,2158 @@
+{
+  "run_id": "demo",
+  "capture_mode": "actual_deterministic_cli_execution_no_agents",
+  "replay_mode": "read_only_historical_trace_no_tools_executed",
+  "recorded_revision": 1,
+  "input_hashes": {
+    "runtime/capability_registry.json": "9de92358b6bd5b081896ce101f23548443d526fb31ced17caf444a65cea83d23",
+    "runtime/confidence_rubric.json": "8904b88d4f83af96ab3b399ec463a4ddf6a22930f03a55009228f88768aa04f1",
+    "runtime/experiment_options.response.json": "c6027d25618e787a24035e90d7889c49560896fba8b57a44329282013df83fcf",
+    "runtime/experiments/X101.json": "398ce07c9571caad7deb4954be9f4c9b5fda434c3a7239bcf6aeaaad40647af2",
+    "runtime/handoffs/antibody_response_template.json": "b539db29810cc6f92fcad0a3fa77cc1c7d9248b36c6cf5c2153e0d8fca752e88",
+    "runtime/initial_evidence.json": "1d78b76f9105e373405ecc061936e3e3321328d899fbedf766fe9465f95847a6",
+    "runtime/metadata/alias_mappings.json": "9d15663c0d14f10286a6c05d40b2377f555bb314286a64440d57d26dd766ffa4",
+    "runtime/metadata/context_catalog.json": "53983ca7e731f6bd183a41f8307ce3ba68040249054d6bcf99d3bafd5a88af60",
+    "runtime/metadata/study_manifest.json": "00ac1850fd96641dfba51f9555d2c5674132cbb9b4ef87f3b0d0f8e90f274563",
+    "runtime/policy.json": "1531dacf1982e73e90c3abcb0b9b37291283e7dfd859e6e0f33035810f614b23",
+    "runtime/predictions/stimulated_signature.response.json": "56e68286639bb682fcb85b35fa3dea6330124891a4c93db8ef794442bb596c8f",
+    "runtime/sources/cro_export.json": "cd4a685c3f79ea45626c52b2dd4f3eeb2d8ee506d41a649d5d61b38bfdf80de1",
+    "runtime/sources/internal_evidence.json": "1b76edad6f1982c52b0f85ac8a543b077ae74ea69eae0ba2eba41964f1bfa1d2",
+    "runtime/workflow_contract.json": "680c7c03de89a5ec9012667a60cf0174a3fa02b172e230711982fdfe9b6526c8",
+    "implementation/contracts.py": "01348d479b95ca3344f3c5cbded16fb2114435c7ee67c473bd90db6b48bde768",
+    "implementation/decision_compiler.py": "d59f6a9c9a737d5fc918d9e94bfa808ca7ae25515f072941532123436d633b75",
+    "implementation/demo.py": "680f0eaa85c14f96ba0b40d647d6a6e12a3fdb2037721f5d955f6bc1b60f91a5",
+    "implementation/evaluate.py": "3725ee519acc89a770dfa14d0ae72430455387f78a7568d97e1f88b27bfd21bb",
+    "implementation/local_tools.py": "e67644a3a7299f84700c01212d3b525dde5421c4cd1b9a9967741b03c1463dd6",
+    "implementation/workflow.py": "90e5505e75a79cb890aa416e56076ef538d0b4a6c053e44ae66a88c093212e7a",
+    "implementation/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b"
+  },
+  "live_inputs_match": true,
+  "events": [
+    {
+      "event_id": 1,
+      "created_at": "2026-10-16T09:10:21.297839+00:00",
+      "kind": "RUN_STARTED",
+      "payload": {
+        "execution_mode": "deterministic_reference_no_agents",
+        "input_hashes": {
+          "implementation/contracts.py": "01348d479b95ca3344f3c5cbded16fb2114435c7ee67c473bd90db6b48bde768",
+          "implementation/decision_compiler.py": "d59f6a9c9a737d5fc918d9e94bfa808ca7ae25515f072941532123436d633b75",
+          "implementation/demo.py": "680f0eaa85c14f96ba0b40d647d6a6e12a3fdb2037721f5d955f6bc1b60f91a5",
+          "implementation/evaluate.py": "3725ee519acc89a770dfa14d0ae72430455387f78a7568d97e1f88b27bfd21bb",
+          "implementation/local_tools.py": "e67644a3a7299f84700c01212d3b525dde5421c4cd1b9a9967741b03c1463dd6",
+          "implementation/workflow.py": "90e5505e75a79cb890aa416e56076ef538d0b4a6c053e44ae66a88c093212e7a",
+          "implementation/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b",
+          "runtime/capability_registry.json": "9de92358b6bd5b081896ce101f23548443d526fb31ced17caf444a65cea83d23",
+          "runtime/confidence_rubric.json": "8904b88d4f83af96ab3b399ec463a4ddf6a22930f03a55009228f88768aa04f1",
+          "runtime/experiment_options.response.json": "c6027d25618e787a24035e90d7889c49560896fba8b57a44329282013df83fcf",
+          "runtime/handoffs/antibody_response_template.json": "b539db29810cc6f92fcad0a3fa77cc1c7d9248b36c6cf5c2153e0d8fca752e88",
+          "runtime/initial_evidence.json": "1d78b76f9105e373405ecc061936e3e3321328d899fbedf766fe9465f95847a6",
+          "runtime/metadata/alias_mappings.json": "9d15663c0d14f10286a6c05d40b2377f555bb314286a64440d57d26dd766ffa4",
+          "runtime/metadata/context_catalog.json": "53983ca7e731f6bd183a41f8307ce3ba68040249054d6bcf99d3bafd5a88af60",
+          "runtime/metadata/study_manifest.json": "00ac1850fd96641dfba51f9555d2c5674132cbb9b4ef87f3b0d0f8e90f274563",
+          "runtime/policy.json": "1531dacf1982e73e90c3abcb0b9b37291283e7dfd859e6e0f33035810f614b23",
+          "runtime/predictions/stimulated_signature.response.json": "56e68286639bb682fcb85b35fa3dea6330124891a4c93db8ef794442bb596c8f",
+          "runtime/sources/cro_export.json": "cd4a685c3f79ea45626c52b2dd4f3eeb2d8ee506d41a649d5d61b38bfdf80de1",
+          "runtime/sources/internal_evidence.json": "1b76edad6f1982c52b0f85ac8a543b077ae74ea69eae0ba2eba41964f1bfa1d2",
+          "runtime/workflow_contract.json": "680c7c03de89a5ec9012667a60cf0174a3fa02b172e230711982fdfe9b6526c8"
+        },
+        "scenario": "standard",
+        "synthetic": true
+      }
+    },
+    {
+      "event_id": 2,
+      "created_at": "2026-10-16T09:10:21.297997+00:00",
+      "kind": "TOOL_REQUEST",
+      "payload": {
+        "arguments": {
+          "contract_version": "tools-v1",
+          "evidence_ids": [],
+          "evidence_snapshot_id": "EV-INITIAL-003",
+          "idempotency_key": "IDEMP-demo-r1-evidence",
+          "include_unresolved_candidates": true,
+          "query": "Assemble source evidence and limitations for the target hypothesis.",
+          "request_id": "demo-r1-evidence",
+          "target_id": "DEMO-R1"
+        },
+        "attempt": 1,
+        "fault_injected": false,
+        "request_sha256": "8a4815ec36055740ee3b28a0b2e765f545d88341456f350dfa9d3cfef75b1e62",
+        "revision": 1,
+        "step": "evidence",
+        "tool": "search_evidence"
+      }
+    },
+    {
+      "event_id": 3,
+      "created_at": "2026-10-16T09:10:21.298271+00:00",
+      "kind": "TOOL_RESULT",
+      "payload": {
+        "attempt": 1,
+        "response": {
+          "contract_version": "tools-v1",
+          "data": {
+            "evidence_snapshot_id": "EV-INITIAL-003",
+            "notice": "Synthetic untrusted source content. Query records purpose; target and evidence IDs define the deterministic filter. Retrieval does not certify a claim.",
+            "records": [
+              {
+                "claim": "Disease-associated locus; not gene-level causality.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "G01",
+                "evidence_id": "E01",
+                "raw_record": {
+                  "claim": "Disease-associated locus; not gene-level causality.",
+                  "family": "G01",
+                  "id": "E01",
+                  "independent_gene_assignment": false,
+                  "measurements": {
+                    "disease_odds_ratio": 1.16,
+                    "reported_95_ci": [
+                      1.1,
+                      1.22
+                    ]
+                  },
+                  "type": "synthetic_measurement"
+                },
+                "record_type": "synthetic_measurement",
+                "source": {
+                  "locator": "fixture://SRC-INTERNAL/INTERNAL-v1/INT-E01",
+                  "mapping_id": "MAP-T002",
+                  "original_target_label": "DEMO_R1",
+                  "snapshot_id": "INTERNAL-v1",
+                  "source_id": "SRC-INTERNAL",
+                  "source_record_id": "INT-E01",
+                  "study_id": "S-G01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {
+                  "disease_odds_ratio": "dimensionless",
+                  "reported_95_ci": "odds_ratio"
+                }
+              },
+              {
+                "claim": "Fine-mapping leaves ambiguity.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "G01",
+                "evidence_id": "E02",
+                "raw_record": {
+                  "claim": "Fine-mapping leaves ambiguity.",
+                  "family": "G01",
+                  "id": "E02",
+                  "measurements": {
+                    "credible_set_variant_count": 7,
+                    "largest_variant_posterior": 0.41
+                  },
+                  "scope": "Variant posterior, not target-causality probability.",
+                  "type": "synthetic_analysis"
+                },
+                "record_type": "synthetic_analysis",
+                "source": {
+                  "locator": "fixture://SRC-INTERNAL/INTERNAL-v1/INT-E02",
+                  "mapping_id": "MAP-T002",
+                  "original_target_label": "DEMO_R1",
+                  "snapshot_id": "INTERNAL-v1",
+                  "source_id": "SRC-INTERNAL",
+                  "source_record_id": "INT-E02",
+                  "study_id": "S-G01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {
+                  "credible_set_variant_count": "count",
+                  "largest_variant_posterior": "probability_of_variant_assignment"
+                }
+              },
+              {
+                "claim": "Shared-variant support under coloc assumptions; direction not harmonized.",
+                "context_id": "CTX-CD4-REST",
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "G01",
+                "evidence_id": "E03",
+                "raw_record": {
+                  "claim": "Shared-variant support under coloc assumptions; direction not harmonized.",
+                  "context": "resting CD4 T-cell eQTL",
+                  "family": "G01",
+                  "id": "E03",
+                  "limitations": "Shares the GWAS evidence family with E01/E02; not three independent studies.",
+                  "measurements": {
+                    "PP_H3": 0.1,
+                    "PP_H4": 0.86,
+                    "remaining_posterior": 0.04
+                  },
+                  "risk_allele_to_expression_direction": "unresolved",
+                  "type": "synthetic_analysis"
+                },
+                "record_type": "synthetic_analysis",
+                "source": {
+                  "locator": "fixture://SRC-INTERNAL/INTERNAL-v1/INT-E03",
+                  "mapping_id": "MAP-T002",
+                  "original_target_label": "DEMO_R1",
+                  "snapshot_id": "INTERNAL-v1",
+                  "source_id": "SRC-INTERNAL",
+                  "source_record_id": "INT-E03",
+                  "study_id": "S-G01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {
+                  "PP_H3": "posterior_under_coloc_assumptions",
+                  "PP_H4": "posterior_under_coloc_assumptions",
+                  "remaining_posterior": "posterior_under_coloc_assumptions"
+                }
+              },
+              {
+                "claim": "Target is measurable in the chosen cell type.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "C01",
+                "evidence_id": "E04",
+                "raw_record": {
+                  "claim": "Target is measurable in the chosen cell type.",
+                  "family": "C01",
+                  "id": "E04",
+                  "measurements": {
+                    "activated_surface_MFI": [
+                      1050,
+                      1120,
+                      1180,
+                      1260,
+                      1310
+                    ],
+                    "n_paired_donors": 5,
+                    "resting_surface_MFI": [
+                      360,
+                      390,
+                      410,
+                      440,
+                      470
+                    ]
+                  },
+                  "scope": "Expression supports assay relevance, not causality or direction.",
+                  "type": "synthetic_measurement"
+                },
+                "record_type": "synthetic_measurement",
+                "source": {
+                  "locator": "fixture://SRC-INTERNAL/INTERNAL-v1/INT-E04",
+                  "mapping_id": "MAP-T002",
+                  "original_target_label": "DEMO_R1",
+                  "snapshot_id": "INTERNAL-v1",
+                  "source_id": "SRC-INTERNAL",
+                  "source_record_id": "INT-E04",
+                  "study_id": "S-C01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {
+                  "activated_surface_MFI": "arbitrary_fluorescence_units",
+                  "n_paired_donors": "count",
+                  "resting_surface_MFI": "arbitrary_fluorescence_units"
+                }
+              },
+              {
+                "claim": "The model-output adapter is synthetic and has no measured predictive accuracy.",
+                "context_id": "CTX-CD4-REST",
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "M01",
+                "evidence_id": "E05",
+                "raw_record": {
+                  "claim": "The model-output adapter is synthetic and has no measured predictive accuracy.",
+                  "family": "M01",
+                  "id": "E05",
+                  "model_version": "synthetic-model-v1",
+                  "scope": "Cannot provide an in-domain prediction for the chosen stimulated assay.",
+                  "supported_prediction_context": "resting CD4 T cells",
+                  "type": "model_card"
+                },
+                "record_type": "model_card",
+                "source": {
+                  "locator": "fixture://SRC-INTERNAL/INTERNAL-v1/INT-E05",
+                  "mapping_id": "MAP-T002",
+                  "original_target_label": "DEMO_R1",
+                  "snapshot_id": "INTERNAL-v1",
+                  "source_id": "SRC-INTERNAL",
+                  "source_record_id": "INT-E05",
+                  "study_id": "S-M01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {}
+              },
+              {
+                "claim": "Hypothetical transcriptomic signature response in a related context.",
+                "context_id": "CTX-CD4-REST",
+                "endpoint_id": "transcriptomic_inflammatory_signature",
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "M01",
+                "evidence_id": "E06",
+                "raw_record": {
+                  "claim": "Hypothetical transcriptomic signature response in a related context.",
+                  "context": "resting CD4 T cells",
+                  "endpoint": "transcriptomic inflammatory-signature score",
+                  "family": "M01",
+                  "id": "E06",
+                  "measurements": {
+                    "expression_reduction_pct": 50,
+                    "signature_change_standardized_units": -0.65
+                  },
+                  "scope": "Not an IL-17A functional-effect prediction or probability of target success.",
+                  "type": "synthetic_prediction",
+                  "uncertainty": "not calibrated"
+                },
+                "record_type": "synthetic_prediction",
+                "source": {
+                  "locator": "fixture://SRC-INTERNAL/INTERNAL-v1/INT-E06",
+                  "mapping_id": "MAP-T002",
+                  "original_target_label": "DEMO_R1",
+                  "snapshot_id": "INTERNAL-v1",
+                  "source_id": "SRC-INTERNAL",
+                  "source_record_id": "INT-E06",
+                  "study_id": "S-M01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {
+                  "expression_reduction_pct": "relative_percent_reduction",
+                  "signature_change_standardized_units": "standardized_signature_units"
+                }
+              },
+              {
+                "claim": "Earlier bulk secretion result is confounded by loss of live cells.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "P01",
+                "evidence_id": "E07",
+                "raw_record": {
+                  "claim": "Earlier bulk secretion result is confounded by loss of live cells.",
+                  "family": "P01",
+                  "id": "E07",
+                  "measurements": {
+                    "kd_live_cell_count": [
+                      60000,
+                      60000,
+                      60000
+                    ],
+                    "kd_secreted_IL17A_pg_ml": [
+                      360,
+                      432,
+                      324
+                    ],
+                    "kd_viable_fraction_pct": [
+                      63,
+                      66,
+                      62
+                    ],
+                    "n_paired_donors": 3,
+                    "ntc_live_cell_count": [
+                      100000,
+                      100000,
+                      100000
+                    ],
+                    "ntc_secreted_IL17A_pg_ml": [
+                      600,
+                      720,
+                      540
+                    ]
+                  },
+                  "scope": "A 40% bulk readout reduction accompanies 40% fewer live cells; it does not establish beneficial function.",
+                  "type": "synthetic_measurement"
+                },
+                "record_type": "synthetic_measurement",
+                "source": {
+                  "locator": "fixture://SRC-CRO/CRO-v1/CRO-E07",
+                  "mapping_id": "MAP-T001",
+                  "original_target_label": "DEMO-R1",
+                  "snapshot_id": "CRO-v1",
+                  "source_id": "SRC-CRO",
+                  "source_record_id": "CRO-E07",
+                  "study_id": "S-P01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {
+                  "kd_live_cell_count": "cells",
+                  "kd_secreted_IL17A_pg_ml": "pg/ml",
+                  "kd_viable_fraction_pct": "percent",
+                  "n_paired_donors": "count",
+                  "ntc_live_cell_count": "cells",
+                  "ntc_secreted_IL17A_pg_ml": "pg/ml"
+                }
+              },
+              {
+                "claim": "No relevant-context, controlled, non-cytotoxic expression-reduction experiment yet.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "P02",
+                "evidence_id": "E08",
+                "raw_record": {
+                  "claim": "No relevant-context, controlled, non-cytotoxic expression-reduction experiment yet.",
+                  "family": "P02",
+                  "id": "E08",
+                  "measurements": null,
+                  "type": "evidence_gap"
+                },
+                "record_type": "evidence_gap",
+                "source": {
+                  "locator": "fixture://SRC-CRO/CRO-v1/CRO-E08",
+                  "mapping_id": "MAP-T001",
+                  "original_target_label": "DEMO-R1",
+                  "snapshot_id": "CRO-v1",
+                  "source_id": "SRC-CRO",
+                  "source_record_id": "CRO-E08",
+                  "study_id": "S-P02"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {}
+              },
+              {
+                "claim": "Investigate cell loss and whether it is on-target, off-target, or delivery-related.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "P01",
+                "evidence_id": "E09",
+                "raw_record": {
+                  "claim": "Investigate cell loss and whether it is on-target, off-target, or delivery-related.",
+                  "family": "P01",
+                  "id": "E09",
+                  "independent_evidence": false,
+                  "source_ids": [
+                    "E07"
+                  ],
+                  "type": "linked_safety_observation"
+                },
+                "record_type": "linked_safety_observation",
+                "source": {
+                  "locator": "fixture://SRC-CRO/CRO-v1/CRO-E09",
+                  "mapping_id": "MAP-T001",
+                  "original_target_label": "DEMO-R1",
+                  "snapshot_id": "CRO-v1",
+                  "source_id": "SRC-CRO",
+                  "source_record_id": "CRO-E09",
+                  "study_id": "S-P01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {}
+              },
+              {
+                "claim": "Tissue and systemic safety are unassessed.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "S01",
+                "evidence_id": "E10",
+                "raw_record": {
+                  "claim": "Tissue and systemic safety are unassessed.",
+                  "family": "S01",
+                  "id": "E10",
+                  "measurements": null,
+                  "type": "evidence_gap"
+                },
+                "record_type": "evidence_gap",
+                "source": {
+                  "locator": "fixture://SRC-INTERNAL/INTERNAL-v1/INT-E10",
+                  "mapping_id": "MAP-T002",
+                  "original_target_label": "DEMO_R1",
+                  "snapshot_id": "INTERNAL-v1",
+                  "source_id": "SRC-INTERNAL",
+                  "source_record_id": "INT-E10",
+                  "study_id": "S-S01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {}
+              },
+              {
+                "claim": "Fictional surface localization permits an antibody feasibility question; binding, desired functional effect, pocket/chemistry and exposure are unknown.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "F01",
+                "evidence_id": "E11",
+                "raw_record": {
+                  "claim": "Fictional surface localization permits an antibody feasibility question; binding, desired functional effect, pocket/chemistry and exposure are unknown.",
+                  "family": "F01",
+                  "id": "E11",
+                  "modality_status": {
+                    "antibody": "conditional",
+                    "small_molecule": "unknown"
+                  },
+                  "type": "modality_constraint"
+                },
+                "record_type": "modality_constraint",
+                "source": {
+                  "locator": "fixture://SRC-INTERNAL/INTERNAL-v1/INT-E11",
+                  "mapping_id": "MAP-T002",
+                  "original_target_label": "DEMO_R1",
+                  "snapshot_id": "INTERNAL-v1",
+                  "source_id": "SRC-INTERNAL",
+                  "source_record_id": "INT-E11",
+                  "study_id": "S-F01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {}
+              },
+              {
+                "claim": "Expression reduction is conceptually aligned with an oligonucleotide hypothesis; relevant-cell delivery, isoform coverage and tolerability are untested.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "F02",
+                "evidence_id": "E12",
+                "raw_record": {
+                  "claim": "Expression reduction is conceptually aligned with an oligonucleotide hypothesis; relevant-cell delivery, isoform coverage and tolerability are untested.",
+                  "family": "F02",
+                  "id": "E12",
+                  "modality_status": {
+                    "oligonucleotide": "conditional"
+                  },
+                  "type": "modality_constraint"
+                },
+                "record_type": "modality_constraint",
+                "source": {
+                  "locator": "fixture://SRC-INTERNAL/INTERNAL-v1/INT-E12",
+                  "mapping_id": "MAP-T002",
+                  "original_target_label": "DEMO_R1",
+                  "snapshot_id": "INTERNAL-v1",
+                  "source_id": "SRC-INTERNAL",
+                  "source_record_id": "INT-E12",
+                  "study_id": "S-F02"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {}
+              },
+              {
+                "claim": "This locus proves inhibiting DEMO-R1 will improve disease.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "G01",
+                "evidence_id": "E13",
+                "raw_record": {
+                  "claim": "This locus proves inhibiting DEMO-R1 will improve disease.",
+                  "family": "G01",
+                  "id": "E13",
+                  "source_ids": [
+                    "E01"
+                  ],
+                  "type": "secondary_summary"
+                },
+                "record_type": "secondary_summary",
+                "source": {
+                  "locator": "fixture://SRC-INTERNAL/INTERNAL-v1/INT-E13",
+                  "mapping_id": "MAP-T002",
+                  "original_target_label": "DEMO_R1",
+                  "snapshot_id": "INTERNAL-v1",
+                  "source_id": "SRC-INTERNAL",
+                  "source_record_id": "INT-E13",
+                  "study_id": "S-G01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {}
+              },
+              {
+                "claim": "Restates the disease-locus association from E01.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "G01",
+                "evidence_id": "E14",
+                "raw_record": {
+                  "claim": "Restates the disease-locus association from E01.",
+                  "duplicate_of": "E01",
+                  "family": "G01",
+                  "id": "E14",
+                  "independent_evidence": false,
+                  "type": "duplicate_extract"
+                },
+                "record_type": "duplicate_extract",
+                "source": {
+                  "locator": "fixture://SRC-INTERNAL/INTERNAL-v1/INT-E14",
+                  "mapping_id": "MAP-T002",
+                  "original_target_label": "DEMO_R1",
+                  "snapshot_id": "INTERNAL-v1",
+                  "source_id": "SRC-INTERNAL",
+                  "source_record_id": "INT-E14",
+                  "study_id": "S-G01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {}
+              },
+              {
+                "claim": "Alias is not verified against the DEMO-R1 identifier.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "UNRESOLVED",
+                "evidence_family_id": "U01",
+                "evidence_id": "E15",
+                "raw_record": {
+                  "claim": "Alias is not verified against the DEMO-R1 identifier.",
+                  "family": "U01",
+                  "id": "E15",
+                  "measurements": null,
+                  "target_text": "DEMO-RI (letter I)",
+                  "type": "unresolved_entity"
+                },
+                "record_type": "unresolved_entity",
+                "source": {
+                  "locator": "fixture://SRC-CRO/CRO-v1/CRO-E15",
+                  "mapping_id": null,
+                  "original_target_label": "DEMO-RI",
+                  "snapshot_id": "CRO-v1",
+                  "source_id": "SRC-CRO",
+                  "source_record_id": "CRO-E15",
+                  "study_id": "S-U01"
+                },
+                "synthetic": true,
+                "target_id": null,
+                "units": {}
+              },
+              {
+                "claim": "A reported 22% response has no specified cell context or endpoint.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "U02",
+                "evidence_id": "E16",
+                "raw_record": {
+                  "cell_context": null,
+                  "claim": "A reported 22% response has no specified cell context or endpoint.",
+                  "endpoint": null,
+                  "family": "U02",
+                  "id": "E16",
+                  "measurements": {
+                    "reported_reduction_pct": 22
+                  },
+                  "type": "incomplete_record"
+                },
+                "record_type": "incomplete_record",
+                "source": {
+                  "locator": "fixture://SRC-CRO/CRO-v1/CRO-E16",
+                  "mapping_id": "MAP-T001",
+                  "original_target_label": "DEMO-R1",
+                  "snapshot_id": "CRO-v1",
+                  "source_id": "SRC-CRO",
+                  "source_record_id": "CRO-E16",
+                  "study_id": "S-U02"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {
+                  "reported_reduction_pct": "percent_unspecified_denominator"
+                }
+              }
+            ]
+          },
+          "error": null,
+          "request_id": "demo-r1-evidence",
+          "source_snapshot_ids": [
+            "evidence-v1",
+            "INTERNAL-v1",
+            "CRO-v1",
+            "aliases-v1"
+          ],
+          "status": "OK",
+          "synthetic": true
+        },
+        "revision": 1,
+        "step": "evidence",
+        "tool": "search_evidence"
+      }
+    },
+    {
+      "event_id": 4,
+      "created_at": "2026-10-16T09:10:21.298355+00:00",
+      "kind": "DEPENDENCY_BLOCKED",
+      "payload": {
+        "dependent_tool": "get_prediction",
+        "next_action": "Read the exact study manifest; no prediction has run.",
+        "required_fields": [
+          "cell_state",
+          "context_id"
+        ]
+      }
+    },
+    {
+      "event_id": 5,
+      "created_at": "2026-10-16T09:10:21.302190+00:00",
+      "kind": "TOOL_REQUEST",
+      "payload": {
+        "arguments": {
+          "contract_version": "tools-v1",
+          "idempotency_key": "IDEMP-demo-r1-metadata",
+          "request_id": "demo-r1-metadata",
+          "snapshot_id": "META-001-v1",
+          "study_id": "S-TARGET-001"
+        },
+        "attempt": 1,
+        "fault_injected": false,
+        "request_sha256": "fd61aaf5c4629c93c7fb290f8e23f2bf8928c0fabe2853f912ae97a4f632f6e0",
+        "revision": 1,
+        "step": "metadata",
+        "tool": "get_study_manifest"
+      }
+    },
+    {
+      "event_id": 6,
+      "created_at": "2026-10-16T09:10:21.302419+00:00",
+      "kind": "TOOL_RESULT",
+      "payload": {
+        "attempt": 1,
+        "response": {
+          "contract_version": "tools-v1",
+          "data": {
+            "context": {
+              "cell_state": "stimulated; Th17-enriched",
+              "cell_type": "CD4 T cell",
+              "context_id": "CTX-CD4-STIM-TH17",
+              "disease_context_id": "DIS-SKIN-LIKE-001",
+              "species": "human"
+            },
+            "data_availability": "metadata_and_frozen_outputs_only",
+            "input_data_kind": "specialist_prepared_single_cell_reference",
+            "input_snapshot_id": "SC-STIM-001-v1",
+            "limitation": "No expression matrix or real model inference is included. The frozen response stands in for a specialist service. Does not resolve E16 or change historical E05/E06.",
+            "manifest_version": "manifest-v1",
+            "owner_role": "single-cell data owner",
+            "resolved_fields": [
+              "cell_state",
+              "context_id"
+            ],
+            "snapshot_id": "META-001-v1",
+            "source_locator": "fixture://metadata/META-001-v1/S-TARGET-001",
+            "study_id": "S-TARGET-001",
+            "synthetic": true,
+            "target_id": "DEMO-R1"
+          },
+          "error": null,
+          "request_id": "demo-r1-metadata",
+          "source_snapshot_ids": [
+            "META-001-v1"
+          ],
+          "status": "OK",
+          "synthetic": true
+        },
+        "revision": 1,
+        "step": "metadata",
+        "tool": "get_study_manifest"
+      }
+    },
+    {
+      "event_id": 7,
+      "created_at": "2026-10-16T09:10:21.302476+00:00",
+      "kind": "METADATA_RESOLVED",
+      "payload": {
+        "context": {
+          "cell_state": "stimulated; Th17-enriched",
+          "cell_type": "CD4 T cell",
+          "context_id": "CTX-CD4-STIM-TH17",
+          "disease_context_id": "DIS-SKIN-LIKE-001",
+          "species": "human"
+        },
+        "does_not_resolve": [
+          "E16"
+        ],
+        "historical_resting_evidence_preserved": true,
+        "snapshot_id": "META-001-v1"
+      }
+    },
+    {
+      "event_id": 8,
+      "created_at": "2026-10-16T09:10:21.302589+00:00",
+      "kind": "CAPABILITY_SELECTION",
+      "payload": {
+        "candidates": [
+          {
+            "capability_id": "CAP-PRED-REST",
+            "reason": "CONTEXT_NOT_SUPPORTED",
+            "request": {
+              "context_id": "CTX-CD4-STIM-TH17",
+              "contract_version": "tools-v1",
+              "endpoint_id": "transcriptomic_inflammatory_signature",
+              "idempotency_key": "IDEMP-demo-r1-prediction",
+              "input_snapshot_id": "SC-STIM-001-v1",
+              "metadata_snapshot_id": "META-001-v1",
+              "model_id": "mock-signature-adapter",
+              "model_version": "synthetic-model-v1",
+              "perturbation": {
+                "expression_changes_pct": [
+                  -50,
+                  0,
+                  50
+                ],
+                "kind": "expression_change"
+              },
+              "request_id": "demo-r1-prediction",
+              "target_id": "DEMO-R1"
+            }
+          },
+          {
+            "capability_id": "CAP-PRED-STIM",
+            "reason": null,
+            "request": {
+              "context_id": "CTX-CD4-STIM-TH17",
+              "contract_version": "tools-v1",
+              "endpoint_id": "transcriptomic_inflammatory_signature",
+              "idempotency_key": "IDEMP-demo-r1-prediction",
+              "input_snapshot_id": "SC-STIM-001-v1",
+              "metadata_snapshot_id": "META-001-v1",
+              "model_id": "mock-signature-adapter",
+              "model_version": "synthetic-model-v2",
+              "perturbation": {
+                "expression_changes_pct": [
+                  -50,
+                  0,
+                  50
+                ],
+                "kind": "expression_change"
+              },
+              "request_id": "demo-r1-prediction",
+              "target_id": "DEMO-R1"
+            }
+          }
+        ],
+        "selection_rule": "Unique exact match of model context, attributes, input reference and requested levels."
+      }
+    },
+    {
+      "event_id": 9,
+      "created_at": "2026-10-16T09:10:21.302611+00:00",
+      "kind": "TOOL_REQUEST",
+      "payload": {
+        "arguments": {
+          "context_id": "CTX-CD4-STIM-TH17",
+          "contract_version": "tools-v1",
+          "endpoint_id": "transcriptomic_inflammatory_signature",
+          "idempotency_key": "IDEMP-demo-r1-prediction",
+          "input_snapshot_id": "SC-STIM-001-v1",
+          "metadata_snapshot_id": "META-001-v1",
+          "model_id": "mock-signature-adapter",
+          "model_version": "synthetic-model-v2",
+          "perturbation": {
+            "expression_changes_pct": [
+              -50,
+              0,
+              50
+            ],
+            "kind": "expression_change"
+          },
+          "request_id": "demo-r1-prediction",
+          "target_id": "DEMO-R1"
+        },
+        "attempt": 1,
+        "fault_injected": false,
+        "request_sha256": "1b44edf6adb38fc447e6cf984022a92886bbf1b134abe59e42f19c5c523e9b44",
+        "revision": 1,
+        "step": "prediction",
+        "tool": "get_prediction"
+      }
+    },
+    {
+      "event_id": 10,
+      "created_at": "2026-10-16T09:10:21.302735+00:00",
+      "kind": "TOOL_RESULT",
+      "payload": {
+        "attempt": 1,
+        "response": {
+          "contract_version": "tools-v1",
+          "data": {
+            "applicability": "ELIGIBLE_UNDER_MOCK_CONTRACT",
+            "context_id": "CTX-CD4-STIM-TH17",
+            "endpoint_id": "transcriptomic_inflammatory_signature",
+            "input_snapshot_id": "SC-STIM-001-v1",
+            "limitations": [
+              "Frozen invented values; no predictive model was trained or run.",
+              "No functional IL-17A effect, clinical benefit or target-success probability follows from these signature units.",
+              "Expression increase is a prediction comparison only, not an arm in X101-X108.",
+              "Historical E06 and this response are not independent experimental support."
+            ],
+            "measured_predictive_accuracy": null,
+            "metadata_snapshot_id": "META-001-v1",
+            "model_id": "mock-signature-adapter",
+            "model_version": "synthetic-model-v2",
+            "output_id": "PRED-STIM-001",
+            "perturbation_kind": "expression_change",
+            "predictions": [
+              {
+                "expression_change_pct": -50.0,
+                "signature_change": -0.5
+              },
+              {
+                "expression_change_pct": 0.0,
+                "signature_change": 0.0
+              },
+              {
+                "expression_change_pct": 50.0,
+                "signature_change": 0.2
+              }
+            ],
+            "source_locator": "fixture://predictions/synthetic-model-v2/PRED-STIM-001",
+            "synthetic": true,
+            "target_id": "DEMO-R1",
+            "uncertainty": "not_calibrated",
+            "units": "standardized_signature_units"
+          },
+          "error": null,
+          "request_id": "demo-r1-prediction",
+          "source_snapshot_ids": [
+            "META-001-v1",
+            "SC-STIM-001-v1",
+            "synthetic-model-v2"
+          ],
+          "status": "OK",
+          "synthetic": true
+        },
+        "revision": 1,
+        "step": "prediction",
+        "tool": "get_prediction"
+      }
+    },
+    {
+      "event_id": 11,
+      "created_at": "2026-10-16T09:10:21.302762+00:00",
+      "kind": "REFERENCE_CHECKS",
+      "payload": {
+        "evidence_families": {
+          "C01": [
+            "E04"
+          ],
+          "F01": [
+            "E11"
+          ],
+          "F02": [
+            "E12"
+          ],
+          "G01": [
+            "E01",
+            "E02",
+            "E03",
+            "E13",
+            "E14"
+          ],
+          "M01": [
+            "E05",
+            "E06"
+          ],
+          "P01": [
+            "E07",
+            "E09"
+          ],
+          "P02": [
+            "E08"
+          ],
+          "S01": [
+            "E10"
+          ],
+          "U01": [
+            "E15"
+          ],
+          "U02": [
+            "E16"
+          ]
+        },
+        "findings": [
+          {
+            "effect": "Resting-cell evidence is not direct stimulated functional-effect evidence.",
+            "evidence_id": "E03",
+            "issue": "related_context_only"
+          },
+          {
+            "effect": "Resting-cell evidence is not direct stimulated functional-effect evidence.",
+            "evidence_id": "E05",
+            "issue": "related_context_only"
+          },
+          {
+            "effect": "Resting-cell evidence is not direct stimulated functional-effect evidence.",
+            "evidence_id": "E06",
+            "issue": "related_context_only"
+          },
+          {
+            "effect": "Locus association does not establish the claimed gene causality or inhibition benefit.",
+            "evidence_id": "E13",
+            "issue": "unsupported_causal_summary"
+          },
+          {
+            "effect": "No independent support beyond E01.",
+            "evidence_id": "E14",
+            "issue": "duplicate"
+          },
+          {
+            "effect": "Exclude from mapped target support.",
+            "evidence_id": "E15",
+            "issue": "unresolved_entity"
+          },
+          {
+            "effect": "Do not fill missing evidence context from the application study manifest.",
+            "evidence_id": "E16",
+            "issue": "missing_context_and_endpoint"
+          }
+        ],
+        "limitations": [
+          "Rules cover this curated case; they are not an LLM scientific challenger or general claim verifier."
+        ],
+        "mode": "deterministic_reference_checks"
+      }
+    },
+    {
+      "event_id": 12,
+      "created_at": "2026-10-16T09:10:21.302781+00:00",
+      "kind": "TOOL_REQUEST",
+      "payload": {
+        "arguments": {
+          "contract_version": "tools-v1",
+          "evidence_ids": [
+            "E03",
+            "E07",
+            "E09",
+            "E16"
+          ],
+          "evidence_snapshot_id": "EV-INITIAL-003",
+          "idempotency_key": "IDEMP-demo-r1-followup",
+          "include_unresolved_candidates": true,
+          "query": "Reinspect genetic direction, cell-loss evidence and the incomplete record after the reference checks.",
+          "request_id": "demo-r1-followup",
+          "target_id": "DEMO-R1"
+        },
+        "attempt": 1,
+        "fault_injected": false,
+        "request_sha256": "0bebe4b050d57b13ab8a9b5ea9b52a771104dcd562751cff296e7caab6c7e799",
+        "revision": 1,
+        "step": "followup",
+        "tool": "search_evidence"
+      }
+    },
+    {
+      "event_id": 13,
+      "created_at": "2026-10-16T09:10:21.302930+00:00",
+      "kind": "TOOL_RESULT",
+      "payload": {
+        "attempt": 1,
+        "response": {
+          "contract_version": "tools-v1",
+          "data": {
+            "evidence_snapshot_id": "EV-INITIAL-003",
+            "notice": "Synthetic untrusted source content. Query records purpose; target and evidence IDs define the deterministic filter. Retrieval does not certify a claim.",
+            "records": [
+              {
+                "claim": "Shared-variant support under coloc assumptions; direction not harmonized.",
+                "context_id": "CTX-CD4-REST",
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "G01",
+                "evidence_id": "E03",
+                "raw_record": {
+                  "claim": "Shared-variant support under coloc assumptions; direction not harmonized.",
+                  "context": "resting CD4 T-cell eQTL",
+                  "family": "G01",
+                  "id": "E03",
+                  "limitations": "Shares the GWAS evidence family with E01/E02; not three independent studies.",
+                  "measurements": {
+                    "PP_H3": 0.1,
+                    "PP_H4": 0.86,
+                    "remaining_posterior": 0.04
+                  },
+                  "risk_allele_to_expression_direction": "unresolved",
+                  "type": "synthetic_analysis"
+                },
+                "record_type": "synthetic_analysis",
+                "source": {
+                  "locator": "fixture://SRC-INTERNAL/INTERNAL-v1/INT-E03",
+                  "mapping_id": "MAP-T002",
+                  "original_target_label": "DEMO_R1",
+                  "snapshot_id": "INTERNAL-v1",
+                  "source_id": "SRC-INTERNAL",
+                  "source_record_id": "INT-E03",
+                  "study_id": "S-G01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {
+                  "PP_H3": "posterior_under_coloc_assumptions",
+                  "PP_H4": "posterior_under_coloc_assumptions",
+                  "remaining_posterior": "posterior_under_coloc_assumptions"
+                }
+              },
+              {
+                "claim": "Earlier bulk secretion result is confounded by loss of live cells.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "P01",
+                "evidence_id": "E07",
+                "raw_record": {
+                  "claim": "Earlier bulk secretion result is confounded by loss of live cells.",
+                  "family": "P01",
+                  "id": "E07",
+                  "measurements": {
+                    "kd_live_cell_count": [
+                      60000,
+                      60000,
+                      60000
+                    ],
+                    "kd_secreted_IL17A_pg_ml": [
+                      360,
+                      432,
+                      324
+                    ],
+                    "kd_viable_fraction_pct": [
+                      63,
+                      66,
+                      62
+                    ],
+                    "n_paired_donors": 3,
+                    "ntc_live_cell_count": [
+                      100000,
+                      100000,
+                      100000
+                    ],
+                    "ntc_secreted_IL17A_pg_ml": [
+                      600,
+                      720,
+                      540
+                    ]
+                  },
+                  "scope": "A 40% bulk readout reduction accompanies 40% fewer live cells; it does not establish beneficial function.",
+                  "type": "synthetic_measurement"
+                },
+                "record_type": "synthetic_measurement",
+                "source": {
+                  "locator": "fixture://SRC-CRO/CRO-v1/CRO-E07",
+                  "mapping_id": "MAP-T001",
+                  "original_target_label": "DEMO-R1",
+                  "snapshot_id": "CRO-v1",
+                  "source_id": "SRC-CRO",
+                  "source_record_id": "CRO-E07",
+                  "study_id": "S-P01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {
+                  "kd_live_cell_count": "cells",
+                  "kd_secreted_IL17A_pg_ml": "pg/ml",
+                  "kd_viable_fraction_pct": "percent",
+                  "n_paired_donors": "count",
+                  "ntc_live_cell_count": "cells",
+                  "ntc_secreted_IL17A_pg_ml": "pg/ml"
+                }
+              },
+              {
+                "claim": "Investigate cell loss and whether it is on-target, off-target, or delivery-related.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "P01",
+                "evidence_id": "E09",
+                "raw_record": {
+                  "claim": "Investigate cell loss and whether it is on-target, off-target, or delivery-related.",
+                  "family": "P01",
+                  "id": "E09",
+                  "independent_evidence": false,
+                  "source_ids": [
+                    "E07"
+                  ],
+                  "type": "linked_safety_observation"
+                },
+                "record_type": "linked_safety_observation",
+                "source": {
+                  "locator": "fixture://SRC-CRO/CRO-v1/CRO-E09",
+                  "mapping_id": "MAP-T001",
+                  "original_target_label": "DEMO-R1",
+                  "snapshot_id": "CRO-v1",
+                  "source_id": "SRC-CRO",
+                  "source_record_id": "CRO-E09",
+                  "study_id": "S-P01"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {}
+              },
+              {
+                "claim": "A reported 22% response has no specified cell context or endpoint.",
+                "context_id": null,
+                "endpoint_id": null,
+                "entity_status": "RESOLVED",
+                "evidence_family_id": "U02",
+                "evidence_id": "E16",
+                "raw_record": {
+                  "cell_context": null,
+                  "claim": "A reported 22% response has no specified cell context or endpoint.",
+                  "endpoint": null,
+                  "family": "U02",
+                  "id": "E16",
+                  "measurements": {
+                    "reported_reduction_pct": 22
+                  },
+                  "type": "incomplete_record"
+                },
+                "record_type": "incomplete_record",
+                "source": {
+                  "locator": "fixture://SRC-CRO/CRO-v1/CRO-E16",
+                  "mapping_id": "MAP-T001",
+                  "original_target_label": "DEMO-R1",
+                  "snapshot_id": "CRO-v1",
+                  "source_id": "SRC-CRO",
+                  "source_record_id": "CRO-E16",
+                  "study_id": "S-U02"
+                },
+                "synthetic": true,
+                "target_id": "DEMO-R1",
+                "units": {
+                  "reported_reduction_pct": "percent_unspecified_denominator"
+                }
+              }
+            ]
+          },
+          "error": null,
+          "request_id": "demo-r1-followup",
+          "source_snapshot_ids": [
+            "evidence-v1",
+            "INTERNAL-v1",
+            "CRO-v1",
+            "aliases-v1"
+          ],
+          "status": "OK",
+          "synthetic": true
+        },
+        "revision": 1,
+        "step": "followup",
+        "tool": "search_evidence"
+      }
+    },
+    {
+      "event_id": 14,
+      "created_at": "2026-10-16T09:10:21.302989+00:00",
+      "kind": "TOOL_REQUEST",
+      "payload": {
+        "arguments": {
+          "context_id": "CTX-CD4-STIM-TH17",
+          "contract_version": "tools-v1",
+          "hypothesis_id": "HYP-DEMO-R1-001",
+          "idempotency_key": "IDEMP-demo-r1-options",
+          "option_snapshot_id": "OPTIONS-v1",
+          "policy_version": "demo-policy-v1",
+          "request_id": "demo-r1-options",
+          "unresolved_questions": [
+            "functional direction",
+            "cell-loss confound",
+            "gene assignment"
+          ]
+        },
+        "attempt": 1,
+        "fault_injected": false,
+        "request_sha256": "5298f0af2d10fb86d89b07f5a1de93c61a9e100b14115d30993fca768373080a",
+        "revision": 1,
+        "step": "options",
+        "tool": "get_experiment_options"
+      }
+    },
+    {
+      "event_id": 15,
+      "created_at": "2026-10-16T09:10:21.303171+00:00",
+      "kind": "TOOL_RESULT",
+      "payload": {
+        "attempt": 1,
+        "response": {
+          "contract_version": "tools-v1",
+          "data": {
+            "option_snapshot_id": "OPTIONS-v1",
+            "options": [
+              {
+                "decision_consequences": {
+                  "resolved": "Refine causal/intervention hypothesis; functional validation may still be required.",
+                  "unresolved": "Keep ambiguity explicit and request a relevant functional test."
+                },
+                "effort_band": "low",
+                "executable_lab_protocol": false,
+                "illustrative_turnaround_weeks": [
+                  0.5,
+                  1.0
+                ],
+                "limitations": [
+                  "May find no new evidence; does not replace functional perturbation."
+                ],
+                "option_id": "OPT-REVIEW",
+                "owner_role": "genetics specialist and data owner",
+                "readouts": [
+                  "harmonised allele-to-expression direction if available",
+                  "source-level context checks"
+                ],
+                "relative_cost_units": 1.0,
+                "scientific_review_status": "illustrative_concept_requires_biology_review",
+                "synthetic": true,
+                "title": "Focused genetics and metadata review",
+                "uncertainty_addressed": [
+                  "gene assignment",
+                  "genetic direction",
+                  "missing source metadata"
+                ]
+              },
+              {
+                "decision_consequences": {
+                  "supportive": "Propose independent replication and specificity work.",
+                  "uncertain_or_invalid": "Preserve reason and agree a focused follow-up with biology.",
+                  "useful_effect_excluded": "Deprioritize this useful-benefit hypothesis in the tested context."
+                },
+                "effort_band": "medium",
+                "executable_lab_protocol": false,
+                "illustrative_turnaround_weeks": [
+                  3.0,
+                  5.0
+                ],
+                "limitations": [
+                  "Demo assumes the perturbation and assay are feasible; confirm with biology.",
+                  "Eight paired donors; two methods on the same donors; no independent cohort replication.",
+                  "Demo thresholds are scientist-reviewable assumptions, not organisational standards."
+                ],
+                "option_id": "OPT-FUNCTION",
+                "owner_role": "biology assay lead",
+                "readouts": [
+                  "live-cell IL-17A-positive fraction",
+                  "live-cell count and viable fraction",
+                  "target surface protein",
+                  "assay controls"
+                ],
+                "relative_cost_units": 5.0,
+                "scientific_review_status": "illustrative_concept_requires_biology_review",
+                "synthetic": true,
+                "title": "Relevant-context expression-reduction experiment",
+                "uncertainty_addressed": [
+                  "functional effect of partial expression reduction",
+                  "cell-loss confound",
+                  "method disagreement"
+                ]
+              },
+              {
+                "decision_consequences": {
+                  "no_change": "May reflect scope or sensitivity; does not alone exclude the functional hypothesis.",
+                  "signature_change": "Generate mechanistic hypotheses; functional confirmation remains necessary."
+                },
+                "effort_band": "high",
+                "executable_lab_protocol": false,
+                "illustrative_turnaround_weeks": [
+                  6.0,
+                  10.0
+                ],
+                "limitations": [
+                  "Illustrative effort only; no formal value-of-information optimum.",
+                  "Less direct for the predefined functional decision than OPT-FUNCTION."
+                ],
+                "option_id": "OPT-OMICS",
+                "owner_role": "biology and single-cell specialists",
+                "readouts": [
+                  "transcriptomic signatures",
+                  "cell-state composition"
+                ],
+                "relative_cost_units": 15.0,
+                "scientific_review_status": "illustrative_concept_requires_biology_review",
+                "synthetic": true,
+                "title": "Broader perturbation transcriptomics screen",
+                "uncertainty_addressed": [
+                  "pathway context",
+                  "possible response mechanisms"
+                ]
+              }
+            ],
+            "selection_method": "qualitative_decision_relevance_no_formal_optimality"
+          },
+          "error": null,
+          "request_id": "demo-r1-options",
+          "source_snapshot_ids": [
+            "OPTIONS-v1",
+            "demo-policy-v1"
+          ],
+          "status": "OK",
+          "synthetic": true
+        },
+        "revision": 1,
+        "step": "options",
+        "tool": "get_experiment_options"
+      }
+    },
+    {
+      "event_id": 16,
+      "created_at": "2026-10-16T09:10:21.303194+00:00",
+      "kind": "NEXT_ACTION_PROPOSED",
+      "payload": {
+        "formal_optimality_claimed": false,
+        "mode": "explicit_scientist_authored_reference_rule",
+        "rationale": "Directly resolves the useful functional-effect and cell-loss uncertainty; review alone or broad signatures cannot establish that endpoint.",
+        "selected_option": "OPT-FUNCTION"
+      }
+    },
+    {
+      "event_id": 17,
+      "created_at": "2026-10-16T09:10:21.303405+00:00",
+      "kind": "ASSESSMENT_CREATED",
+      "payload": {
+        "assessment_id": "demo-A001",
+        "content_sha256": "a1426069327b02f30e4f01114ac6e9a6f220989becbd619973e463933868564e",
+        "proposed_action": "EXPERIMENT_TO_RESOLVE_UNCERTAINTY",
+        "review_required": true,
+        "workflow_status": "READY_FOR_BIOLOGY_REVIEW"
+      }
+    },
+    {
+      "event_id": 18,
+      "created_at": "2026-10-16T09:10:21.307149+00:00",
+      "kind": "REVIEW_RECORDED",
+      "payload": {
+        "actor_mode": "simulated_human",
+        "assessment_id": "demo-A001",
+        "authorization_scope": "local_simulation_only",
+        "decision": "APPROVE",
+        "rationale": "Scripted example: approve the scoped synthetic experiment under the provisional criteria.",
+        "review_id": "demo-R001",
+        "reviewed_content_sha256": "a1426069327b02f30e4f01114ac6e9a6f220989becbd619973e463933868564e",
+        "reviewer_role": "Demo biology reviewer (scripted)",
+        "synthetic": true
+      }
+    },
+    {
+      "event_id": 19,
+      "created_at": "2026-10-16T09:10:21.314018+00:00",
+      "kind": "RESULT_IMPORTED",
+      "payload": {
+        "experiment_id": "X101",
+        "prior_approval_invalidated": true,
+        "prior_assessment_id": "demo-A001",
+        "simulated": true,
+        "snapshot_sha256": "398ce07c9571caad7deb4954be9f4c9b5fda434c3a7239bcf6aeaaad40647af2"
+      }
+    },
+    {
+      "event_id": 20,
+      "created_at": "2026-10-16T09:10:21.314358+00:00",
+      "kind": "CALCULATION",
+      "payload": {
+        "mode": "fixed_code",
+        "note": "Effect estimates are diagnostic if prerequisites fail.",
+        "result": {
+          "claim_scope": {
+            "assay_protocol_version": "mock-assay-v1",
+            "cell_context": "stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)",
+            "disease_context": "inflammatory skin disease-like assay; no patient-efficacy claim",
+            "endpoint": "relative reduction in fraction of live CD4 T cells that are IL-17A positive",
+            "endpoint_time_hours": 72,
+            "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+            "target": "DEMO-R1 (fictional cell-surface receptor)"
+          },
+          "experiment_id": "X101",
+          "failed_gates": [],
+          "human_review_required": true,
+          "policy_version": "demo-policy-v1",
+          "prerequisites_passed": true,
+          "proposed_action": "ADVANCE_TO_REPLICATION",
+          "reason": "Both methods meet the useful-effect criterion with intact prerequisites.",
+          "statistics": {
+            "KD-A": {
+              "donor_functional_reductions_pct": {
+                "D01": 32.00000000000001,
+                "D02": 31.000000000000007,
+                "D03": 35.00000000000001,
+                "D04": 28.000000000000004,
+                "D05": 28.999999999999993,
+                "D06": 37.0,
+                "D07": 32.99999999999999,
+                "D08": 31.000000000000007
+              },
+              "functional_reduction_pct": {
+                "lower_95": 29.511922118076697,
+                "mean": 32.0,
+                "n_donors": 8,
+                "upper_95": 34.4880778819233
+              },
+              "live_cell_recovery_pct": {
+                "lower_95": 95.19797788816842,
+                "mean": 96.375,
+                "n_donors": 8,
+                "upper_95": 97.55202211183158
+              },
+              "protein_reduction_range_pct": [
+                48.0,
+                62.0
+              ],
+              "viable_fraction_range_pct": [
+                91,
+                94
+              ]
+            },
+            "KD-B": {
+              "donor_functional_reductions_pct": {
+                "D01": 29.000000000000004,
+                "D02": 29.000000000000004,
+                "D03": 30.000000000000004,
+                "D04": 27.0,
+                "D05": 30.999999999999993,
+                "D06": 28.000000000000004,
+                "D07": 32.99999999999999,
+                "D08": 25.0
+              },
+              "functional_reduction_pct": {
+                "lower_95": 26.95217532822033,
+                "mean": 29.0,
+                "n_donors": 8,
+                "upper_95": 31.04782467177967
+              },
+              "live_cell_recovery_pct": {
+                "lower_95": 94.19797788816842,
+                "mean": 95.375,
+                "n_donors": 8,
+                "upper_95": 96.55202211183158
+              },
+              "protein_reduction_range_pct": [
+                46.00000000000001,
+                60.0
+              ],
+              "viable_fraction_range_pct": [
+                90,
+                94
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "event_id": 21,
+      "created_at": "2026-10-16T09:10:21.314544+00:00",
+      "kind": "ASSESSMENT_CREATED",
+      "payload": {
+        "assessment_id": "demo-A002",
+        "content_sha256": "34de16e1d7bfd080e0245c8bf2601da0196eeeee89f0e4c647b35824b5806dfa",
+        "proposed_action": "ADVANCE_TO_REPLICATION",
+        "review_required": true,
+        "workflow_status": "READY_FOR_BIOLOGY_REVIEW"
+      }
+    },
+    {
+      "event_id": 22,
+      "created_at": "2026-10-16T09:10:21.318353+00:00",
+      "kind": "REVIEW_RECORDED",
+      "payload": {
+        "actor_mode": "simulated_human",
+        "assessment_id": "demo-A002",
+        "authorization_scope": "local_simulation_only",
+        "decision": "DEFER",
+        "rationale": "Scripted example: clarify the scope of the proposed next work before approving it.",
+        "review_id": "demo-R002",
+        "reviewed_content_sha256": "34de16e1d7bfd080e0245c8bf2601da0196eeeee89f0e4c647b35824b5806dfa",
+        "reviewer_role": "Demo biology reviewer (scripted)",
+        "synthetic": true
+      }
+    },
+    {
+      "event_id": 23,
+      "created_at": "2026-10-16T09:10:21.324992+00:00",
+      "kind": "REVIEW_FOLLOWUP_SAVED",
+      "payload": {
+        "assessment_id": "demo-A002",
+        "assessment_sha256": "34de16e1d7bfd080e0245c8bf2601da0196eeeee89f0e4c647b35824b5806dfa",
+        "followup_id": "f6fe7ca6fd934184bcebc8c5098e8c32",
+        "owner": "Demo assay team (scripted)",
+        "previous_followup_id": null,
+        "progress_note": "Scripted plan; no additional experiments performed.",
+        "re_review_condition": "Scoped next-action clarification available for review.",
+        "recorded_at": "2026-10-16T09:10:21.324970+00:00",
+        "required_work": "Clarify the proposed replication and target-specificity scope.",
+        "review_id": "demo-R002",
+        "run_id": "demo",
+        "status": "Planned"
+      }
+    },
+    {
+      "event_id": 24,
+      "created_at": "2026-10-16T09:10:21.329147+00:00",
+      "kind": "REVIEW_FOLLOWUP_SAVED",
+      "payload": {
+        "assessment_id": "demo-A002",
+        "assessment_sha256": "34de16e1d7bfd080e0245c8bf2601da0196eeeee89f0e4c647b35824b5806dfa",
+        "followup_id": "df6f6ea537da455ea08068232e9ca536",
+        "owner": "Demo assay team (scripted)",
+        "previous_followup_id": "f6fe7ca6fd934184bcebc8c5098e8c32",
+        "progress_note": "Scripted clarification: approval is sought only for replication and specificity work. No new experimental results are claimed.",
+        "re_review_condition": "Scoped next-action clarification available for review.",
+        "recorded_at": "2026-10-16T09:10:21.328863+00:00",
+        "required_work": "Clarify the proposed replication and target-specificity scope.",
+        "review_id": "demo-R002",
+        "run_id": "demo",
+        "status": "Ready for re-review"
+      }
+    },
+    {
+      "event_id": 25,
+      "created_at": "2026-10-16T09:10:21.331137+00:00",
+      "kind": "REVIEW_RECORDED",
+      "payload": {
+        "actor_mode": "simulated_human",
+        "assessment_id": "demo-A002",
+        "authorization_scope": "local_simulation_only",
+        "decision": "APPROVE",
+        "rationale": "Scripted example: approve new-donor/batch replication and target-specificity work only. The two methods clear the provisional useful-effect criterion but share the same eight donors. Independent replication, specificity, antibody blockade equivalence and systemic safety remain unestablished. This is not target validation or programme approval.",
+        "review_id": "demo-R003",
+        "reviewed_content_sha256": "34de16e1d7bfd080e0245c8bf2601da0196eeeee89f0e4c647b35824b5806dfa",
+        "reviewer_role": "Demo biology reviewer (scripted)",
+        "synthetic": true
+      }
+    },
+    {
+      "event_id": 26,
+      "created_at": "2026-10-16T09:10:21.338533+00:00",
+      "kind": "HANDOFF_CREATED",
+      "payload": {
+        "assessment": {
+          "assessment_id": "demo-A002",
+          "author_mode": "deterministic_reference",
+          "challenging_evidence_ids": [
+            "E07",
+            "E09",
+            "E10"
+          ],
+          "confidence": {
+            "causal": {
+              "evidence_ids": [
+                "E01",
+                "E02",
+                "E03"
+              ],
+              "ordinal": 1,
+              "rationale": "Suggestive locus evidence; gene assignment and genetic direction remain unresolved.",
+              "scope": "gene-to-disease causal hypothesis",
+              "status": "ASSESSED"
+            },
+            "interpretation": "proposed_ordinal_support_not_probability",
+            "intervention": {
+              "evidence_ids": [
+                "X101"
+              ],
+              "ordinal": 2,
+              "rationale": "Both methods meet the predefined 20% useful functional-effect criterion with intact prerequisites. The methods use the same donors; this is not independent cohort replication.",
+              "scope": "20% useful functional effect of expression reduction in this tested context",
+              "status": "ASSESSED"
+            },
+            "modality_feasibility": {
+              "antibody": "conditional",
+              "oligonucleotide": "conditional",
+              "small_molecule": "unknown"
+            },
+            "rubric_version": "ordinal-rubric-v1",
+            "systemic_safety": "unassessed"
+          },
+          "context_id": "CTX-CD4-STIM-TH17",
+          "excluded_or_limited_evidence": {
+            "E06": "Historical resting-cell signature prediction; not a stimulated functional-effect prediction.",
+            "E13": "Causal/inhibition-benefit overclaim is unsupported by the cited locus association.",
+            "E14": "Duplicate of E01; no independent support.",
+            "E15": "Unresolved entity; do not map automatically.",
+            "E16": "Cell context, endpoint and denominator remain unknown.",
+            "PRED-STIM-001": "Frozen signature response; no measured predictive accuracy or functional-benefit claim."
+          },
+          "failed_gates": [],
+          "functional_effect_units": "relative_percent_reduction",
+          "functional_effects": {
+            "KD-A": {
+              "lower_95": 29.511922118076697,
+              "mean": 32.0,
+              "n_donors": 8,
+              "upper_95": 34.4880778819233
+            },
+            "KD-B": {
+              "lower_95": 26.95217532822033,
+              "mean": 29.0,
+              "n_donors": 8,
+              "upper_95": 31.04782467177967
+            }
+          },
+          "human_review_required": true,
+          "hypothesis": "Partial expression reduction produces at least 20% relative reduction in the live-cell IL-17A-positive fraction while preserving cells in the specified stimulated context.",
+          "hypothesis_id": "HYP-DEMO-R1-001",
+          "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+          "next_action": "Propose new-donor/batch replication and target-specificity work; open a conditional specialist feasibility discussion.",
+          "next_owner_role": "biology reviewer",
+          "prerequisites_passed": true,
+          "rationale": "Both methods meet the predefined 20% useful functional-effect criterion with intact prerequisites. The methods use the same donors; this is not independent cohort replication.",
+          "remaining_uncertainties": [
+            "Gene assignment and genetic direction remain unresolved.",
+            "Systemic and tissue safety remain unassessed.",
+            "Expression reduction is not established to be equivalent to receptor blockade.",
+            "Relevant-cell delivery, isoform coverage and modality feasibility require specialist assessment.",
+            "Independent replication and specificity remain unestablished."
+          ],
+          "scientific_recommendation": "ADVANCE_TO_REPLICATION",
+          "supporting_evidence_ids": [
+            "E01",
+            "E02",
+            "E03",
+            "E04",
+            "X101"
+          ],
+          "synthetic": true,
+          "target_id": "DEMO-R1",
+          "versions": {
+            "alias_mapping_version": "aliases-v1",
+            "contract_version": "tools-v1",
+            "evidence_snapshot_id": "EV-INITIAL-003+evidence-v2-X101",
+            "input_content_sha256": {
+              "implementation/contracts.py": "01348d479b95ca3344f3c5cbded16fb2114435c7ee67c473bd90db6b48bde768",
+              "implementation/decision_compiler.py": "d59f6a9c9a737d5fc918d9e94bfa808ca7ae25515f072941532123436d633b75",
+              "implementation/demo.py": "680f0eaa85c14f96ba0b40d647d6a6e12a3fdb2037721f5d955f6bc1b60f91a5",
+              "implementation/evaluate.py": "3725ee519acc89a770dfa14d0ae72430455387f78a7568d97e1f88b27bfd21bb",
+              "implementation/local_tools.py": "e67644a3a7299f84700c01212d3b525dde5421c4cd1b9a9967741b03c1463dd6",
+              "implementation/workflow.py": "90e5505e75a79cb890aa416e56076ef538d0b4a6c053e44ae66a88c093212e7a",
+              "implementation/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b",
+              "runtime/capability_registry.json": "9de92358b6bd5b081896ce101f23548443d526fb31ced17caf444a65cea83d23",
+              "runtime/confidence_rubric.json": "8904b88d4f83af96ab3b399ec463a4ddf6a22930f03a55009228f88768aa04f1",
+              "runtime/experiment_options.response.json": "c6027d25618e787a24035e90d7889c49560896fba8b57a44329282013df83fcf",
+              "runtime/experiments/X101.json": "398ce07c9571caad7deb4954be9f4c9b5fda434c3a7239bcf6aeaaad40647af2",
+              "runtime/handoffs/antibody_response_template.json": "b539db29810cc6f92fcad0a3fa77cc1c7d9248b36c6cf5c2153e0d8fca752e88",
+              "runtime/initial_evidence.json": "1d78b76f9105e373405ecc061936e3e3321328d899fbedf766fe9465f95847a6",
+              "runtime/metadata/alias_mappings.json": "9d15663c0d14f10286a6c05d40b2377f555bb314286a64440d57d26dd766ffa4",
+              "runtime/metadata/context_catalog.json": "53983ca7e731f6bd183a41f8307ce3ba68040249054d6bcf99d3bafd5a88af60",
+              "runtime/metadata/study_manifest.json": "00ac1850fd96641dfba51f9555d2c5674132cbb9b4ef87f3b0d0f8e90f274563",
+              "runtime/policy.json": "1531dacf1982e73e90c3abcb0b9b37291283e7dfd859e6e0f33035810f614b23",
+              "runtime/predictions/stimulated_signature.response.json": "56e68286639bb682fcb85b35fa3dea6330124891a4c93db8ef794442bb596c8f",
+              "runtime/sources/cro_export.json": "cd4a685c3f79ea45626c52b2dd4f3eeb2d8ee506d41a649d5d61b38bfdf80de1",
+              "runtime/sources/internal_evidence.json": "1b76edad6f1982c52b0f85ac8a543b077ae74ea69eae0ba2eba41964f1bfa1d2",
+              "runtime/workflow_contract.json": "680c7c03de89a5ec9012667a60cf0174a3fa02b172e230711982fdfe9b6526c8"
+            },
+            "metadata_snapshot_id": "META-001-v1",
+            "model_output_ids": [
+              "PRED-STIM-001"
+            ],
+            "model_versions": {
+              "historical_E06": "synthetic-model-v1",
+              "mock-signature-adapter": "synthetic-model-v2"
+            },
+            "policy_version": "demo-policy-v1",
+            "prompt_version": "no-LLM-reference-cli-v1-b2d84e5fb927",
+            "registry_version": "registry-v1"
+          },
+          "workflow_status": "READY_FOR_BIOLOGY_REVIEW"
+        },
+        "delivery_mode": "local_simulation",
+        "handoff_id": "demo-H001",
+        "handoff_version": "handoff-v1",
+        "next_owner_role": "antibody specialists",
+        "recipient_platform": "antibody",
+        "requested_action": "Assess whether receptor blockade can reproduce the expression-reduction phenotype; identify the missing evidence.",
+        "requested_by_role": "DDS workflow lead",
+        "review": {
+          "actor_mode": "simulated_human",
+          "assessment_id": "demo-A002",
+          "authorization_scope": "local_simulation_only",
+          "decision": "APPROVE",
+          "rationale": "Scripted example: approve new-donor/batch replication and target-specificity work only. The two methods clear the provisional useful-effect criterion but share the same eight donors. Independent replication, specificity, antibody blockade equivalence and systemic safety remain unestablished. This is not target validation or programme approval.",
+          "review_id": "demo-R003",
+          "reviewed_content_sha256": "34de16e1d7bfd080e0245c8bf2601da0196eeeee89f0e4c647b35824b5806dfa",
+          "reviewer_role": "Demo biology reviewer (scripted)",
+          "synthetic": true
+        },
+        "synthetic": true
+      }
+    },
+    {
+      "event_id": 27,
+      "created_at": "2026-10-16T09:10:21.338664+00:00",
+      "kind": "SIMULATED_SPECIALIST_RESPONSE",
+      "payload": {
+        "assessment_id": "demo-A002",
+        "delivery_mode": "local_simulation",
+        "handoff_id": "demo-H001",
+        "handoff_version": "handoff-v1",
+        "missing_information": [
+          "Whether receptor blockade reproduces the non-cytotoxic expression-reduction phenotype."
+        ],
+        "next_action": "Agree a mechanism-equivalence study concept with biology and antibody specialists.",
+        "next_owner_role": "biology assay lead with antibody specialists",
+        "platform": "antibody",
+        "reason": "Expression reduction does not establish that receptor blockade gives the same functional result.",
+        "response_id": "demo-H001-response",
+        "reviewed_content_sha256": "34de16e1d7bfd080e0245c8bf2601da0196eeeee89f0e4c647b35824b5806dfa",
+        "status": "NEEDS_INFORMATION",
+        "synthetic": true
+      }
+    }
+  ],
+  "recorded_inputs": [
+    {
+      "revision": 1,
+      "relative_path": "runtime/capability_registry.json",
+      "sha256": "9de92358b6bd5b081896ce101f23548443d526fb31ced17caf444a65cea83d23",
+      "source_text": "{\n  \"synthetic\": true,\n  \"registry_version\": \"registry-v1\",\n  \"capabilities\": [\n    {\n      \"capability_id\": \"CAP-EVIDENCE\",\n      \"tool_name\": \"search_evidence\",\n      \"owner_role\": \"evidence data owner\",\n      \"input_schema\": \"schemas/SearchEvidenceRequest.schema.json\",\n      \"output_schema\": \"schemas/SearchEvidenceResponse.schema.json\",\n      \"schema_version\": \"tools-v1\",\n      \"supported_context_ids\": [],\n      \"required_context_attributes\": {},\n      \"supported_perturbations\": [],\n      \"allowed_expression_changes_pct\": [],\n      \"required_data_references\": [\n        \"EV-INITIAL-003\"\n      ],\n      \"model_id\": null,\n      \"model_version\": null,\n      \"permitted_side_effects\": \"none\",\n      \"max_transient_retries\": 1,\n      \"retry_requires_identical_input_and_idempotency_key\": true,\n      \"limitations\": [\n        \"All data and responses are synthetic; eligibility is not empirical validation.\"\n      ]\n    },\n    {\n      \"capability_id\": \"CAP-METADATA\",\n      \"tool_name\": \"get_study_manifest\",\n      \"owner_role\": \"single-cell data owner\",\n      \"input_schema\": \"schemas/GetStudyManifestRequest.schema.json\",\n      \"output_schema\": \"schemas/GetStudyManifestResponse.schema.json\",\n      \"schema_version\": \"tools-v1\",\n      \"supported_context_ids\": [],\n      \"required_context_attributes\": {},\n      \"supported_perturbations\": [],\n      \"allowed_expression_changes_pct\": [],\n      \"required_data_references\": [\n        \"META-001-v1\"\n      ],\n      \"model_id\": null,\n      \"model_version\": null,\n      \"permitted_side_effects\": \"none\",\n      \"max_transient_retries\": 1,\n      \"retry_requires_identical_input_and_idempotency_key\": true,\n      \"limitations\": [\n        \"All data and responses are synthetic; eligibility is not empirical validation.\"\n      ]\n    },\n    {\n      \"capability_id\": \"CAP-PRED-REST\",\n      \"tool_name\": \"get_prediction\",\n      \"owner_role\": \"specialist predictive-model team\",\n      \"input_schema\": \"schemas/GetPredictionRequest.schema.json\",\n      \"output_schema\": \"schemas/GetPredictionResponse.schema.json\",\n      \"schema_version\": \"tools-v1\",\n      \"supported_context_ids\": [\n        \"CTX-CD4-REST\"\n      ],\n      \"required_context_attributes\": {\n        \"context_id\": \"CTX-CD4-REST\",\n        \"species\": \"human\",\n        \"cell_type\": \"CD4 T cell\",\n        \"cell_state\": \"resting\",\n        \"disease_context_id\": \"DIS-SKIN-LIKE-001\"\n      },\n      \"supported_perturbations\": [\n        \"expression_change\"\n      ],\n      \"allowed_expression_changes_pct\": [\n        -50.0\n      ],\n      \"required_data_references\": [\n        \"SC-REST-001-v1\"\n      ],\n      \"model_id\": \"mock-signature-adapter\",\n      \"model_version\": \"synthetic-model-v1\",\n      \"permitted_side_effects\": \"none\",\n      \"max_transient_retries\": 1,\n      \"retry_requires_identical_input_and_idempotency_key\": true,\n      \"limitations\": [\n        \"All data and responses are synthetic; eligibility is not empirical validation.\"\n      ]\n    },\n    {\n      \"capability_id\": \"CAP-PRED-STIM\",\n      \"tool_name\": \"get_prediction\",\n      \"owner_role\": \"specialist predictive-model team\",\n      \"input_schema\": \"schemas/GetPredictionRequest.schema.json\",\n      \"output_schema\": \"schemas/GetPredictionResponse.schema.json\",\n      \"schema_version\": \"tools-v1\",\n      \"supported_context_ids\": [\n        \"CTX-CD4-STIM-TH17\"\n      ],\n      \"required_context_attributes\": {\n        \"context_id\": \"CTX-CD4-STIM-TH17\",\n        \"species\": \"human\",\n        \"cell_type\": \"CD4 T cell\",\n        \"cell_state\": \"stimulated; Th17-enriched\",\n        \"disease_context_id\": \"DIS-SKIN-LIKE-001\"\n      },\n      \"supported_perturbations\": [\n        \"expression_change\"\n      ],\n      \"allowed_expression_changes_pct\": [\n        -50.0,\n        0.0,\n        50.0\n      ],\n      \"required_data_references\": [\n        \"SC-STIM-001-v1\"\n      ],\n      \"model_id\": \"mock-signature-adapter\",\n      \"model_version\": \"synthetic-model-v2\",\n      \"permitted_side_effects\": \"none\",\n      \"max_transient_retries\": 1,\n      \"retry_requires_identical_input_and_idempotency_key\": true,\n      \"limitations\": [\n        \"All data and responses are synthetic; eligibility is not empirical validation.\"\n      ]\n    },\n    {\n      \"capability_id\": \"CAP-OPTIONS\",\n      \"tool_name\": \"get_experiment_options\",\n      \"owner_role\": \"biology assay lead\",\n      \"input_schema\": \"schemas/GetExperimentOptionsRequest.schema.json\",\n      \"output_schema\": \"schemas/GetExperimentOptionsResponse.schema.json\",\n      \"schema_version\": \"tools-v1\",\n      \"supported_context_ids\": [\n        \"CTX-CD4-STIM-TH17\"\n      ],\n      \"required_context_attributes\": {},\n      \"supported_perturbations\": [],\n      \"allowed_expression_changes_pct\": [],\n      \"required_data_references\": [\n        \"OPTIONS-v1\",\n        \"demo-policy-v1\"\n      ],\n      \"model_id\": null,\n      \"model_version\": null,\n      \"permitted_side_effects\": \"none\",\n      \"max_transient_retries\": 1,\n      \"retry_requires_identical_input_and_idempotency_key\": true,\n      \"limitations\": [\n        \"All data and responses are synthetic; eligibility is not empirical validation.\"\n      ]\n    }\n  ]\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/confidence_rubric.json",
+      "sha256": "8904b88d4f83af96ab3b399ec463a4ddf6a22930f03a55009228f88768aa04f1",
+      "source_text": "{\n  \"synthetic\": true,\n  \"rubric_version\": \"ordinal-rubric-v1\",\n  \"interpretation\": \"Proposed human-reviewed ordinal support, not calibrated probabilities or an aggregate score.\",\n  \"grades\": {\n    \"0\": \"The assessed, explicitly scoped claim is not supported.\",\n    \"1\": \"Suggestive evidence or unresolved support.\",\n    \"2\": \"Converging relevant-context evidence with material limitations.\",\n    \"3\": \"Independently replicated relevant support; not demonstrated in this demo.\"\n  },\n  \"unknown\": {\n    \"ordinal\": null,\n    \"status\": \"UNKNOWN\",\n    \"meaning\": \"Not assessed; do not substitute zero.\"\n  },\n  \"dimensions\": [\n    \"causal\",\n    \"intervention\"\n  ],\n  \"separate_assessments\": [\n    \"modality feasibility\",\n    \"systemic safety\",\n    \"portfolio priority\"\n  ],\n  \"rules\": [\n    \"State the precise claim and supporting/contradicting evidence for each grade.\",\n    \"A mock prediction, duplicated record or resolved metadata cannot alone increase support.\",\n    \"Technical/QC failures and uncertain biology do not automatically imply ordinal zero.\",\n    \"An expression-reduction result does not resolve gene assignment or genetic direction.\",\n    \"Functional support is scoped to the useful-effect threshold, achieved perturbation and context.\"\n  ]\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/experiment_options.response.json",
+      "sha256": "c6027d25618e787a24035e90d7889c49560896fba8b57a44329282013df83fcf",
+      "source_text": "{\n  \"synthetic\": true,\n  \"contract_version\": \"tools-v1\",\n  \"request_id\": \"Q008\",\n  \"status\": \"OK\",\n  \"source_snapshot_ids\": [\n    \"OPTIONS-v1\",\n    \"demo-policy-v1\"\n  ],\n  \"data\": {\n    \"option_snapshot_id\": \"OPTIONS-v1\",\n    \"options\": [\n      {\n        \"synthetic\": true,\n        \"option_id\": \"OPT-REVIEW\",\n        \"title\": \"Focused genetics and metadata review\",\n        \"uncertainty_addressed\": [\n          \"gene assignment\",\n          \"genetic direction\",\n          \"missing source metadata\"\n        ],\n        \"readouts\": [\n          \"harmonised allele-to-expression direction if available\",\n          \"source-level context checks\"\n        ],\n        \"decision_consequences\": {\n          \"resolved\": \"Refine causal/intervention hypothesis; functional validation may still be required.\",\n          \"unresolved\": \"Keep ambiguity explicit and request a relevant functional test.\"\n        },\n        \"effort_band\": \"low\",\n        \"illustrative_turnaround_weeks\": [\n          0.5,\n          1.0\n        ],\n        \"relative_cost_units\": 1.0,\n        \"limitations\": [\n          \"May find no new evidence; does not replace functional perturbation.\"\n        ],\n        \"owner_role\": \"genetics specialist and data owner\",\n        \"scientific_review_status\": \"illustrative_concept_requires_biology_review\",\n        \"executable_lab_protocol\": false\n      },\n      {\n        \"synthetic\": true,\n        \"option_id\": \"OPT-FUNCTION\",\n        \"title\": \"Relevant-context expression-reduction experiment\",\n        \"uncertainty_addressed\": [\n          \"functional effect of partial expression reduction\",\n          \"cell-loss confound\",\n          \"method disagreement\"\n        ],\n        \"readouts\": [\n          \"live-cell IL-17A-positive fraction\",\n          \"live-cell count and viable fraction\",\n          \"target surface protein\",\n          \"assay controls\"\n        ],\n        \"decision_consequences\": {\n          \"supportive\": \"Propose independent replication and specificity work.\",\n          \"useful_effect_excluded\": \"Deprioritize this useful-benefit hypothesis in the tested context.\",\n          \"uncertain_or_invalid\": \"Preserve reason and agree a focused follow-up with biology.\"\n        },\n        \"effort_band\": \"medium\",\n        \"illustrative_turnaround_weeks\": [\n          3.0,\n          5.0\n        ],\n        \"relative_cost_units\": 5.0,\n        \"limitations\": [\n          \"Demo assumes the perturbation and assay are feasible; confirm with biology.\",\n          \"Eight paired donors; two methods on the same donors; no independent cohort replication.\",\n          \"Demo thresholds are scientist-reviewable assumptions, not organisational standards.\"\n        ],\n        \"owner_role\": \"biology assay lead\",\n        \"scientific_review_status\": \"illustrative_concept_requires_biology_review\",\n        \"executable_lab_protocol\": false\n      },\n      {\n        \"synthetic\": true,\n        \"option_id\": \"OPT-OMICS\",\n        \"title\": \"Broader perturbation transcriptomics screen\",\n        \"uncertainty_addressed\": [\n          \"pathway context\",\n          \"possible response mechanisms\"\n        ],\n        \"readouts\": [\n          \"transcriptomic signatures\",\n          \"cell-state composition\"\n        ],\n        \"decision_consequences\": {\n          \"signature_change\": \"Generate mechanistic hypotheses; functional confirmation remains necessary.\",\n          \"no_change\": \"May reflect scope or sensitivity; does not alone exclude the functional hypothesis.\"\n        },\n        \"effort_band\": \"high\",\n        \"illustrative_turnaround_weeks\": [\n          6.0,\n          10.0\n        ],\n        \"relative_cost_units\": 15.0,\n        \"limitations\": [\n          \"Illustrative effort only; no formal value-of-information optimum.\",\n          \"Less direct for the predefined functional decision than OPT-FUNCTION.\"\n        ],\n        \"owner_role\": \"biology and single-cell specialists\",\n        \"scientific_review_status\": \"illustrative_concept_requires_biology_review\",\n        \"executable_lab_protocol\": false\n      }\n    ],\n    \"selection_method\": \"qualitative_decision_relevance_no_formal_optimality\"\n  },\n  \"error\": null\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/experiments/X101.json",
+      "sha256": "398ce07c9571caad7deb4954be9f4c9b5fda434c3a7239bcf6aeaaad40647af2",
+      "source_text": "{\n  \"experiment_id\": \"X101\",\n  \"synthetic\": true,\n  \"evidence_version\": \"evidence-v2-X101\",\n  \"policy_version\": \"demo-policy-v1\",\n  \"context\": {\n    \"target\": \"DEMO-R1 (fictional cell-surface receptor)\",\n    \"disease_context\": \"inflammatory skin disease-like assay; no patient-efficacy claim\",\n    \"cell_context\": \"stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)\",\n    \"intervention\": \"partial reduction of target expression; no claim of equivalence to activity blockade\",\n    \"endpoint\": \"relative reduction in fraction of live CD4 T cells that are IL-17A positive\",\n    \"endpoint_time_hours\": 72,\n    \"assay_protocol_version\": \"mock-assay-v1\"\n  },\n  \"measurement_status\": \"Invented donor-level means and QC summaries, not raw instrument data.\",\n  \"design\": \"Alternative mock outcomes of one planned study, not sequential studies or 24 independent donors. Paired controls for each method; technical triplicates averaged first. No donor excluded.\",\n  \"assays\": {\n    \"KD-A\": [\n      {\n        \"measurement_id\": \"X101-KD-A-D01\",\n        \"donor_id\": \"D01\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 12000,\n        \"ntc_il17_positive_pct\": 20,\n        \"kd_il17_positive_pct\": 13.6,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 10.0,\n        \"ntc_live_fraction_pct\": 94,\n        \"kd_live_fraction_pct\": 93,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 97000,\n        \"ntc_target_mfi\": 1000,\n        \"kd_target_mfi\": 480.0,\n        \"max_technical_cv_pct\": 8\n      },\n      {\n        \"measurement_id\": \"X101-KD-A-D02\",\n        \"donor_id\": \"D02\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 12500,\n        \"ntc_il17_positive_pct\": 24,\n        \"kd_il17_positive_pct\": 16.56,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 12.48,\n        \"ntc_live_fraction_pct\": 93,\n        \"kd_live_fraction_pct\": 92,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 96000,\n        \"ntc_target_mfi\": 1040,\n        \"kd_target_mfi\": 468.0,\n        \"max_technical_cv_pct\": 7\n      },\n      {\n        \"measurement_id\": \"X101-KD-A-D03\",\n        \"donor_id\": \"D03\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 13000,\n        \"ntc_il17_positive_pct\": 18,\n        \"kd_il17_positive_pct\": 11.7,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 8.28,\n        \"ntc_live_fraction_pct\": 95,\n        \"kd_live_fraction_pct\": 94,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 98000,\n        \"ntc_target_mfi\": 1080,\n        \"kd_target_mfi\": 432.0,\n        \"max_technical_cv_pct\": 9\n      },\n      {\n        \"measurement_id\": \"X101-KD-A-D04\",\n        \"donor_id\": \"D04\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 13500,\n        \"ntc_il17_positive_pct\": 22,\n        \"kd_il17_positive_pct\": 15.84,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 11.88,\n        \"ntc_live_fraction_pct\": 94,\n        \"kd_live_fraction_pct\": 93,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 95000,\n        \"ntc_target_mfi\": 1120,\n        \"kd_target_mfi\": 582.4,\n        \"max_technical_cv_pct\": 6\n      },\n      {\n        \"measurement_id\": \"X101-KD-A-D05\",\n        \"donor_id\": \"D05\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 14000,\n        \"ntc_il17_positive_pct\": 26,\n        \"kd_il17_positive_pct\": 18.46,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 12.48,\n        \"ntc_live_fraction_pct\": 92,\n        \"kd_live_fraction_pct\": 91,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 96000,\n        \"ntc_target_mfi\": 1160,\n        \"kd_target_mfi\": 498.8,\n        \"max_technical_cv_pct\": 10\n      },\n      {\n        \"measurement_id\": \"X101-KD-A-D06\",\n        \"donor_id\": \"D06\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 14500,\n        \"ntc_il17_positive_pct\": 21,\n        \"kd_il17_positive_pct\": 13.23,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 10.71,\n        \"ntc_live_fraction_pct\": 95,\n        \"kd_live_fraction_pct\": 94,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 97000,\n        \"ntc_target_mfi\": 1200,\n        \"kd_target_mfi\": 456.0,\n        \"max_technical_cv_pct\": 8\n      },\n      {\n        \"measurement_id\": \"X101-KD-A-D07\",\n        \"donor_id\": \"D07\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 15000,\n        \"ntc_il17_positive_pct\": 19,\n        \"kd_il17_positive_pct\": 12.73,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 9.31,\n        \"ntc_live_fraction_pct\": 93,\n        \"kd_live_fraction_pct\": 92,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 94000,\n        \"ntc_target_mfi\": 1240,\n        \"kd_target_mfi\": 570.4,\n        \"max_technical_cv_pct\": 7\n      },\n      {\n        \"measurement_id\": \"X101-KD-A-D08\",\n        \"donor_id\": \"D08\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 15500,\n        \"ntc_il17_positive_pct\": 23,\n        \"kd_il17_positive_pct\": 15.87,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 12.19,\n        \"ntc_live_fraction_pct\": 94,\n        \"kd_live_fraction_pct\": 93,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 98000,\n        \"ntc_target_mfi\": 1280,\n        \"kd_target_mfi\": 524.8,\n        \"max_technical_cv_pct\": 9\n      }\n    ],\n    \"KD-B\": [\n      {\n        \"measurement_id\": \"X101-KD-B-D01\",\n        \"donor_id\": \"D01\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 12000,\n        \"ntc_il17_positive_pct\": 20,\n        \"kd_il17_positive_pct\": 14.2,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 10.0,\n        \"ntc_live_fraction_pct\": 94,\n        \"kd_live_fraction_pct\": 93,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 96000,\n        \"ntc_target_mfi\": 1000,\n        \"kd_target_mfi\": 510.0,\n        \"max_technical_cv_pct\": 9\n      },\n      {\n        \"measurement_id\": \"X101-KD-B-D02\",\n        \"donor_id\": \"D02\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 12500,\n        \"ntc_il17_positive_pct\": 24,\n        \"kd_il17_positive_pct\": 17.04,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 12.48,\n        \"ntc_live_fraction_pct\": 93,\n        \"kd_live_fraction_pct\": 91,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 95000,\n        \"ntc_target_mfi\": 1040,\n        \"kd_target_mfi\": 488.8,\n        \"max_technical_cv_pct\": 8\n      },\n      {\n        \"measurement_id\": \"X101-KD-B-D03\",\n        \"donor_id\": \"D03\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 13000,\n        \"ntc_il17_positive_pct\": 18,\n        \"kd_il17_positive_pct\": 12.6,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 8.28,\n        \"ntc_live_fraction_pct\": 95,\n        \"kd_live_fraction_pct\": 94,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 97000,\n        \"ntc_target_mfi\": 1080,\n        \"kd_target_mfi\": 453.6,\n        \"max_technical_cv_pct\": 10\n      },\n      {\n        \"measurement_id\": \"X101-KD-B-D04\",\n        \"donor_id\": \"D04\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 13500,\n        \"ntc_il17_positive_pct\": 22,\n        \"kd_il17_positive_pct\": 16.06,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 11.88,\n        \"ntc_live_fraction_pct\": 94,\n        \"kd_live_fraction_pct\": 92,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 94000,\n        \"ntc_target_mfi\": 1120,\n        \"kd_target_mfi\": 604.8,\n        \"max_technical_cv_pct\": 7\n      },\n      {\n        \"measurement_id\": \"X101-KD-B-D05\",\n        \"donor_id\": \"D05\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 14000,\n        \"ntc_il17_positive_pct\": 26,\n        \"kd_il17_positive_pct\": 17.94,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 12.48,\n        \"ntc_live_fraction_pct\": 92,\n        \"kd_live_fraction_pct\": 90,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 95000,\n        \"ntc_target_mfi\": 1160,\n        \"kd_target_mfi\": 522.0,\n        \"max_technical_cv_pct\": 11\n      },\n      {\n        \"measurement_id\": \"X101-KD-B-D06\",\n        \"donor_id\": \"D06\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 14500,\n        \"ntc_il17_positive_pct\": 21,\n        \"kd_il17_positive_pct\": 15.12,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 10.71,\n        \"ntc_live_fraction_pct\": 95,\n        \"kd_live_fraction_pct\": 94,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 96000,\n        \"ntc_target_mfi\": 1200,\n        \"kd_target_mfi\": 480.0,\n        \"max_technical_cv_pct\": 9\n      },\n      {\n        \"measurement_id\": \"X101-KD-B-D07\",\n        \"donor_id\": \"D07\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 15000,\n        \"ntc_il17_positive_pct\": 19,\n        \"kd_il17_positive_pct\": 12.73,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 9.31,\n        \"ntc_live_fraction_pct\": 93,\n        \"kd_live_fraction_pct\": 91,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 93000,\n        \"ntc_target_mfi\": 1240,\n        \"kd_target_mfi\": 607.6,\n        \"max_technical_cv_pct\": 8\n      },\n      {\n        \"measurement_id\": \"X101-KD-B-D08\",\n        \"donor_id\": \"D08\",\n        \"technical_replicates\": 3,\n        \"min_live_cd4_events_per_well\": 15500,\n        \"ntc_il17_positive_pct\": 23,\n        \"kd_il17_positive_pct\": 17.25,\n        \"unstim_il17_positive_pct\": 4,\n        \"positive_control_il17_positive_pct\": 12.19,\n        \"ntc_live_fraction_pct\": 94,\n        \"kd_live_fraction_pct\": 93,\n        \"positive_control_live_fraction_pct\": 92,\n        \"positive_control_live_recovery_pct\": 98,\n        \"ntc_live_cells\": 100000,\n        \"kd_live_cells\": 97000,\n        \"ntc_target_mfi\": 1280,\n        \"kd_target_mfi\": 550.4,\n        \"max_technical_cv_pct\": 10\n      }\n    ]\n  }\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/handoffs/antibody_response_template.json",
+      "sha256": "b539db29810cc6f92fcad0a3fa77cc1c7d9248b36c6cf5c2153e0d8fca752e88",
+      "source_text": "{\n  \"synthetic\": true,\n  \"platform\": \"antibody\",\n  \"status\": \"NEEDS_INFORMATION\",\n  \"reason\": \"Expression reduction does not establish that receptor blockade gives the same functional result.\",\n  \"missing_information\": [\n    \"Whether receptor blockade reproduces the non-cytotoxic expression-reduction phenotype.\"\n  ],\n  \"next_action\": \"Agree a mechanism-equivalence study concept with biology and antibody specialists.\",\n  \"next_owner_role\": \"biology assay lead with antibody specialists\",\n  \"delivery_mode\": \"local_simulation\"\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/initial_evidence.json",
+      "sha256": "1d78b76f9105e373405ecc061936e3e3321328d899fbedf766fe9465f95847a6",
+      "source_text": "{\n  \"synthetic\": true,\n  \"evidence_version\": \"evidence-v1\",\n  \"context\": {\n    \"target\": \"DEMO-R1 (fictional cell-surface receptor)\",\n    \"disease_context\": \"inflammatory skin disease-like assay; no patient-efficacy claim\",\n    \"cell_context\": \"stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)\",\n    \"intervention\": \"partial reduction of target expression; no claim of equivalence to activity blockade\",\n    \"endpoint\": \"relative reduction in fraction of live CD4 T cells that are IL-17A positive\",\n    \"endpoint_time_hours\": 72,\n    \"assay_protocol_version\": \"mock-assay-v1\"\n  },\n  \"notice\": \"All target-specific data and source IDs are invented. No source ID denotes a published study. Sixteen records are not sixteen independent studies.\",\n  \"records\": [\n    {\n      \"id\": \"E01\",\n      \"type\": \"synthetic_measurement\",\n      \"family\": \"G01\",\n      \"claim\": \"Disease-associated locus; not gene-level causality.\",\n      \"measurements\": {\n        \"disease_odds_ratio\": 1.16,\n        \"reported_95_ci\": [\n          1.1,\n          1.22\n        ]\n      },\n      \"independent_gene_assignment\": false\n    },\n    {\n      \"id\": \"E02\",\n      \"type\": \"synthetic_analysis\",\n      \"family\": \"G01\",\n      \"claim\": \"Fine-mapping leaves ambiguity.\",\n      \"measurements\": {\n        \"credible_set_variant_count\": 7,\n        \"largest_variant_posterior\": 0.41\n      },\n      \"scope\": \"Variant posterior, not target-causality probability.\"\n    },\n    {\n      \"id\": \"E03\",\n      \"type\": \"synthetic_analysis\",\n      \"family\": \"G01\",\n      \"claim\": \"Shared-variant support under coloc assumptions; direction not harmonized.\",\n      \"measurements\": {\n        \"PP_H4\": 0.86,\n        \"PP_H3\": 0.1,\n        \"remaining_posterior\": 0.04\n      },\n      \"context\": \"resting CD4 T-cell eQTL\",\n      \"risk_allele_to_expression_direction\": \"unresolved\",\n      \"limitations\": \"Shares the GWAS evidence family with E01/E02; not three independent studies.\"\n    },\n    {\n      \"id\": \"E04\",\n      \"type\": \"synthetic_measurement\",\n      \"family\": \"C01\",\n      \"claim\": \"Target is measurable in the chosen cell type.\",\n      \"measurements\": {\n        \"activated_surface_MFI\": [\n          1050,\n          1120,\n          1180,\n          1260,\n          1310\n        ],\n        \"resting_surface_MFI\": [\n          360,\n          390,\n          410,\n          440,\n          470\n        ],\n        \"n_paired_donors\": 5\n      },\n      \"scope\": \"Expression supports assay relevance, not causality or direction.\"\n    },\n    {\n      \"id\": \"E05\",\n      \"type\": \"model_card\",\n      \"family\": \"M01\",\n      \"claim\": \"The model-output adapter is synthetic and has no measured predictive accuracy.\",\n      \"model_version\": \"synthetic-model-v1\",\n      \"supported_prediction_context\": \"resting CD4 T cells\",\n      \"scope\": \"Cannot provide an in-domain prediction for the chosen stimulated assay.\"\n    },\n    {\n      \"id\": \"E06\",\n      \"type\": \"synthetic_prediction\",\n      \"family\": \"M01\",\n      \"claim\": \"Hypothetical transcriptomic signature response in a related context.\",\n      \"measurements\": {\n        \"expression_reduction_pct\": 50,\n        \"signature_change_standardized_units\": -0.65\n      },\n      \"context\": \"resting CD4 T cells\",\n      \"endpoint\": \"transcriptomic inflammatory-signature score\",\n      \"uncertainty\": \"not calibrated\",\n      \"scope\": \"Not an IL-17A functional-effect prediction or probability of target success.\"\n    },\n    {\n      \"id\": \"E07\",\n      \"type\": \"synthetic_measurement\",\n      \"family\": \"P01\",\n      \"claim\": \"Earlier bulk secretion result is confounded by loss of live cells.\",\n      \"measurements\": {\n        \"ntc_secreted_IL17A_pg_ml\": [\n          600,\n          720,\n          540\n        ],\n        \"kd_secreted_IL17A_pg_ml\": [\n          360,\n          432,\n          324\n        ],\n        \"ntc_live_cell_count\": [\n          100000,\n          100000,\n          100000\n        ],\n        \"kd_live_cell_count\": [\n          60000,\n          60000,\n          60000\n        ],\n        \"kd_viable_fraction_pct\": [\n          63,\n          66,\n          62\n        ],\n        \"n_paired_donors\": 3\n      },\n      \"scope\": \"A 40% bulk readout reduction accompanies 40% fewer live cells; it does not establish beneficial function.\"\n    },\n    {\n      \"id\": \"E08\",\n      \"type\": \"evidence_gap\",\n      \"family\": \"P02\",\n      \"claim\": \"No relevant-context, controlled, non-cytotoxic expression-reduction experiment yet.\",\n      \"measurements\": null\n    },\n    {\n      \"id\": \"E09\",\n      \"type\": \"linked_safety_observation\",\n      \"family\": \"P01\",\n      \"claim\": \"Investigate cell loss and whether it is on-target, off-target, or delivery-related.\",\n      \"source_ids\": [\n        \"E07\"\n      ],\n      \"independent_evidence\": false\n    },\n    {\n      \"id\": \"E10\",\n      \"type\": \"evidence_gap\",\n      \"family\": \"S01\",\n      \"claim\": \"Tissue and systemic safety are unassessed.\",\n      \"measurements\": null\n    },\n    {\n      \"id\": \"E11\",\n      \"type\": \"modality_constraint\",\n      \"family\": \"F01\",\n      \"claim\": \"Fictional surface localization permits an antibody feasibility question; binding, desired functional effect, pocket/chemistry and exposure are unknown.\",\n      \"modality_status\": {\n        \"antibody\": \"conditional\",\n        \"small_molecule\": \"unknown\"\n      }\n    },\n    {\n      \"id\": \"E12\",\n      \"type\": \"modality_constraint\",\n      \"family\": \"F02\",\n      \"claim\": \"Expression reduction is conceptually aligned with an oligonucleotide hypothesis; relevant-cell delivery, isoform coverage and tolerability are untested.\",\n      \"modality_status\": {\n        \"oligonucleotide\": \"conditional\"\n      }\n    },\n    {\n      \"id\": \"E13\",\n      \"type\": \"secondary_summary\",\n      \"family\": \"G01\",\n      \"claim\": \"This locus proves inhibiting DEMO-R1 will improve disease.\",\n      \"source_ids\": [\n        \"E01\"\n      ]\n    },\n    {\n      \"id\": \"E14\",\n      \"type\": \"duplicate_extract\",\n      \"family\": \"G01\",\n      \"claim\": \"Restates the disease-locus association from E01.\",\n      \"duplicate_of\": \"E01\",\n      \"independent_evidence\": false\n    },\n    {\n      \"id\": \"E15\",\n      \"type\": \"unresolved_entity\",\n      \"family\": \"U01\",\n      \"target_text\": \"DEMO-RI (letter I)\",\n      \"claim\": \"Alias is not verified against the DEMO-R1 identifier.\",\n      \"measurements\": null\n    },\n    {\n      \"id\": \"E16\",\n      \"type\": \"incomplete_record\",\n      \"family\": \"U02\",\n      \"claim\": \"A reported 22% response has no specified cell context or endpoint.\",\n      \"measurements\": {\n        \"reported_reduction_pct\": 22\n      },\n      \"cell_context\": null,\n      \"endpoint\": null\n    }\n  ]\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/metadata/alias_mappings.json",
+      "sha256": "9d15663c0d14f10286a6c05d40b2377f555bb314286a64440d57d26dd766ffa4",
+      "source_text": "{\n  \"synthetic\": true,\n  \"mapping_version\": \"aliases-v1\",\n  \"mappings\": [\n    {\n      \"mapping_id\": \"MAP-T001\",\n      \"original_value\": \"DEMO-R1\",\n      \"canonical_id\": \"DEMO-R1\",\n      \"authority\": \"synthetic entity registry\"\n    },\n    {\n      \"mapping_id\": \"MAP-T002\",\n      \"original_value\": \"DEMO_R1\",\n      \"canonical_id\": \"DEMO-R1\",\n      \"authority\": \"synthetic entity registry\"\n    }\n  ],\n  \"unresolved\": [\n    {\n      \"original_value\": \"DEMO-RI\",\n      \"canonical_id\": null,\n      \"reason\": \"Letter I versus digit 1 has no authoritative mapping.\"\n    }\n  ],\n  \"rule\": \"Exact allowlisted mappings only; no fuzzy replacement of I with 1.\"\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/metadata/context_catalog.json",
+      "sha256": "53983ca7e731f6bd183a41f8307ce3ba68040249054d6bcf99d3bafd5a88af60",
+      "source_text": "{\n  \"synthetic\": true,\n  \"context_catalog_version\": \"contexts-v1\",\n  \"contexts\": [\n    {\n      \"context_id\": \"CTX-CD4-STIM-TH17\",\n      \"species\": \"human\",\n      \"cell_type\": \"CD4 T cell\",\n      \"cell_state\": \"stimulated; Th17-enriched\",\n      \"disease_context_id\": \"DIS-SKIN-LIKE-001\"\n    },\n    {\n      \"context_id\": \"CTX-CD4-REST\",\n      \"species\": \"human\",\n      \"cell_type\": \"CD4 T cell\",\n      \"cell_state\": \"resting\",\n      \"disease_context_id\": \"DIS-SKIN-LIKE-001\"\n    }\n  ],\n  \"assay_context_binding\": {\n    \"assay_protocol_version\": \"mock-assay-v1\",\n    \"context_id\": \"CTX-CD4-STIM-TH17\",\n    \"required_attributes\": {\n      \"context_id\": \"CTX-CD4-STIM-TH17\",\n      \"species\": \"human\",\n      \"cell_type\": \"CD4 T cell\",\n      \"cell_state\": \"stimulated; Th17-enriched\",\n      \"disease_context_id\": \"DIS-SKIN-LIKE-001\"\n    },\n    \"legacy_context\": {\n      \"target\": \"DEMO-R1 (fictional cell-surface receptor)\",\n      \"disease_context\": \"inflammatory skin disease-like assay; no patient-efficacy claim\",\n      \"cell_context\": \"stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)\",\n      \"intervention\": \"partial reduction of target expression; no claim of equivalence to activity blockade\",\n      \"endpoint\": \"relative reduction in fraction of live CD4 T cells that are IL-17A positive\",\n      \"endpoint_time_hours\": 72,\n      \"assay_protocol_version\": \"mock-assay-v1\"\n    }\n  },\n  \"rule\": \"Check canonical ID AND required attributes against this versioned catalogue. Free text is not sufficient.\"\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/metadata/study_manifest.json",
+      "sha256": "00ac1850fd96641dfba51f9555d2c5674132cbb9b4ef87f3b0d0f8e90f274563",
+      "source_text": "{\n  \"synthetic\": true,\n  \"study_id\": \"S-TARGET-001\",\n  \"snapshot_id\": \"META-001-v1\",\n  \"manifest_version\": \"manifest-v1\",\n  \"target_id\": \"DEMO-R1\",\n  \"context\": {\n    \"context_id\": \"CTX-CD4-STIM-TH17\",\n    \"species\": \"human\",\n    \"cell_type\": \"CD4 T cell\",\n    \"cell_state\": \"stimulated; Th17-enriched\",\n    \"disease_context_id\": \"DIS-SKIN-LIKE-001\"\n  },\n  \"input_snapshot_id\": \"SC-STIM-001-v1\",\n  \"input_data_kind\": \"specialist_prepared_single_cell_reference\",\n  \"data_availability\": \"metadata_and_frozen_outputs_only\",\n  \"source_locator\": \"fixture://metadata/META-001-v1/S-TARGET-001\",\n  \"resolved_fields\": [\n    \"cell_state\",\n    \"context_id\"\n  ],\n  \"owner_role\": \"single-cell data owner\",\n  \"limitation\": \"No expression matrix or real model inference is included. The frozen response stands in for a specialist service. Does not resolve E16 or change historical E05/E06.\"\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/policy.json",
+      "sha256": "1531dacf1982e73e90c3abcb0b9b37291283e7dfd859e6e0f33035810f614b23",
+      "source_text": "{\n  \"policy_version\": \"demo-policy-v1\",\n  \"synthetic\": true,\n  \"status\": \"proposed illustrative policy, not an organisational standard or validated assay specification\",\n  \"context\": {\n    \"target\": \"DEMO-R1 (fictional cell-surface receptor)\",\n    \"disease_context\": \"inflammatory skin disease-like assay; no patient-efficacy claim\",\n    \"cell_context\": \"stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)\",\n    \"intervention\": \"partial reduction of target expression; no claim of equivalence to activity blockade\",\n    \"endpoint\": \"relative reduction in fraction of live CD4 T cells that are IL-17A positive\",\n    \"endpoint_time_hours\": 72,\n    \"assay_protocol_version\": \"mock-assay-v1\"\n  },\n  \"donor_ids\": [\n    \"D01\",\n    \"D02\",\n    \"D03\",\n    \"D04\",\n    \"D05\",\n    \"D06\",\n    \"D07\",\n    \"D08\"\n  ],\n  \"assay_ids\": [\n    \"KD-A\",\n    \"KD-B\"\n  ],\n  \"assay_descriptions\": {\n    \"KD-A\": \"RNA knockdown, primary assay\",\n    \"KD-B\": \"CRISPRi expression reduction, corroborating method; same donors\"\n  },\n  \"required_measurement_fields\": [\n    \"technical_replicates\",\n    \"min_live_cd4_events_per_well\",\n    \"ntc_il17_positive_pct\",\n    \"kd_il17_positive_pct\",\n    \"unstim_il17_positive_pct\",\n    \"positive_control_il17_positive_pct\",\n    \"ntc_live_fraction_pct\",\n    \"kd_live_fraction_pct\",\n    \"positive_control_live_fraction_pct\",\n    \"positive_control_live_recovery_pct\",\n    \"ntc_live_cells\",\n    \"kd_live_cells\",\n    \"ntc_target_mfi\",\n    \"kd_target_mfi\",\n    \"max_technical_cv_pct\"\n  ],\n  \"minimum_useful_reduction_pct\": 20,\n  \"protein_reduction_range_pct\": [\n    40,\n    70\n  ],\n  \"min_live_cd4_events\": 5000,\n  \"technical_replicates_per_condition\": 3,\n  \"qc_thresholds\": {\n    \"ntc_viable_fraction_min_pct\": 90,\n    \"dynamic_range_min_fold\": 3,\n    \"positive_control_reduction_min_pct\": 40,\n    \"positive_control_viable_fraction_min_pct\": 85,\n    \"positive_control_recovery_min_pct\": 90,\n    \"max_technical_cv_pct\": 15\n  },\n  \"tolerability_thresholds\": {\n    \"viable_fraction_min_pct\": 85,\n    \"per_donor_recovery_min_pct\": 85,\n    \"mean_recovery_lower_ci_min_pct\": 90\n  },\n  \"prerequisite_rules\": {\n    \"G0\": \"Exact hypothesis, endpoint, context and policy version match.\",\n    \"G1\": \"Eight complete donor pairs per method, three technical wells averaged per condition, at least 5000 live CD4 events per well. No outcome-driven exclusions.\",\n    \"G2\": \"Each donor/method: NTC viable fraction >=90%; stimulated/unstimulated IL-17A-positive fraction ratio >=3; positive control functional reduction >=40%, viable fraction >=85%, live-cell recovery >=90%; maximum technical CV <=15%.\",\n    \"G3\": \"Each donor/method: target surface-protein MFI reduction within 40-70% inclusive.\",\n    \"G4\": \"Each donor/method: viable fraction >=85% and live-cell recovery >=85% of paired NTC. Each method: lower 95% CI for mean live-cell recovery >=90% of NTC.\"\n  },\n  \"action_rules\": {\n    \"ADVANCE_TO_REPLICATION\": \"G0-G4 pass; both methods lower 95% confidence bound >=20% functional reduction. New donors/batches plus target-specificity work; specialist feasibility discussion only.\",\n    \"DEPRIORITIZE_TESTED_HYPOTHESIS\": \"G0-G4 pass; both methods upper 95% confidence bound <20%. Applies to useful mean benefit at achieved expression reduction in this assay/context only.\",\n    \"INCONCLUSIVE\": \"Any prerequisite fails, a useful-effect boundary is crossed, or methods disagree. No automatic advance or target-wide rejection.\"\n  },\n  \"analysis\": \"For each donor: d = 100*(1 - KD_IL17_positive_fraction / matched_NTC_fraction). Equal-weight donor mean +/- t(0.975,7)*sample_SD/sqrt(8). Technical wells and individual cells do not increase n. Analyze methods separately; do not pool correlated methods.\",\n  \"rounding\": \"Display one decimal place; apply criteria to unrounded computed values, allowing only 1e-9 absolute units for floating-point noise.\",\n  \"limitations\": [\n    \"Eight donors is a demo size, not a powered sample-size recommendation.\",\n    \"Confidence intervals assume appropriate independent donor sampling and approximate normality of donor effects; synthetic data validate arithmetic only.\",\n    \"These are per-method intervals, not a jointly calibrated target-success probability or a multiplicity-adjusted discovery claim.\",\n    \"Twenty percent is a provisional useful-effect threshold, not literature-derived or clinically validated.\",\n    \"Expression reduction in two methods does not establish equivalence to inhibition, antagonism or degradation.\",\n    \"A viability pass does not establish tissue or systemic safety.\"\n  ]\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/predictions/stimulated_signature.response.json",
+      "sha256": "56e68286639bb682fcb85b35fa3dea6330124891a4c93db8ef794442bb596c8f",
+      "source_text": "{\n  \"synthetic\": true,\n  \"contract_version\": \"tools-v1\",\n  \"request_id\": \"Q004\",\n  \"status\": \"OK\",\n  \"source_snapshot_ids\": [\n    \"META-001-v1\",\n    \"SC-STIM-001-v1\",\n    \"synthetic-model-v2\"\n  ],\n  \"data\": {\n    \"synthetic\": true,\n    \"output_id\": \"PRED-STIM-001\",\n    \"model_id\": \"mock-signature-adapter\",\n    \"model_version\": \"synthetic-model-v2\",\n    \"target_id\": \"DEMO-R1\",\n    \"context_id\": \"CTX-CD4-STIM-TH17\",\n    \"input_snapshot_id\": \"SC-STIM-001-v1\",\n    \"metadata_snapshot_id\": \"META-001-v1\",\n    \"perturbation_kind\": \"expression_change\",\n    \"endpoint_id\": \"transcriptomic_inflammatory_signature\",\n    \"units\": \"standardized_signature_units\",\n    \"applicability\": \"ELIGIBLE_UNDER_MOCK_CONTRACT\",\n    \"predictions\": [\n      {\n        \"expression_change_pct\": -50.0,\n        \"signature_change\": -0.5\n      },\n      {\n        \"expression_change_pct\": 0.0,\n        \"signature_change\": 0.0\n      },\n      {\n        \"expression_change_pct\": 50.0,\n        \"signature_change\": 0.2\n      }\n    ],\n    \"uncertainty\": \"not_calibrated\",\n    \"measured_predictive_accuracy\": null,\n    \"source_locator\": \"fixture://predictions/synthetic-model-v2/PRED-STIM-001\",\n    \"limitations\": [\n      \"Frozen invented values; no predictive model was trained or run.\",\n      \"No functional IL-17A effect, clinical benefit or target-success probability follows from these signature units.\",\n      \"Expression increase is a prediction comparison only, not an arm in X101-X108.\",\n      \"Historical E06 and this response are not independent experimental support.\"\n    ]\n  },\n  \"error\": null\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/sources/cro_export.json",
+      "sha256": "cd4a685c3f79ea45626c52b2dd4f3eeb2d8ee506d41a649d5d61b38bfdf80de1",
+      "source_text": "{\n  \"synthetic\": true,\n  \"source_id\": \"SRC-CRO\",\n  \"export_version\": \"CRO-v1\",\n  \"derivation\": \"View of initial_evidence.json evidence-v1; no independent new support.\",\n  \"rows\": [\n    {\n      \"row_id\": \"CRO-E07\",\n      \"analyte\": \"DEMO-R1\",\n      \"study_code\": \"S-P01\",\n      \"unit_map\": {\n        \"ntc_secreted_IL17A_pg_ml\": \"pg/ml\",\n        \"kd_secreted_IL17A_pg_ml\": \"pg/ml\",\n        \"ntc_live_cell_count\": \"cells\",\n        \"kd_live_cell_count\": \"cells\",\n        \"kd_viable_fraction_pct\": \"percent\",\n        \"n_paired_donors\": \"count\"\n      },\n      \"report\": {\n        \"id\": \"E07\",\n        \"type\": \"synthetic_measurement\",\n        \"family\": \"P01\",\n        \"claim\": \"Earlier bulk secretion result is confounded by loss of live cells.\",\n        \"measurements\": {\n          \"ntc_secreted_IL17A_pg_ml\": [\n            600,\n            720,\n            540\n          ],\n          \"kd_secreted_IL17A_pg_ml\": [\n            360,\n            432,\n            324\n          ],\n          \"ntc_live_cell_count\": [\n            100000,\n            100000,\n            100000\n          ],\n          \"kd_live_cell_count\": [\n            60000,\n            60000,\n            60000\n          ],\n          \"kd_viable_fraction_pct\": [\n            63,\n            66,\n            62\n          ],\n          \"n_paired_donors\": 3\n        },\n        \"scope\": \"A 40% bulk readout reduction accompanies 40% fewer live cells; it does not establish beneficial function.\"\n      }\n    },\n    {\n      \"row_id\": \"CRO-E08\",\n      \"analyte\": \"DEMO-R1\",\n      \"study_code\": \"S-P02\",\n      \"unit_map\": {},\n      \"report\": {\n        \"id\": \"E08\",\n        \"type\": \"evidence_gap\",\n        \"family\": \"P02\",\n        \"claim\": \"No relevant-context, controlled, non-cytotoxic expression-reduction experiment yet.\",\n        \"measurements\": null\n      }\n    },\n    {\n      \"row_id\": \"CRO-E09\",\n      \"analyte\": \"DEMO-R1\",\n      \"study_code\": \"S-P01\",\n      \"unit_map\": {},\n      \"report\": {\n        \"id\": \"E09\",\n        \"type\": \"linked_safety_observation\",\n        \"family\": \"P01\",\n        \"claim\": \"Investigate cell loss and whether it is on-target, off-target, or delivery-related.\",\n        \"source_ids\": [\n          \"E07\"\n        ],\n        \"independent_evidence\": false\n      }\n    },\n    {\n      \"row_id\": \"CRO-E15\",\n      \"analyte\": \"DEMO-RI\",\n      \"study_code\": \"S-U01\",\n      \"unit_map\": {},\n      \"report\": {\n        \"id\": \"E15\",\n        \"type\": \"unresolved_entity\",\n        \"family\": \"U01\",\n        \"target_text\": \"DEMO-RI (letter I)\",\n        \"claim\": \"Alias is not verified against the DEMO-R1 identifier.\",\n        \"measurements\": null\n      }\n    },\n    {\n      \"row_id\": \"CRO-E16\",\n      \"analyte\": \"DEMO-R1\",\n      \"study_code\": \"S-U02\",\n      \"unit_map\": {\n        \"reported_reduction_pct\": \"percent_unspecified_denominator\"\n      },\n      \"report\": {\n        \"id\": \"E16\",\n        \"type\": \"incomplete_record\",\n        \"family\": \"U02\",\n        \"claim\": \"A reported 22% response has no specified cell context or endpoint.\",\n        \"measurements\": {\n          \"reported_reduction_pct\": 22\n        },\n        \"cell_context\": null,\n        \"endpoint\": null\n      }\n    }\n  ]\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/sources/internal_evidence.json",
+      "sha256": "1b76edad6f1982c52b0f85ac8a543b077ae74ea69eae0ba2eba41964f1bfa1d2",
+      "source_text": "{\n  \"synthetic\": true,\n  \"source_id\": \"SRC-INTERNAL\",\n  \"snapshot_id\": \"INTERNAL-v1\",\n  \"derivation\": \"View of initial_evidence.json evidence-v1; no independent new support.\",\n  \"analysis_request\": {\n    \"study_id\": \"S-TARGET-001\",\n    \"metadata_snapshot_id\": \"META-001-v1\",\n    \"target_label\": \"DEMO_R1\",\n    \"species\": \"human\",\n    \"cell_type\": \"CD4 T cell\",\n    \"cell_state\": null,\n    \"context_id\": null,\n    \"input_snapshot_id\": \"SC-STIM-001-v1\",\n    \"status\": \"NEEDS_METADATA\",\n    \"required_missing_fields\": [\n      \"cell_state\",\n      \"context_id\"\n    ],\n    \"note\": \"Missing application-input metadata; not the historical resting-cell model record.\"\n  },\n  \"items\": [\n    {\n      \"record_key\": \"INT-E01\",\n      \"target_label\": \"DEMO_R1\",\n      \"study_ref\": \"S-G01\",\n      \"units\": {\n        \"disease_odds_ratio\": \"dimensionless\",\n        \"reported_95_ci\": \"odds_ratio\"\n      },\n      \"record_payload\": {\n        \"id\": \"E01\",\n        \"type\": \"synthetic_measurement\",\n        \"family\": \"G01\",\n        \"claim\": \"Disease-associated locus; not gene-level causality.\",\n        \"measurements\": {\n          \"disease_odds_ratio\": 1.16,\n          \"reported_95_ci\": [\n            1.1,\n            1.22\n          ]\n        },\n        \"independent_gene_assignment\": false\n      }\n    },\n    {\n      \"record_key\": \"INT-E02\",\n      \"target_label\": \"DEMO_R1\",\n      \"study_ref\": \"S-G01\",\n      \"units\": {\n        \"credible_set_variant_count\": \"count\",\n        \"largest_variant_posterior\": \"probability_of_variant_assignment\"\n      },\n      \"record_payload\": {\n        \"id\": \"E02\",\n        \"type\": \"synthetic_analysis\",\n        \"family\": \"G01\",\n        \"claim\": \"Fine-mapping leaves ambiguity.\",\n        \"measurements\": {\n          \"credible_set_variant_count\": 7,\n          \"largest_variant_posterior\": 0.41\n        },\n        \"scope\": \"Variant posterior, not target-causality probability.\"\n      }\n    },\n    {\n      \"record_key\": \"INT-E03\",\n      \"target_label\": \"DEMO_R1\",\n      \"study_ref\": \"S-G01\",\n      \"units\": {\n        \"PP_H4\": \"posterior_under_coloc_assumptions\",\n        \"PP_H3\": \"posterior_under_coloc_assumptions\",\n        \"remaining_posterior\": \"posterior_under_coloc_assumptions\"\n      },\n      \"record_payload\": {\n        \"id\": \"E03\",\n        \"type\": \"synthetic_analysis\",\n        \"family\": \"G01\",\n        \"claim\": \"Shared-variant support under coloc assumptions; direction not harmonized.\",\n        \"measurements\": {\n          \"PP_H4\": 0.86,\n          \"PP_H3\": 0.1,\n          \"remaining_posterior\": 0.04\n        },\n        \"context\": \"resting CD4 T-cell eQTL\",\n        \"risk_allele_to_expression_direction\": \"unresolved\",\n        \"limitations\": \"Shares the GWAS evidence family with E01/E02; not three independent studies.\"\n      }\n    },\n    {\n      \"record_key\": \"INT-E04\",\n      \"target_label\": \"DEMO_R1\",\n      \"study_ref\": \"S-C01\",\n      \"units\": {\n        \"activated_surface_MFI\": \"arbitrary_fluorescence_units\",\n        \"resting_surface_MFI\": \"arbitrary_fluorescence_units\",\n        \"n_paired_donors\": \"count\"\n      },\n      \"record_payload\": {\n        \"id\": \"E04\",\n        \"type\": \"synthetic_measurement\",\n        \"family\": \"C01\",\n        \"claim\": \"Target is measurable in the chosen cell type.\",\n        \"measurements\": {\n          \"activated_surface_MFI\": [\n            1050,\n            1120,\n            1180,\n            1260,\n            1310\n          ],\n          \"resting_surface_MFI\": [\n            360,\n            390,\n            410,\n            440,\n            470\n          ],\n          \"n_paired_donors\": 5\n        },\n        \"scope\": \"Expression supports assay relevance, not causality or direction.\"\n      }\n    },\n    {\n      \"record_key\": \"INT-E05\",\n      \"target_label\": \"DEMO_R1\",\n      \"study_ref\": \"S-M01\",\n      \"units\": {},\n      \"record_payload\": {\n        \"id\": \"E05\",\n        \"type\": \"model_card\",\n        \"family\": \"M01\",\n        \"claim\": \"The model-output adapter is synthetic and has no measured predictive accuracy.\",\n        \"model_version\": \"synthetic-model-v1\",\n        \"supported_prediction_context\": \"resting CD4 T cells\",\n        \"scope\": \"Cannot provide an in-domain prediction for the chosen stimulated assay.\"\n      }\n    },\n    {\n      \"record_key\": \"INT-E06\",\n      \"target_label\": \"DEMO_R1\",\n      \"study_ref\": \"S-M01\",\n      \"units\": {\n        \"expression_reduction_pct\": \"relative_percent_reduction\",\n        \"signature_change_standardized_units\": \"standardized_signature_units\"\n      },\n      \"record_payload\": {\n        \"id\": \"E06\",\n        \"type\": \"synthetic_prediction\",\n        \"family\": \"M01\",\n        \"claim\": \"Hypothetical transcriptomic signature response in a related context.\",\n        \"measurements\": {\n          \"expression_reduction_pct\": 50,\n          \"signature_change_standardized_units\": -0.65\n        },\n        \"context\": \"resting CD4 T cells\",\n        \"endpoint\": \"transcriptomic inflammatory-signature score\",\n        \"uncertainty\": \"not calibrated\",\n        \"scope\": \"Not an IL-17A functional-effect prediction or probability of target success.\"\n      }\n    },\n    {\n      \"record_key\": \"INT-E10\",\n      \"target_label\": \"DEMO_R1\",\n      \"study_ref\": \"S-S01\",\n      \"units\": {},\n      \"record_payload\": {\n        \"id\": \"E10\",\n        \"type\": \"evidence_gap\",\n        \"family\": \"S01\",\n        \"claim\": \"Tissue and systemic safety are unassessed.\",\n        \"measurements\": null\n      }\n    },\n    {\n      \"record_key\": \"INT-E11\",\n      \"target_label\": \"DEMO_R1\",\n      \"study_ref\": \"S-F01\",\n      \"units\": {},\n      \"record_payload\": {\n        \"id\": \"E11\",\n        \"type\": \"modality_constraint\",\n        \"family\": \"F01\",\n        \"claim\": \"Fictional surface localization permits an antibody feasibility question; binding, desired functional effect, pocket/chemistry and exposure are unknown.\",\n        \"modality_status\": {\n          \"antibody\": \"conditional\",\n          \"small_molecule\": \"unknown\"\n        }\n      }\n    },\n    {\n      \"record_key\": \"INT-E12\",\n      \"target_label\": \"DEMO_R1\",\n      \"study_ref\": \"S-F02\",\n      \"units\": {},\n      \"record_payload\": {\n        \"id\": \"E12\",\n        \"type\": \"modality_constraint\",\n        \"family\": \"F02\",\n        \"claim\": \"Expression reduction is conceptually aligned with an oligonucleotide hypothesis; relevant-cell delivery, isoform coverage and tolerability are untested.\",\n        \"modality_status\": {\n          \"oligonucleotide\": \"conditional\"\n        }\n      }\n    },\n    {\n      \"record_key\": \"INT-E13\",\n      \"target_label\": \"DEMO_R1\",\n      \"study_ref\": \"S-G01\",\n      \"units\": {},\n      \"record_payload\": {\n        \"id\": \"E13\",\n        \"type\": \"secondary_summary\",\n        \"family\": \"G01\",\n        \"claim\": \"This locus proves inhibiting DEMO-R1 will improve disease.\",\n        \"source_ids\": [\n          \"E01\"\n        ]\n      }\n    },\n    {\n      \"record_key\": \"INT-E14\",\n      \"target_label\": \"DEMO_R1\",\n      \"study_ref\": \"S-G01\",\n      \"units\": {},\n      \"record_payload\": {\n        \"id\": \"E14\",\n        \"type\": \"duplicate_extract\",\n        \"family\": \"G01\",\n        \"claim\": \"Restates the disease-locus association from E01.\",\n        \"duplicate_of\": \"E01\",\n        \"independent_evidence\": false\n      }\n    }\n  ]\n}\n"
+    },
+    {
+      "revision": 1,
+      "relative_path": "runtime/workflow_contract.json",
+      "sha256": "680c7c03de89a5ec9012667a60cf0174a3fa02b172e230711982fdfe9b6526c8",
+      "source_text": "{\n  \"synthetic\": true,\n  \"workflow_contract_version\": \"workflow-v1\",\n  \"initial_metadata_calls_max\": 1,\n  \"post_challenge_followups_max\": 1,\n  \"transient_retries_per_call_max\": 1,\n  \"retry_rule\": \"Same semantic input, request ID and idempotency key; attempt number belongs in the event log.\",\n  \"technical_retry_exhausted\": \"Persist blocked/partial status and assign service owner; no new scientific result.\",\n  \"context_rule\": \"Registry, manifest and canonical attributes must agree before prediction.\",\n  \"approval_binding\": \"SHA-256 of complete DecisionBrief including version bundle; changed content requires new assessment and review.\",\n  \"ownership\": {\n    \"scientific_decision\": \"biology reviewer\",\n    \"workflow\": \"DDS workflow lead\",\n    \"model_validity\": \"specialist predictive-model team\",\n    \"infrastructure\": \"technology/platform partners\"\n  },\n  \"states\": {\n    \"NEEDS_METADATA\": \"Query exact manifest once; if unresolved, stop dependent calls and ask data owner.\",\n    \"MODEL_NOT_APPLICABLE\": \"Abstain or select a registered eligible alternative; not a negative biological result.\",\n    \"TECHNICAL_RETRY\": \"Retry transient error at most once; preserve same inputs/key.\",\n    \"SCHEMA_OR_QC_REVIEW\": \"Review invalid input, context, controls or failed intended perturbation; do not rerun until favourable.\",\n    \"BIOLOGY_UNRESOLVED\": \"Valid imprecision, disagreement or cell-loss confound; retain specific reasons for biology.\",\n    \"READY_FOR_BIOLOGY_REVIEW\": \"Complete proposal awaiting human review, not authorization to act.\",\n    \"HANDOFF_NEEDS_INFORMATION\": \"Specialist requests a specific missing item and next owner; preserve biology assessment.\"\n  },\n  \"response_to_state\": {\n    \"NEEDS_METADATA\": \"NEEDS_METADATA\",\n    \"MODEL_NOT_APPLICABLE\": \"MODEL_NOT_APPLICABLE\",\n    \"TECHNICAL_ERROR\": \"TECHNICAL_RETRY\",\n    \"INVALID_INPUT\": \"SCHEMA_OR_QC_REVIEW\"\n  },\n  \"not_found_rule\": \"No result; retain a source gap. Missing manifest blocks prediction. Do not infer lack of biological effect.\",\n  \"scientific_actions\": [\n    \"EXPERIMENT_TO_RESOLVE_UNCERTAINTY\",\n    \"ADVANCE_TO_REPLICATION\",\n    \"DEPRIORITIZE_TESTED_HYPOTHESIS\",\n    \"INCONCLUSIVE\"\n  ],\n  \"technical_state_is_not_scientific_action\": true,\n  \"implementation_status\": \"Implemented by reference CLI v1: local adapters, bounded retries, SQLite history, review/resume and simulated handoff. Agents, UI and production deployment remain later work.\"\n}\n"
+    }
+  ],
+  "assessments": [
+    {
+      "assessment_id": "demo-A001",
+      "author_mode": "deterministic_reference",
+      "challenging_evidence_ids": [
+        "E07",
+        "E09",
+        "E10"
+      ],
+      "confidence": {
+        "causal": {
+          "evidence_ids": [
+            "E01",
+            "E02",
+            "E03"
+          ],
+          "ordinal": 1,
+          "rationale": "Suggestive locus evidence; gene assignment and genetic direction remain unresolved.",
+          "scope": "gene-to-disease causal hypothesis",
+          "status": "ASSESSED"
+        },
+        "interpretation": "proposed_ordinal_support_not_probability",
+        "intervention": {
+          "evidence_ids": [
+            "E07",
+            "PRED-STIM-001"
+          ],
+          "ordinal": 1,
+          "rationale": "Application context metadata is resolved. The eligible frozen signature response suggests a functional test; it does not establish functional benefit. Gene assignment, genetic direction and the earlier cell-loss confound remain unresolved.",
+          "scope": "20% useful functional effect of expression reduction in this tested context",
+          "status": "ASSESSED"
+        },
+        "modality_feasibility": {
+          "antibody": "conditional",
+          "oligonucleotide": "conditional",
+          "small_molecule": "unknown"
+        },
+        "rubric_version": "ordinal-rubric-v1",
+        "systemic_safety": "unassessed"
+      },
+      "context_id": "CTX-CD4-STIM-TH17",
+      "excluded_or_limited_evidence": {
+        "E06": "Historical resting-cell signature prediction; not a stimulated functional-effect prediction.",
+        "E13": "Causal/inhibition-benefit overclaim is unsupported by the cited locus association.",
+        "E14": "Duplicate of E01; no independent support.",
+        "E15": "Unresolved entity; do not map automatically.",
+        "E16": "Cell context, endpoint and denominator remain unknown.",
+        "PRED-STIM-001": "Frozen signature response; no measured predictive accuracy or functional-benefit claim."
+      },
+      "failed_gates": [],
+      "functional_effect_units": "relative_percent_reduction",
+      "functional_effects": {},
+      "human_review_required": true,
+      "hypothesis": "Partial expression reduction produces at least 20% relative reduction in the live-cell IL-17A-positive fraction while preserving cells in the specified stimulated context.",
+      "hypothesis_id": "HYP-DEMO-R1-001",
+      "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+      "next_action": "Propose OPT-FUNCTION after bounded evidence review; agree feasibility and assay policy with biology.",
+      "next_owner_role": "biology reviewer",
+      "prerequisites_passed": null,
+      "rationale": "Application context metadata is resolved. The eligible frozen signature response suggests a functional test; it does not establish functional benefit. Gene assignment, genetic direction and the earlier cell-loss confound remain unresolved.",
+      "remaining_uncertainties": [
+        "Gene assignment and genetic direction remain unresolved.",
+        "Systemic and tissue safety remain unassessed.",
+        "Expression reduction is not established to be equivalent to receptor blockade.",
+        "Relevant-cell delivery, isoform coverage and modality feasibility require specialist assessment."
+      ],
+      "scientific_recommendation": "EXPERIMENT_TO_RESOLVE_UNCERTAINTY",
+      "supporting_evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "PRED-STIM-001"
+      ],
+      "synthetic": true,
+      "target_id": "DEMO-R1",
+      "versions": {
+        "alias_mapping_version": "aliases-v1",
+        "contract_version": "tools-v1",
+        "evidence_snapshot_id": "EV-INITIAL-003",
+        "input_content_sha256": {
+          "implementation/contracts.py": "01348d479b95ca3344f3c5cbded16fb2114435c7ee67c473bd90db6b48bde768",
+          "implementation/decision_compiler.py": "d59f6a9c9a737d5fc918d9e94bfa808ca7ae25515f072941532123436d633b75",
+          "implementation/demo.py": "680f0eaa85c14f96ba0b40d647d6a6e12a3fdb2037721f5d955f6bc1b60f91a5",
+          "implementation/evaluate.py": "3725ee519acc89a770dfa14d0ae72430455387f78a7568d97e1f88b27bfd21bb",
+          "implementation/local_tools.py": "e67644a3a7299f84700c01212d3b525dde5421c4cd1b9a9967741b03c1463dd6",
+          "implementation/workflow.py": "90e5505e75a79cb890aa416e56076ef538d0b4a6c053e44ae66a88c093212e7a",
+          "implementation/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b",
+          "runtime/capability_registry.json": "9de92358b6bd5b081896ce101f23548443d526fb31ced17caf444a65cea83d23",
+          "runtime/confidence_rubric.json": "8904b88d4f83af96ab3b399ec463a4ddf6a22930f03a55009228f88768aa04f1",
+          "runtime/experiment_options.response.json": "c6027d25618e787a24035e90d7889c49560896fba8b57a44329282013df83fcf",
+          "runtime/handoffs/antibody_response_template.json": "b539db29810cc6f92fcad0a3fa77cc1c7d9248b36c6cf5c2153e0d8fca752e88",
+          "runtime/initial_evidence.json": "1d78b76f9105e373405ecc061936e3e3321328d899fbedf766fe9465f95847a6",
+          "runtime/metadata/alias_mappings.json": "9d15663c0d14f10286a6c05d40b2377f555bb314286a64440d57d26dd766ffa4",
+          "runtime/metadata/context_catalog.json": "53983ca7e731f6bd183a41f8307ce3ba68040249054d6bcf99d3bafd5a88af60",
+          "runtime/metadata/study_manifest.json": "00ac1850fd96641dfba51f9555d2c5674132cbb9b4ef87f3b0d0f8e90f274563",
+          "runtime/policy.json": "1531dacf1982e73e90c3abcb0b9b37291283e7dfd859e6e0f33035810f614b23",
+          "runtime/predictions/stimulated_signature.response.json": "56e68286639bb682fcb85b35fa3dea6330124891a4c93db8ef794442bb596c8f",
+          "runtime/sources/cro_export.json": "cd4a685c3f79ea45626c52b2dd4f3eeb2d8ee506d41a649d5d61b38bfdf80de1",
+          "runtime/sources/internal_evidence.json": "1b76edad6f1982c52b0f85ac8a543b077ae74ea69eae0ba2eba41964f1bfa1d2",
+          "runtime/workflow_contract.json": "680c7c03de89a5ec9012667a60cf0174a3fa02b172e230711982fdfe9b6526c8"
+        },
+        "metadata_snapshot_id": "META-001-v1",
+        "model_output_ids": [
+          "PRED-STIM-001"
+        ],
+        "model_versions": {
+          "historical_E06": "synthetic-model-v1",
+          "mock-signature-adapter": "synthetic-model-v2"
+        },
+        "policy_version": "demo-policy-v1",
+        "prompt_version": "no-LLM-reference-cli-v1-b2d84e5fb927",
+        "registry_version": "registry-v1"
+      },
+      "workflow_status": "READY_FOR_BIOLOGY_REVIEW"
+    },
+    {
+      "assessment_id": "demo-A002",
+      "author_mode": "deterministic_reference",
+      "challenging_evidence_ids": [
+        "E07",
+        "E09",
+        "E10"
+      ],
+      "confidence": {
+        "causal": {
+          "evidence_ids": [
+            "E01",
+            "E02",
+            "E03"
+          ],
+          "ordinal": 1,
+          "rationale": "Suggestive locus evidence; gene assignment and genetic direction remain unresolved.",
+          "scope": "gene-to-disease causal hypothesis",
+          "status": "ASSESSED"
+        },
+        "interpretation": "proposed_ordinal_support_not_probability",
+        "intervention": {
+          "evidence_ids": [
+            "X101"
+          ],
+          "ordinal": 2,
+          "rationale": "Both methods meet the predefined 20% useful functional-effect criterion with intact prerequisites. The methods use the same donors; this is not independent cohort replication.",
+          "scope": "20% useful functional effect of expression reduction in this tested context",
+          "status": "ASSESSED"
+        },
+        "modality_feasibility": {
+          "antibody": "conditional",
+          "oligonucleotide": "conditional",
+          "small_molecule": "unknown"
+        },
+        "rubric_version": "ordinal-rubric-v1",
+        "systemic_safety": "unassessed"
+      },
+      "context_id": "CTX-CD4-STIM-TH17",
+      "excluded_or_limited_evidence": {
+        "E06": "Historical resting-cell signature prediction; not a stimulated functional-effect prediction.",
+        "E13": "Causal/inhibition-benefit overclaim is unsupported by the cited locus association.",
+        "E14": "Duplicate of E01; no independent support.",
+        "E15": "Unresolved entity; do not map automatically.",
+        "E16": "Cell context, endpoint and denominator remain unknown.",
+        "PRED-STIM-001": "Frozen signature response; no measured predictive accuracy or functional-benefit claim."
+      },
+      "failed_gates": [],
+      "functional_effect_units": "relative_percent_reduction",
+      "functional_effects": {
+        "KD-A": {
+          "lower_95": 29.511922118076697,
+          "mean": 32.0,
+          "n_donors": 8,
+          "upper_95": 34.4880778819233
+        },
+        "KD-B": {
+          "lower_95": 26.95217532822033,
+          "mean": 29.0,
+          "n_donors": 8,
+          "upper_95": 31.04782467177967
+        }
+      },
+      "human_review_required": true,
+      "hypothesis": "Partial expression reduction produces at least 20% relative reduction in the live-cell IL-17A-positive fraction while preserving cells in the specified stimulated context.",
+      "hypothesis_id": "HYP-DEMO-R1-001",
+      "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+      "next_action": "Propose new-donor/batch replication and target-specificity work; open a conditional specialist feasibility discussion.",
+      "next_owner_role": "biology reviewer",
+      "prerequisites_passed": true,
+      "rationale": "Both methods meet the predefined 20% useful functional-effect criterion with intact prerequisites. The methods use the same donors; this is not independent cohort replication.",
+      "remaining_uncertainties": [
+        "Gene assignment and genetic direction remain unresolved.",
+        "Systemic and tissue safety remain unassessed.",
+        "Expression reduction is not established to be equivalent to receptor blockade.",
+        "Relevant-cell delivery, isoform coverage and modality feasibility require specialist assessment.",
+        "Independent replication and specificity remain unestablished."
+      ],
+      "scientific_recommendation": "ADVANCE_TO_REPLICATION",
+      "supporting_evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "X101"
+      ],
+      "synthetic": true,
+      "target_id": "DEMO-R1",
+      "versions": {
+        "alias_mapping_version": "aliases-v1",
+        "contract_version": "tools-v1",
+        "evidence_snapshot_id": "EV-INITIAL-003+evidence-v2-X101",
+        "input_content_sha256": {
+          "implementation/contracts.py": "01348d479b95ca3344f3c5cbded16fb2114435c7ee67c473bd90db6b48bde768",
+          "implementation/decision_compiler.py": "d59f6a9c9a737d5fc918d9e94bfa808ca7ae25515f072941532123436d633b75",
+          "implementation/demo.py": "680f0eaa85c14f96ba0b40d647d6a6e12a3fdb2037721f5d955f6bc1b60f91a5",
+          "implementation/evaluate.py": "3725ee519acc89a770dfa14d0ae72430455387f78a7568d97e1f88b27bfd21bb",
+          "implementation/local_tools.py": "e67644a3a7299f84700c01212d3b525dde5421c4cd1b9a9967741b03c1463dd6",
+          "implementation/workflow.py": "90e5505e75a79cb890aa416e56076ef538d0b4a6c053e44ae66a88c093212e7a",
+          "implementation/workflow_store.py": "5d5d01fef5b1a5515f1c9549cbb97235e8e6fda24c0b6be900af94680420c32b",
+          "runtime/capability_registry.json": "9de92358b6bd5b081896ce101f23548443d526fb31ced17caf444a65cea83d23",
+          "runtime/confidence_rubric.json": "8904b88d4f83af96ab3b399ec463a4ddf6a22930f03a55009228f88768aa04f1",
+          "runtime/experiment_options.response.json": "c6027d25618e787a24035e90d7889c49560896fba8b57a44329282013df83fcf",
+          "runtime/experiments/X101.json": "398ce07c9571caad7deb4954be9f4c9b5fda434c3a7239bcf6aeaaad40647af2",
+          "runtime/handoffs/antibody_response_template.json": "b539db29810cc6f92fcad0a3fa77cc1c7d9248b36c6cf5c2153e0d8fca752e88",
+          "runtime/initial_evidence.json": "1d78b76f9105e373405ecc061936e3e3321328d899fbedf766fe9465f95847a6",
+          "runtime/metadata/alias_mappings.json": "9d15663c0d14f10286a6c05d40b2377f555bb314286a64440d57d26dd766ffa4",
+          "runtime/metadata/context_catalog.json": "53983ca7e731f6bd183a41f8307ce3ba68040249054d6bcf99d3bafd5a88af60",
+          "runtime/metadata/study_manifest.json": "00ac1850fd96641dfba51f9555d2c5674132cbb9b4ef87f3b0d0f8e90f274563",
+          "runtime/policy.json": "1531dacf1982e73e90c3abcb0b9b37291283e7dfd859e6e0f33035810f614b23",
+          "runtime/predictions/stimulated_signature.response.json": "56e68286639bb682fcb85b35fa3dea6330124891a4c93db8ef794442bb596c8f",
+          "runtime/sources/cro_export.json": "cd4a685c3f79ea45626c52b2dd4f3eeb2d8ee506d41a649d5d61b38bfdf80de1",
+          "runtime/sources/internal_evidence.json": "1b76edad6f1982c52b0f85ac8a543b077ae74ea69eae0ba2eba41964f1bfa1d2",
+          "runtime/workflow_contract.json": "680c7c03de89a5ec9012667a60cf0174a3fa02b172e230711982fdfe9b6526c8"
+        },
+        "metadata_snapshot_id": "META-001-v1",
+        "model_output_ids": [
+          "PRED-STIM-001"
+        ],
+        "model_versions": {
+          "historical_E06": "synthetic-model-v1",
+          "mock-signature-adapter": "synthetic-model-v2"
+        },
+        "policy_version": "demo-policy-v1",
+        "prompt_version": "no-LLM-reference-cli-v1-b2d84e5fb927",
+        "registry_version": "registry-v1"
+      },
+      "workflow_status": "READY_FOR_BIOLOGY_REVIEW"
+    }
+  ],
+  "reviews": [
+    {
+      "actor_mode": "simulated_human",
+      "assessment_id": "demo-A001",
+      "authorization_scope": "local_simulation_only",
+      "decision": "APPROVE",
+      "rationale": "Scripted example: approve the scoped synthetic experiment under the provisional criteria.",
+      "review_id": "demo-R001",
+      "reviewed_content_sha256": "a1426069327b02f30e4f01114ac6e9a6f220989becbd619973e463933868564e",
+      "reviewer_role": "Demo biology reviewer (scripted)",
+      "synthetic": true
+    },
+    {
+      "actor_mode": "simulated_human",
+      "assessment_id": "demo-A002",
+      "authorization_scope": "local_simulation_only",
+      "decision": "DEFER",
+      "rationale": "Scripted example: clarify the scope of the proposed next work before approving it.",
+      "review_id": "demo-R002",
+      "reviewed_content_sha256": "34de16e1d7bfd080e0245c8bf2601da0196eeeee89f0e4c647b35824b5806dfa",
+      "reviewer_role": "Demo biology reviewer (scripted)",
+      "synthetic": true
+    },
+    {
+      "actor_mode": "simulated_human",
+      "assessment_id": "demo-A002",
+      "authorization_scope": "local_simulation_only",
+      "decision": "APPROVE",
+      "rationale": "Scripted example: approve new-donor/batch replication and target-specificity work only. The two methods clear the provisional useful-effect criterion but share the same eight donors. Independent replication, specificity, antibody blockade equivalence and systemic safety remain unestablished. This is not target validation or programme approval.",
+      "review_id": "demo-R003",
+      "reviewed_content_sha256": "34de16e1d7bfd080e0245c8bf2601da0196eeeee89f0e4c647b35824b5806dfa",
+      "reviewer_role": "Demo biology reviewer (scripted)",
+      "synthetic": true
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "contract_version": "tools-v1",
+  "request_id": "Q003",
+  "idempotency_key": "IDEMP-Q003",
+  "study_id": "S-U02",
+  "snapshot_id": "META-U02-v1"
+}

@@ -1,0 +1,61 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "tools-v1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "title": "Request Id",
+      "type": "string"
+    },
+    "idempotency_key": {
+      "minLength": 1,
+      "title": "Idempotency Key",
+      "type": "string"
+    },
+    "hypothesis_id": {
+      "minLength": 1,
+      "title": "Hypothesis Id",
+      "type": "string"
+    },
+    "context_id": {
+      "minLength": 1,
+      "title": "Context Id",
+      "type": "string"
+    },
+    "policy_version": {
+      "minLength": 1,
+      "title": "Policy Version",
+      "type": "string"
+    },
+    "unresolved_questions": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Unresolved Questions",
+      "type": "array"
+    },
+    "option_snapshot_id": {
+      "minLength": 1,
+      "title": "Option Snapshot Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "request_id",
+    "idempotency_key",
+    "hypothesis_id",
+    "context_id",
+    "policy_version",
+    "unresolved_questions",
+    "option_snapshot_id"
+  ],
+  "title": "GetExperimentOptionsRequest",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

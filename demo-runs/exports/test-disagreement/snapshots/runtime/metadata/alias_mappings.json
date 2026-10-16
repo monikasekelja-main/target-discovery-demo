@@ -1,0 +1,26 @@
+{
+  "synthetic": true,
+  "mapping_version": "aliases-v1",
+  "mappings": [
+    {
+      "mapping_id": "MAP-T001",
+      "original_value": "DEMO-R1",
+      "canonical_id": "DEMO-R1",
+      "authority": "synthetic entity registry"
+    },
+    {
+      "mapping_id": "MAP-T002",
+      "original_value": "DEMO_R1",
+      "canonical_id": "DEMO-R1",
+      "authority": "synthetic entity registry"
+    }
+  ],
+  "unresolved": [
+    {
+      "original_value": "DEMO-RI",
+      "canonical_id": null,
+      "reason": "Letter I versus digit 1 has no authoritative mapping."
+    }
+  ],
+  "rule": "Exact allowlisted mappings only; no fuzzy replacement of I with 1."
+}

@@ -1,0 +1,46 @@
+{
+  "version": "programme-context-v1",
+  "target_id": "DEMO-R1",
+  "context_id": "CTX-CD4-STIM-TH17",
+  "intended_indication": "Plaque psoriasis",
+  "target_description": "DEMO-R1 is a fictional cell-surface receptor.",
+  "programme_status": "Illustrative demonstration example, not a real programme or asset.",
+  "summary": "Programme hypothesis: expression reduction may alter an inflammatory T-cell state.",
+  "programme_question": "Could reducing DEMO-R1 expression interrupt a disease-relevant inflammatory T-cell state and offer a differentiated therapeutic opportunity?",
+  "mechanistic_hypothesis": "DEMO-R1 may help maintain an IL-17A-producing CD4 T-cell state. Its precise signalling mechanism and causal contribution to disease remain unresolved.",
+  "immediate_uncertainty": "Does partial expression reduction produce a reproducible functional response distinguishable from cell loss and perturbation artefacts?",
+  "experiment": "The existing synthetic experiment uses stimulated, Th17-enriched primary human CD4 T-cell culture. The endpoint is the relative reduction in the fraction of live CD4 T cells that are IL-17A positive at 72 hours. RNA knockdown and CRISPRi are separate methods in the same eight donors, not independent cohort replication. These metadata do not establish psoriasis-patient or skin-tissue provenance.",
+  "prediction_scope": "The demo's target-specific evidence and frozen predictions are synthetic. No predictive model was trained or run. The selected saved assessment alone determines the current evidence finding and next action; this description does not imply an experiment has already been completed.",
+  "alternatives": [
+    "A change in inflammatory cell state.",
+    "Broad suppression of T-cell activation.",
+    "Selective loss of IL-17A-producing cells despite acceptable aggregate recovery.",
+    "A perturbation effect unrelated to DEMO-R1."
+  ],
+  "differentiation_hypothesis": "Investigate selectivity for the relevant inflammatory state against appropriate comparison states and in disease-relevant tissue. The current data establish no advantage in efficacy, safety, durability, exposure or clinical value.",
+  "specialist_questions": [
+    "Antibody: could an antibody produce the desired functional action? Expression reduction does not establish antibody-blockade equivalence.",
+    "Oligonucleotide: are relevant-cell delivery, transcript/isoform coverage and tolerability achievable?",
+    "Small molecule: is tractable modulation plausible?"
+  ],
+  "specialist_scope": "These are questions for specialists, not specialist findings or established modality feasibility.",
+  "scope_notes": [
+    "Presentation context only: separate from the saved assessment and any prior human review. It is not new target evidence, cannot increase confidence and grants no approval.",
+    "Naming plaque psoriasis does not turn the mock locus evidence into a real psoriasis GWAS or resolve gene assignment or genetic direction.",
+    "A reduced IL-17A-positive fraction does not by itself prove direct transcriptional repression, reduced secretion per surviving cell, tissue benefit or clinical efficacy."
+  ],
+  "references": [
+    {
+      "citation": "Langley RG et al. Secukinumab in Plaque Psoriasis: Results of Two Phase 3 Trials. N Engl J Med 2014;371:326–338.",
+      "url": "https://doi.org/10.1056/NEJMoa1314258",
+      "supports": "IL-17A's therapeutic relevance in plaque psoriasis.",
+      "limits": "No evidence for DEMO-R1, expression-reduction equivalence or the demo's provisional useful-effect criterion."
+    },
+    {
+      "citation": "Fries A et al. Differentiation of IL-26+ TH17 intermediates into IL-17A producers via epithelial crosstalk in psoriasis. Nature Communications 14, 3878 (2023).",
+      "url": "https://doi.org/10.1038/s41467-023-39484-4",
+      "supports": "Relevance of tissue-dependent T-cell states and epithelial interactions.",
+      "limits": "Does not validate DEMO-R1 or the current mock culture as a psoriasis model."
+    }
+  ]
+}

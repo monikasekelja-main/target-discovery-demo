@@ -1,0 +1,238 @@
+{
+  "$defs": {
+    "Context": {
+      "additionalProperties": false,
+      "properties": {
+        "context_id": {
+          "minLength": 1,
+          "title": "Context Id",
+          "type": "string"
+        },
+        "species": {
+          "const": "human",
+          "title": "Species",
+          "type": "string"
+        },
+        "cell_type": {
+          "minLength": 1,
+          "title": "Cell Type",
+          "type": "string"
+        },
+        "cell_state": {
+          "minLength": 1,
+          "title": "Cell State",
+          "type": "string"
+        },
+        "disease_context_id": {
+          "minLength": 1,
+          "title": "Disease Context Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "context_id",
+        "species",
+        "cell_type",
+        "cell_state",
+        "disease_context_id"
+      ],
+      "title": "Context",
+      "type": "object"
+    },
+    "Manifest": {
+      "additionalProperties": false,
+      "properties": {
+        "synthetic": {
+          "const": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "study_id": {
+          "minLength": 1,
+          "title": "Study Id",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "minLength": 1,
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "manifest_version": {
+          "minLength": 1,
+          "title": "Manifest Version",
+          "type": "string"
+        },
+        "target_id": {
+          "minLength": 1,
+          "title": "Target Id",
+          "type": "string"
+        },
+        "context": {
+          "$ref": "#/$defs/Context"
+        },
+        "input_snapshot_id": {
+          "minLength": 1,
+          "title": "Input Snapshot Id",
+          "type": "string"
+        },
+        "input_data_kind": {
+          "const": "specialist_prepared_single_cell_reference",
+          "title": "Input Data Kind",
+          "type": "string"
+        },
+        "data_availability": {
+          "const": "metadata_and_frozen_outputs_only",
+          "title": "Data Availability",
+          "type": "string"
+        },
+        "source_locator": {
+          "minLength": 1,
+          "title": "Source Locator",
+          "type": "string"
+        },
+        "resolved_fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Resolved Fields",
+          "type": "array"
+        },
+        "owner_role": {
+          "minLength": 1,
+          "title": "Owner Role",
+          "type": "string"
+        },
+        "limitation": {
+          "minLength": 1,
+          "title": "Limitation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "synthetic",
+        "study_id",
+        "snapshot_id",
+        "manifest_version",
+        "target_id",
+        "context",
+        "input_snapshot_id",
+        "input_data_kind",
+        "data_availability",
+        "source_locator",
+        "resolved_fields",
+        "owner_role",
+        "limitation"
+      ],
+      "title": "Manifest",
+      "type": "object"
+    },
+    "ToolError": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "minLength": 1,
+          "title": "Code",
+          "type": "string"
+        },
+        "message": {
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "retryable": {
+          "title": "Retryable",
+          "type": "boolean"
+        },
+        "missing_fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Fields",
+          "type": "array"
+        },
+        "next_owner_role": {
+          "minLength": 1,
+          "title": "Next Owner Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "retryable",
+        "missing_fields",
+        "next_owner_role"
+      ],
+      "title": "ToolError",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "synthetic": {
+      "const": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "contract_version": {
+      "const": "tools-v1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "title": "Request Id",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "OK",
+        "NEEDS_METADATA",
+        "NOT_FOUND",
+        "TECHNICAL_ERROR",
+        "INVALID_INPUT"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "source_snapshot_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Snapshot Ids",
+      "type": "array"
+    },
+    "data": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Manifest"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "error": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ToolError"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "synthetic",
+    "contract_version",
+    "request_id",
+    "status",
+    "source_snapshot_ids",
+    "data",
+    "error"
+  ],
+  "title": "GetStudyManifestResponse",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

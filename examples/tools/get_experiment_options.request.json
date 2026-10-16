@@ -1,0 +1,14 @@
+{
+  "contract_version": "tools-v1",
+  "request_id": "Q008",
+  "idempotency_key": "IDEMP-Q008",
+  "hypothesis_id": "HYP-DEMO-R1-001",
+  "context_id": "CTX-CD4-STIM-TH17",
+  "policy_version": "demo-policy-v1",
+  "unresolved_questions": [
+    "functional direction",
+    "cell-loss confound",
+    "gene assignment"
+  ],
+  "option_snapshot_id": "OPTIONS-v1"
+}

@@ -1,0 +1,41 @@
+{
+  "synthetic": true,
+  "context_catalog_version": "contexts-v1",
+  "contexts": [
+    {
+      "context_id": "CTX-CD4-STIM-TH17",
+      "species": "human",
+      "cell_type": "CD4 T cell",
+      "cell_state": "stimulated; Th17-enriched",
+      "disease_context_id": "DIS-SKIN-LIKE-001"
+    },
+    {
+      "context_id": "CTX-CD4-REST",
+      "species": "human",
+      "cell_type": "CD4 T cell",
+      "cell_state": "resting",
+      "disease_context_id": "DIS-SKIN-LIKE-001"
+    }
+  ],
+  "assay_context_binding": {
+    "assay_protocol_version": "mock-assay-v1",
+    "context_id": "CTX-CD4-STIM-TH17",
+    "required_attributes": {
+      "context_id": "CTX-CD4-STIM-TH17",
+      "species": "human",
+      "cell_type": "CD4 T cell",
+      "cell_state": "stimulated; Th17-enriched",
+      "disease_context_id": "DIS-SKIN-LIKE-001"
+    },
+    "legacy_context": {
+      "target": "DEMO-R1 (fictional cell-surface receptor)",
+      "disease_context": "inflammatory skin disease-like assay; no patient-efficacy claim",
+      "cell_context": "stimulated, Th17-enriched primary human CD4 T-cell culture (synthetic)",
+      "intervention": "partial reduction of target expression; no claim of equivalence to activity blockade",
+      "endpoint": "relative reduction in fraction of live CD4 T cells that are IL-17A positive",
+      "endpoint_time_hours": 72,
+      "assay_protocol_version": "mock-assay-v1"
+    }
+  },
+  "rule": "Check canonical ID AND required attributes against this versioned catalogue. Free text is not sufficient."
+}

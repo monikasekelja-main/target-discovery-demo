@@ -1,0 +1,101 @@
+{
+  "$defs": {
+    "Perturbation": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "expression_change",
+          "title": "Kind",
+          "type": "string"
+        },
+        "expression_changes_pct": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Expression Changes Pct",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "expression_changes_pct"
+      ],
+      "title": "Perturbation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "tools-v1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "title": "Request Id",
+      "type": "string"
+    },
+    "idempotency_key": {
+      "minLength": 1,
+      "title": "Idempotency Key",
+      "type": "string"
+    },
+    "model_id": {
+      "minLength": 1,
+      "title": "Model Id",
+      "type": "string"
+    },
+    "model_version": {
+      "minLength": 1,
+      "title": "Model Version",
+      "type": "string"
+    },
+    "target_id": {
+      "minLength": 1,
+      "title": "Target Id",
+      "type": "string"
+    },
+    "context_id": {
+      "minLength": 1,
+      "title": "Context Id",
+      "type": "string"
+    },
+    "perturbation": {
+      "$ref": "#/$defs/Perturbation"
+    },
+    "input_snapshot_id": {
+      "minLength": 1,
+      "title": "Input Snapshot Id",
+      "type": "string"
+    },
+    "metadata_snapshot_id": {
+      "minLength": 1,
+      "title": "Metadata Snapshot Id",
+      "type": "string"
+    },
+    "endpoint_id": {
+      "const": "transcriptomic_inflammatory_signature",
+      "title": "Endpoint Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "request_id",
+    "idempotency_key",
+    "model_id",
+    "model_version",
+    "target_id",
+    "context_id",
+    "perturbation",
+    "input_snapshot_id",
+    "metadata_snapshot_id",
+    "endpoint_id"
+  ],
+  "title": "GetPredictionRequest",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "contract_version": "tools-v1",
+  "request_id": "Q007",
+  "status": "TECHNICAL_ERROR",
+  "source_snapshot_ids": [
+    "registry-v1"
+  ],
+  "data": null,
+  "error": {
+    "code": "SERVICE_TIMEOUT",
+    "message": "Simulated timeout before a result was available.",
+    "retryable": true,
+    "missing_fields": [],
+    "next_owner_role": "specialist service owner"
+  }
+}

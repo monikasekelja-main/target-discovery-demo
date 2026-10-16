@@ -1,0 +1,248 @@
+{
+  "$defs": {
+    "PredictionPoint": {
+      "additionalProperties": false,
+      "properties": {
+        "expression_change_pct": {
+          "title": "Expression Change Pct",
+          "type": "number"
+        },
+        "signature_change": {
+          "title": "Signature Change",
+          "type": "number"
+        }
+      },
+      "required": [
+        "expression_change_pct",
+        "signature_change"
+      ],
+      "title": "PredictionPoint",
+      "type": "object"
+    },
+    "PredictionResult": {
+      "additionalProperties": false,
+      "properties": {
+        "synthetic": {
+          "const": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "output_id": {
+          "minLength": 1,
+          "title": "Output Id",
+          "type": "string"
+        },
+        "model_id": {
+          "minLength": 1,
+          "title": "Model Id",
+          "type": "string"
+        },
+        "model_version": {
+          "minLength": 1,
+          "title": "Model Version",
+          "type": "string"
+        },
+        "target_id": {
+          "minLength": 1,
+          "title": "Target Id",
+          "type": "string"
+        },
+        "context_id": {
+          "minLength": 1,
+          "title": "Context Id",
+          "type": "string"
+        },
+        "input_snapshot_id": {
+          "minLength": 1,
+          "title": "Input Snapshot Id",
+          "type": "string"
+        },
+        "metadata_snapshot_id": {
+          "minLength": 1,
+          "title": "Metadata Snapshot Id",
+          "type": "string"
+        },
+        "perturbation_kind": {
+          "const": "expression_change",
+          "title": "Perturbation Kind",
+          "type": "string"
+        },
+        "endpoint_id": {
+          "const": "transcriptomic_inflammatory_signature",
+          "title": "Endpoint Id",
+          "type": "string"
+        },
+        "units": {
+          "const": "standardized_signature_units",
+          "title": "Units",
+          "type": "string"
+        },
+        "applicability": {
+          "const": "ELIGIBLE_UNDER_MOCK_CONTRACT",
+          "title": "Applicability",
+          "type": "string"
+        },
+        "predictions": {
+          "items": {
+            "$ref": "#/$defs/PredictionPoint"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Predictions",
+          "type": "array"
+        },
+        "uncertainty": {
+          "const": "not_calibrated",
+          "title": "Uncertainty",
+          "type": "string"
+        },
+        "measured_predictive_accuracy": {
+          "title": "Measured Predictive Accuracy",
+          "type": "null"
+        },
+        "source_locator": {
+          "minLength": 1,
+          "title": "Source Locator",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "synthetic",
+        "output_id",
+        "model_id",
+        "model_version",
+        "target_id",
+        "context_id",
+        "input_snapshot_id",
+        "metadata_snapshot_id",
+        "perturbation_kind",
+        "endpoint_id",
+        "units",
+        "applicability",
+        "predictions",
+        "uncertainty",
+        "measured_predictive_accuracy",
+        "source_locator",
+        "limitations"
+      ],
+      "title": "PredictionResult",
+      "type": "object"
+    },
+    "ToolError": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "minLength": 1,
+          "title": "Code",
+          "type": "string"
+        },
+        "message": {
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "retryable": {
+          "title": "Retryable",
+          "type": "boolean"
+        },
+        "missing_fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Fields",
+          "type": "array"
+        },
+        "next_owner_role": {
+          "minLength": 1,
+          "title": "Next Owner Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "retryable",
+        "missing_fields",
+        "next_owner_role"
+      ],
+      "title": "ToolError",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "synthetic": {
+      "const": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "contract_version": {
+      "const": "tools-v1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "title": "Request Id",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "OK",
+        "NEEDS_METADATA",
+        "MODEL_NOT_APPLICABLE",
+        "TECHNICAL_ERROR",
+        "INVALID_INPUT"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "source_snapshot_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Snapshot Ids",
+      "type": "array"
+    },
+    "data": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/PredictionResult"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "error": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ToolError"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "synthetic",
+    "contract_version",
+    "request_id",
+    "status",
+    "source_snapshot_ids",
+    "data",
+    "error"
+  ],
+  "title": "GetPredictionResponse",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

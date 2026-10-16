@@ -1,0 +1,71 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "synthetic": {
+      "const": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "review_id": {
+      "minLength": 1,
+      "title": "Review Id",
+      "type": "string"
+    },
+    "assessment_id": {
+      "minLength": 1,
+      "title": "Assessment Id",
+      "type": "string"
+    },
+    "reviewed_content_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Reviewed Content Sha256",
+      "type": "string"
+    },
+    "reviewer_role": {
+      "minLength": 1,
+      "title": "Reviewer Role",
+      "type": "string"
+    },
+    "actor_mode": {
+      "enum": [
+        "simulated_human",
+        "local_demo_operator"
+      ],
+      "title": "Actor Mode",
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "APPROVE",
+        "AMEND",
+        "DEFER"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "rationale": {
+      "minLength": 1,
+      "title": "Rationale",
+      "type": "string"
+    },
+    "authorization_scope": {
+      "const": "local_simulation_only",
+      "title": "Authorization Scope",
+      "type": "string"
+    }
+  },
+  "required": [
+    "synthetic",
+    "review_id",
+    "assessment_id",
+    "reviewed_content_sha256",
+    "reviewer_role",
+    "actor_mode",
+    "decision",
+    "rationale",
+    "authorization_scope"
+  ],
+  "title": "Review",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

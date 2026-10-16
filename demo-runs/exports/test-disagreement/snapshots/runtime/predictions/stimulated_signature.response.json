@@ -1,0 +1,49 @@
+{
+  "synthetic": true,
+  "contract_version": "tools-v1",
+  "request_id": "Q004",
+  "status": "OK",
+  "source_snapshot_ids": [
+    "META-001-v1",
+    "SC-STIM-001-v1",
+    "synthetic-model-v2"
+  ],
+  "data": {
+    "synthetic": true,
+    "output_id": "PRED-STIM-001",
+    "model_id": "mock-signature-adapter",
+    "model_version": "synthetic-model-v2",
+    "target_id": "DEMO-R1",
+    "context_id": "CTX-CD4-STIM-TH17",
+    "input_snapshot_id": "SC-STIM-001-v1",
+    "metadata_snapshot_id": "META-001-v1",
+    "perturbation_kind": "expression_change",
+    "endpoint_id": "transcriptomic_inflammatory_signature",
+    "units": "standardized_signature_units",
+    "applicability": "ELIGIBLE_UNDER_MOCK_CONTRACT",
+    "predictions": [
+      {
+        "expression_change_pct": -50.0,
+        "signature_change": -0.5
+      },
+      {
+        "expression_change_pct": 0.0,
+        "signature_change": 0.0
+      },
+      {
+        "expression_change_pct": 50.0,
+        "signature_change": 0.2
+      }
+    ],
+    "uncertainty": "not_calibrated",
+    "measured_predictive_accuracy": null,
+    "source_locator": "fixture://predictions/synthetic-model-v2/PRED-STIM-001",
+    "limitations": [
+      "Frozen invented values; no predictive model was trained or run.",
+      "No functional IL-17A effect, clinical benefit or target-success probability follows from these signature units.",
+      "Expression increase is a prediction comparison only, not an arm in X101-X108.",
+      "Historical E06 and this response are not independent experimental support."
+    ]
+  },
+  "error": null
+}

@@ -1,0 +1,32 @@
+{
+  "synthetic": true,
+  "rubric_version": "ordinal-rubric-v1",
+  "interpretation": "Proposed human-reviewed ordinal support, not calibrated probabilities or an aggregate score.",
+  "grades": {
+    "0": "The assessed, explicitly scoped claim is not supported.",
+    "1": "Suggestive evidence or unresolved support.",
+    "2": "Converging relevant-context evidence with material limitations.",
+    "3": "Independently replicated relevant support; not demonstrated in this demo."
+  },
+  "unknown": {
+    "ordinal": null,
+    "status": "UNKNOWN",
+    "meaning": "Not assessed; do not substitute zero."
+  },
+  "dimensions": [
+    "causal",
+    "intervention"
+  ],
+  "separate_assessments": [
+    "modality feasibility",
+    "systemic safety",
+    "portfolio priority"
+  ],
+  "rules": [
+    "State the precise claim and supporting/contradicting evidence for each grade.",
+    "A mock prediction, duplicated record or resolved metadata cannot alone increase support.",
+    "Technical/QC failures and uncertain biology do not automatically imply ordinal zero.",
+    "An expression-reduction result does not resolve gene assignment or genetic direction.",
+    "Functional support is scoped to the useful-effect threshold, achieved perturbation and context."
+  ]
+}

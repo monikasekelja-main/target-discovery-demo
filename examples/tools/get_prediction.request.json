@@ -1,0 +1,20 @@
+{
+  "contract_version": "tools-v1",
+  "request_id": "Q004",
+  "idempotency_key": "IDEMP-Q004",
+  "model_id": "mock-signature-adapter",
+  "model_version": "synthetic-model-v2",
+  "target_id": "DEMO-R1",
+  "context_id": "CTX-CD4-STIM-TH17",
+  "perturbation": {
+    "kind": "expression_change",
+    "expression_changes_pct": [
+      -50.0,
+      0.0,
+      50.0
+    ]
+  },
+  "input_snapshot_id": "SC-STIM-001-v1",
+  "metadata_snapshot_id": "META-001-v1",
+  "endpoint_id": "transcriptomic_inflammatory_signature"
+}

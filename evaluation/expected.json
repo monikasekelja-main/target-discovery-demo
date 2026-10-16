@@ -1,0 +1,87 @@
+{
+  "evaluation_only": true,
+  "never_include_in_runtime_prompts_or_retrieval": true,
+  "ordinal_interpretation": {
+    "0": "assessed; useful intervention not supported in this tested context",
+    "1": "suggestive or unresolved",
+    "2": "converging relevant-context support with limitations",
+    "3": "independent replication, specificity and broader context support; unavailable in this demo"
+  },
+  "note": "Ordinals are proposed human-reviewed evidence categories, not probabilities. They are not summed and are not computed automatically by the gate calculator. Explicit contrary evidence and gaps remain visible.",
+  "cases": {
+    "initial": {
+      "action": "EXPERIMENT_TO_RESOLVE_UNCERTAINTY",
+      "causal_support_ordinal": 1,
+      "intervention_support_ordinal": 1,
+      "required_points": [
+        "resolve application metadata before eligible prediction",
+        "eligible mock signature response is not functional evidence or calibrated confidence",
+        "historical resting prediction remains limited",
+        "gene assignment and genetic direction unresolved",
+        "earlier cell-loss confound",
+        "request relevant-context experiment"
+      ]
+    },
+    "X101": {
+      "label": "supportive",
+      "action": "ADVANCE_TO_REPLICATION",
+      "causal_support_ordinal": 1,
+      "intervention_support_ordinal": 2,
+      "required_points": [
+        "same-donor orthogonal corroboration, not independent replication",
+        "new donors and target-specificity work next",
+        "no antibody/knockdown equivalence",
+        "systemic safety unresolved"
+      ]
+    },
+    "X102": {
+      "label": "valid contrary result",
+      "action": "DEPRIORITIZE_TESTED_HYPOTHESIS",
+      "causal_support_ordinal": 1,
+      "intervention_support_ordinal": 0,
+      "required_points": [
+        "20% useful mean effect excluded",
+        "limited to achieved knockdown, endpoint and context",
+        "small nonzero effects may remain",
+        "does not refute disease-locus association"
+      ]
+    },
+    "X103": {
+      "label": "imprecise",
+      "action": "INCONCLUSIVE",
+      "causal_support_ordinal": 1,
+      "intervention_support_ordinal": 1,
+      "required_points": [
+        "wide donor variability",
+        "useful-effect boundary remains inside intervals",
+        "no post-hoc responder selection",
+        "prospective precision plan before more sampling"
+      ]
+    },
+    "X104": {
+      "label": "cell-loss confound",
+      "action": "INCONCLUSIVE",
+      "required_points": [
+        "functional readout cannot justify beneficial action with cell loss",
+        "explicit liability investigation"
+      ]
+    },
+    "X105": {
+      "label": "positive assay control failed",
+      "action": "INCONCLUSIVE"
+    },
+    "X106": {
+      "label": "insufficient expression reduction",
+      "action": "INCONCLUSIVE"
+    },
+    "X107": {
+      "label": "methods disagree",
+      "action": "INCONCLUSIVE"
+    },
+    "X108": {
+      "label": "wrong cell context",
+      "action": "INCONCLUSIVE"
+    }
+  },
+  "package_version": "demo-fixtures-v3"
+}

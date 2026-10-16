@@ -1,0 +1,116 @@
+{
+  "evaluation_only": true,
+  "cases": [
+    {
+      "experiment_id": "X101",
+      "scientific_recommendation": "ADVANCE_TO_REPLICATION",
+      "workflow_status": "READY_FOR_BIOLOGY_REVIEW",
+      "failed_gates": [],
+      "next_owner_role": "biology reviewer"
+    },
+    {
+      "experiment_id": "X102",
+      "scientific_recommendation": "DEPRIORITIZE_TESTED_HYPOTHESIS",
+      "workflow_status": "READY_FOR_BIOLOGY_REVIEW",
+      "failed_gates": [],
+      "next_owner_role": "biology reviewer"
+    },
+    {
+      "experiment_id": "X103",
+      "scientific_recommendation": "INCONCLUSIVE",
+      "workflow_status": "BIOLOGY_UNRESOLVED",
+      "failed_gates": [],
+      "next_owner_role": "biology reviewer"
+    },
+    {
+      "experiment_id": "X104",
+      "scientific_recommendation": "INCONCLUSIVE",
+      "workflow_status": "BIOLOGY_UNRESOLVED",
+      "failed_gates": [
+        "G4:KD-A/D01: cell-loss/viability requirement failed",
+        "G4:KD-A/D02: cell-loss/viability requirement failed",
+        "G4:KD-A/D03: cell-loss/viability requirement failed",
+        "G4:KD-A/D04: cell-loss/viability requirement failed",
+        "G4:KD-A/D05: cell-loss/viability requirement failed",
+        "G4:KD-A/D06: cell-loss/viability requirement failed",
+        "G4:KD-A/D07: cell-loss/viability requirement failed",
+        "G4:KD-A/D08: cell-loss/viability requirement failed",
+        "G4:KD-A: lower 95% bound on mean live-cell recovery below policy threshold",
+        "G4:KD-B/D01: cell-loss/viability requirement failed",
+        "G4:KD-B/D02: cell-loss/viability requirement failed",
+        "G4:KD-B/D03: cell-loss/viability requirement failed",
+        "G4:KD-B/D04: cell-loss/viability requirement failed",
+        "G4:KD-B/D05: cell-loss/viability requirement failed",
+        "G4:KD-B/D06: cell-loss/viability requirement failed",
+        "G4:KD-B/D07: cell-loss/viability requirement failed",
+        "G4:KD-B/D08: cell-loss/viability requirement failed",
+        "G4:KD-B: lower 95% bound on mean live-cell recovery below policy threshold"
+      ],
+      "next_owner_role": "biology reviewer"
+    },
+    {
+      "experiment_id": "X105",
+      "scientific_recommendation": "INCONCLUSIVE",
+      "workflow_status": "SCHEMA_OR_QC_REVIEW",
+      "failed_gates": [
+        "G2:KD-A/D01: assay-control/QC requirement failed",
+        "G2:KD-A/D02: assay-control/QC requirement failed",
+        "G2:KD-A/D03: assay-control/QC requirement failed",
+        "G2:KD-A/D04: assay-control/QC requirement failed",
+        "G2:KD-A/D05: assay-control/QC requirement failed",
+        "G2:KD-A/D06: assay-control/QC requirement failed",
+        "G2:KD-A/D07: assay-control/QC requirement failed",
+        "G2:KD-A/D08: assay-control/QC requirement failed",
+        "G2:KD-B/D01: assay-control/QC requirement failed",
+        "G2:KD-B/D02: assay-control/QC requirement failed",
+        "G2:KD-B/D03: assay-control/QC requirement failed",
+        "G2:KD-B/D04: assay-control/QC requirement failed",
+        "G2:KD-B/D05: assay-control/QC requirement failed",
+        "G2:KD-B/D06: assay-control/QC requirement failed",
+        "G2:KD-B/D07: assay-control/QC requirement failed",
+        "G2:KD-B/D08: assay-control/QC requirement failed"
+      ],
+      "next_owner_role": "biology assay lead / data owner"
+    },
+    {
+      "experiment_id": "X106",
+      "scientific_recommendation": "INCONCLUSIVE",
+      "workflow_status": "SCHEMA_OR_QC_REVIEW",
+      "failed_gates": [
+        "G3:KD-A/D01: protein reduction outside specified range",
+        "G3:KD-A/D02: protein reduction outside specified range",
+        "G3:KD-A/D03: protein reduction outside specified range",
+        "G3:KD-A/D04: protein reduction outside specified range",
+        "G3:KD-A/D05: protein reduction outside specified range",
+        "G3:KD-A/D06: protein reduction outside specified range",
+        "G3:KD-A/D07: protein reduction outside specified range",
+        "G3:KD-A/D08: protein reduction outside specified range",
+        "G3:KD-B/D01: protein reduction outside specified range",
+        "G3:KD-B/D02: protein reduction outside specified range",
+        "G3:KD-B/D03: protein reduction outside specified range",
+        "G3:KD-B/D04: protein reduction outside specified range",
+        "G3:KD-B/D05: protein reduction outside specified range",
+        "G3:KD-B/D06: protein reduction outside specified range",
+        "G3:KD-B/D07: protein reduction outside specified range",
+        "G3:KD-B/D08: protein reduction outside specified range"
+      ],
+      "next_owner_role": "biology assay lead / data owner"
+    },
+    {
+      "experiment_id": "X107",
+      "scientific_recommendation": "INCONCLUSIVE",
+      "workflow_status": "BIOLOGY_UNRESOLVED",
+      "failed_gates": [],
+      "next_owner_role": "biology reviewer"
+    },
+    {
+      "experiment_id": "X108",
+      "scientific_recommendation": "INCONCLUSIVE",
+      "workflow_status": "SCHEMA_OR_QC_REVIEW",
+      "failed_gates": [
+        "G0: hypothesis/assay context mismatch"
+      ],
+      "next_owner_role": "biology assay lead / data owner"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "synthetic": true,
+  "study_id": "S-TARGET-001",
+  "snapshot_id": "META-001-v1",
+  "manifest_version": "manifest-v1",
+  "target_id": "DEMO-R1",
+  "context": {
+    "context_id": "CTX-CD4-STIM-TH17",
+    "species": "human",
+    "cell_type": "CD4 T cell",
+    "cell_state": "stimulated; Th17-enriched",
+    "disease_context_id": "DIS-SKIN-LIKE-001"
+  },
+  "input_snapshot_id": "SC-STIM-001-v1",
+  "input_data_kind": "specialist_prepared_single_cell_reference",
+  "data_availability": "metadata_and_frozen_outputs_only",
+  "source_locator": "fixture://metadata/META-001-v1/S-TARGET-001",
+  "resolved_fields": [
+    "cell_state",
+    "context_id"
+  ],
+  "owner_role": "single-cell data owner",
+  "limitation": "No expression matrix or real model inference is included. The frozen response stands in for a specialist service. Does not resolve E16 or change historical E05/E06."
+}
