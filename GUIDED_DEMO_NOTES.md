@@ -1,3 +1,5 @@
+> Historical notes for the preserved assay guide. In this copy, **Patient-study demo** is the default; select **Optional assay example** to replay the original experience.
+
 # Guided demo — review before repository update
 
 This separate copy opens directly into a four-step, read-only story for the saved `demo / demo-A002` case. The original workbench and the GitHub repository were not modified.

@@ -244,8 +244,14 @@ def main():
     [data-testid="stMain"] hr {margin: .25rem 0;}
     </style>''')
 
-    mode=st.radio('Experience', ['Guided demo', 'Explore the workbench'], horizontal=True,
-                  index=1 if os.environ.get('TARGET_DEMO_WORKSPACE') else 0, key='experience', label_visibility='collapsed')
+    mode=st.radio('Experience', ['Patient-study demo', 'Guided demo', 'Explore the workbench'], horizontal=True,
+                  format_func=lambda value: 'Optional assay example' if value=='Guided demo' else value,
+                  index=2 if os.environ.get('TARGET_DEMO_WORKSPACE') else 0, key='experience', label_visibility='collapsed')
+    if mode=='Patient-study demo':
+        cancel_on_navigation('Patient-study demo','predictive-replay','nomination-v2',PACKAGE/'demo-runs')
+        from target_discovery.ui.predictive_demo import render as render_predictive
+        render_predictive()
+        return
     if mode=='Guided demo':
         cancel_on_navigation('Guided demo','demo','demo-A002',PACKAGE/'demo-runs')
         from target_discovery.ui.guided_demo import render

@@ -1,6 +1,6 @@
 # Target Discovery Workbench
 
-A runnable scientific decision-workflow demonstration: inspect evidence, challenge a hypothesis, record a scoped review and prepare a specialist handoff.
+An offline demonstration of a proposed workflow: patient single-cell data → in-silico perturbation → intervention and cell-state nomination → biological test. The patient study has not been run.
 
 **DEMO-R1 and all target-specific data are fictional.** Bundled reviews and follow-ups are scripted; bundled agent reports use an offline test provider. This demonstrates workflow behaviour, not biological validation or live AI quality.
 
@@ -18,13 +18,18 @@ python -m streamlit run streamlit_app.py
 On Windows, use `py -3.12 -m venv .venv` and `.venv\Scripts\Activate.ps1`.
 Installing dependencies requires internet access; replaying the saved cases needs no API key.
 
-The app opens directly into a **four-step guided demo**: why investigate, what we learned, what was decided and what happens next. Use **Next** to follow the saved case; **View supporting detail** reveals evidence and provenance. Choose **Explore the workbench** for all scenarios, review controls and the optional evidence assistant. See the [saved replay guide](REPLAY_DEMO.md). Optional AI features require your own credentials and may incur costs.
+The app opens into **Patient-study demo**, a four-step offline rehearsal: define the study, test the prediction, review the experiment and agree the next action. Expand **Explore a different scenario or route** to try nine illustrative scenarios and both sequential and parallel biology routes. No patient data or foundation model is used, and no API key is needed.
+
+Human review in this new path is **session-only rehearsal**: it never changes saved assessments or authorizes execution. Review approval is bound to the study, scenario and route. See [the patient-study guide](PREDICTIVE_DEMO.md).
+
+The original **Optional assay example** remains available as an optional, independent synthetic assay example; its 32%/29% results are not outputs of the proposed patient study. **Explore the workbench** retains the original technical functionality, persistent reviews and optional AI features. Those optional features require your credentials and may incur costs. See the [original saved replay guide](REPLAY_DEMO.md).
 
 ## Repository layout
 
 ```text
 streamlit_app.py          Thin Streamlit launcher
 target_discovery/        Application package
+   predictive/           Versioned study contracts and pure offline scenario replay
    workflow/             Deterministic calculations, contracts and persistence
    agents/               Bounded analyst/challenger roles and providers
    evidence/             Read-only evidence assistant, retrieval and figures
@@ -34,6 +39,7 @@ target_discovery/        Application package
 tests/                  Offline regression tests
 scripts/                Fixture generation, validation and replay setup
 docs/                   Architecture, scientific assumptions and usage guides
+predictive_examples/    Illustrative patient-study manifest and nine scenarios
 runtime/                Synthetic evidence, policy and frozen predictions
 demo-runs/              Six saved public replay cases
 recorded_examples/      Additional scripted reference workspaces

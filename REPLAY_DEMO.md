@@ -1,3 +1,5 @@
+> This guide covers the preserved **Optional assay example** and original workbench. The new default is **Patient-study demo**; see [PREDICTIVE_DEMO.md](PREDICTIVE_DEMO.md). The assay results below are independent synthetic examples, not patient-study outputs.
+
 # Replay the synthetic target-discovery demo
 
 Use Python 3.12. From this folder:
@@ -13,7 +15,7 @@ On Windows use `py -3.12 -m venv .venv` and `.venv\Scripts\Activate.ps1`. Open t
 
 ## Follow the guided case
 
-The app opens **Guided demo** on the saved `demo / demo-A002` case. No workspace or assessment selection is needed.
+The app opens **Optional assay example** on the saved `demo / demo-A002` case. No workspace or assessment selection is needed.
 
 1. **Why investigate?** The target hypothesis and the earlier E07 cell-loss concern explain why another test was needed.
 2. **What did we learn?** The saved chart shows the two effect estimates and provisional threshold. Shared donors and unresolved specificity limit the conclusion to a next experimental step.

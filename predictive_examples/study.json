@@ -1,0 +1,86 @@
+{
+  "schema_version": "predictive-study-v1",
+  "study_id": "PSO-ILLUSTRATIVE-001",
+  "evidence_status": "illustrative_not_executed",
+  "indication": "Plaque psoriasis",
+  "target": "DEMO-R1",
+  "target_identity_status": "fictional_placeholder",
+  "question": "Would reducing this candidate shift a relevant patient CD4 state away from an inflammatory programme, without simply losing the cells?",
+  "dataset": {
+    "source": "Illustrative study manifest; no patient dataset downloaded or analysed",
+    "accession": null,
+    "access_status": "not_requested",
+    "tissue": "Psoriatic skin",
+    "reference": "Within-lineage reference CD4 states, subject to biological review; not an assumed healthy destination",
+    "donor_ids": [
+      "ILL-D01",
+      "ILL-D02",
+      "ILL-D03",
+      "ILL-D04",
+      "ILL-D05",
+      "ILL-D06",
+      "ILL-D07",
+      "ILL-D08"
+    ],
+    "original_annotation": "CD4 T cell / Th17-like (illustrative annotation)",
+    "approved_mapping": false,
+    "mapping_owner": "Data steward and single-cell specialist",
+    "preprocessing_version": "illustrative-plan-v1"
+  },
+  "adaptation": {
+    "status": "proposed_not_run",
+    "plan": "Reserve evaluation donors before preprocessing that learns from data or model adaptation; assess whether patient-data adaptation improves the intended representation.",
+    "split": "Illustrative split: ILL-D01\u201304 development; ILL-D05\u201308 held out. These invented counts are not a sample-size recommendation.",
+    "development_donors": [
+      "ILL-D01",
+      "ILL-D02",
+      "ILL-D03",
+      "ILL-D04"
+    ],
+    "evaluation_donors": [
+      "ILL-D05",
+      "ILL-D06",
+      "ILL-D07",
+      "ILL-D08"
+    ]
+  },
+  "model": {
+    "name": "Unselected partner model service",
+    "version": null,
+    "operation": "Model-supported gene perturbation; exact operation not yet selected",
+    "output": "State-shift nomination; not a predicted IL-17A percentage",
+    "intended_use": "Prioritise a target intervention and a represented CD4 state for biological testing",
+    "validation": "Not established; a real study requires task-relevant evaluation, simple baselines and perturbation evidence",
+    "baseline": "Compare against an unadapted model and informative simple baselines; include unchanged-input and control perturbations"
+  },
+  "boundaries": [
+    "Published psoriasis background is context, not evidence for fictional DEMO-R1.",
+    "All replay outcomes are invented examples, not results from patient cells or a trained foundation model.",
+    "Observational adaptation does not establish causal perturbation accuracy.",
+    "Embedding change, transcript reduction and antibody blockade are different interventions or outputs.",
+    "Patient skin and a stimulated culture are not equivalent; transportability must be reviewed.",
+    "Selective producer loss, reduced production among survivors and mixed mechanisms remain competing explanations.",
+    "Differentiation from existing treatments is an untested hypothesis; no superiority, safety or clinical benefit is established."
+  ],
+  "biological_test": {
+    "interventions": [
+      "RNA knockdown",
+      "CRISPRi"
+    ],
+    "timepoint": "72 hours, illustrative; biology must agree",
+    "readouts": [
+      "Target reduction",
+      "IL-17A-positive fraction among live CD4 cells",
+      "Absolute cell and subset recovery",
+      "Survival, activation/stress and cytokine production per survivor as appropriate"
+    ],
+    "criteria": "Agree useful effect, QC, precision and failure criteria before seeing results; do not automatically inherit the legacy assay threshold."
+  },
+  "owners": {
+    "data": "Data steward",
+    "model": "Predictive-model specialist",
+    "platform": "Platform service owner",
+    "scientific_decision": "Biology reviewer",
+    "resources": "Accountable project owner"
+  }
+}

@@ -1,0 +1,614 @@
+[
+  {
+    "id": "supportive",
+    "label": "Supportive nomination",
+    "data_status": "ready",
+    "model_status": "supported",
+    "conflict": false,
+    "timeout": false,
+    "summary": "Illustrative checks show a state-specific signal beyond controls and simple baselines, consistent across held-out donors.",
+    "challenge": "The Th17-like state leads the illustrative comparisons, but embedding direction does not establish a functional response.",
+    "request": "Biology: assess patient-to-culture match and specify a target-reduction test before commitment.",
+    "request_owner": "Biology reviewer",
+    "observations": [
+      {
+        "evidence_id": "supportive-SIM-P01",
+        "cell_state": "Th17-like CD4 state",
+        "donor_shifts": {
+          "ILL-D05": 0.3,
+          "ILL-D06": 0.35,
+          "ILL-D07": 0.28,
+          "ILL-D08": 0.32
+        },
+        "simple_baseline": 0.1,
+        "control_shift": 0.03,
+        "identity_preserved": true
+      },
+      {
+        "evidence_id": "supportive-SIM-P02",
+        "cell_state": "Other memory CD4 state",
+        "donor_shifts": {
+          "ILL-D05": 0.04,
+          "ILL-D06": 0.05,
+          "ILL-D07": 0.02,
+          "ILL-D08": 0.03
+        },
+        "simple_baseline": 0.06,
+        "control_shift": 0.03,
+        "identity_preserved": true
+      }
+    ],
+    "prerequisites": [
+      {
+        "name": "Scoped scientific rationale",
+        "met": true,
+        "basis": "Invented planning record: target reduction could resolve whether the cultured CD4 phenotype is target-dependent.",
+        "owner": "Biology reviewer",
+        "evidence_id": "supportive-SIM-G0"
+      },
+      {
+        "name": "Assay readiness",
+        "met": true,
+        "basis": "Invented feasibility record: target-reduction and recovery measurements can be scoped in a defined CD4 culture. Patient-state equivalence remains unestablished.",
+        "owner": "Assay lead",
+        "evidence_id": "supportive-SIM-G1"
+      },
+      {
+        "name": "Decision value",
+        "met": true,
+        "basis": "Invented planning record: a controlled functional result would change the priority of independent replication.",
+        "owner": "Biology reviewer",
+        "evidence_id": "supportive-SIM-G2"
+      },
+      {
+        "name": "Resources allocated",
+        "met": true,
+        "basis": "Invented resource record: a small assay allocation is assumed available; this is not an actual budget.",
+        "owner": "Project owner",
+        "evidence_id": "supportive-SIM-G3"
+      }
+    ],
+    "independent_rationale": {
+      "name": "Independent basis for parallel biology",
+      "met": true,
+      "basis": "SIM-E01: fictional prior target-expression and perturbability evidence motivates a cultured-CD4 reduction test, independent of patient-state nomination. Causality and functional benefit remain unknown.",
+      "owner": "Biology reviewer",
+      "evidence_id": "supportive-SIM-E01"
+    }
+  },
+  {
+    "id": "inconclusive",
+    "label": "No clear predictive advantage",
+    "data_status": "ready",
+    "model_status": "supported",
+    "conflict": false,
+    "timeout": false,
+    "summary": "Illustrative prediction does not clearly improve on simple comparisons. No supported nomination.",
+    "challenge": "The proposed perturbation does not beat the simple baseline consistently across donors.",
+    "request": "Analysis: compare an informative alternative and document whether modelling adds decision value.",
+    "request_owner": "Analysis lead",
+    "observations": [
+      {
+        "evidence_id": "inconclusive-SIM-P01",
+        "cell_state": "Th17-like CD4 state",
+        "donor_shifts": {
+          "ILL-D05": 0.09,
+          "ILL-D06": 0.11,
+          "ILL-D07": 0.08,
+          "ILL-D08": 0.1
+        },
+        "simple_baseline": 0.1,
+        "control_shift": 0.03,
+        "identity_preserved": true
+      },
+      {
+        "evidence_id": "inconclusive-SIM-P02",
+        "cell_state": "Other memory CD4 state",
+        "donor_shifts": {
+          "ILL-D05": 0.04,
+          "ILL-D06": 0.05,
+          "ILL-D07": 0.02,
+          "ILL-D08": 0.03
+        },
+        "simple_baseline": 0.06,
+        "control_shift": 0.03,
+        "identity_preserved": true
+      }
+    ],
+    "prerequisites": [
+      {
+        "name": "Scoped scientific rationale",
+        "met": true,
+        "basis": "Invented planning record: target reduction could resolve whether the cultured CD4 phenotype is target-dependent.",
+        "owner": "Biology reviewer",
+        "evidence_id": "inconclusive-SIM-G0"
+      },
+      {
+        "name": "Assay readiness",
+        "met": true,
+        "basis": "Invented feasibility record: target-reduction and recovery measurements can be scoped in a defined CD4 culture. Patient-state equivalence remains unestablished.",
+        "owner": "Assay lead",
+        "evidence_id": "inconclusive-SIM-G1"
+      },
+      {
+        "name": "Decision value",
+        "met": true,
+        "basis": "Invented planning record: a controlled functional result would change the priority of independent replication.",
+        "owner": "Biology reviewer",
+        "evidence_id": "inconclusive-SIM-G2"
+      },
+      {
+        "name": "Resources allocated",
+        "met": true,
+        "basis": "Invented resource record: a small assay allocation is assumed available; this is not an actual budget.",
+        "owner": "Project owner",
+        "evidence_id": "inconclusive-SIM-G3"
+      }
+    ],
+    "independent_rationale": {
+      "name": "Independent basis for parallel biology",
+      "met": true,
+      "basis": "SIM-E01: fictional prior target-expression and perturbability evidence motivates a cultured-CD4 reduction test, independent of patient-state nomination. Causality and functional benefit remain unknown.",
+      "owner": "Biology reviewer",
+      "evidence_id": "inconclusive-SIM-E01"
+    }
+  },
+  {
+    "id": "annotation",
+    "label": "Missing cell-state annotation",
+    "data_status": "missing_annotation",
+    "model_status": "supported",
+    "conflict": false,
+    "timeout": false,
+    "summary": "Only a broad T-cell label is available; do not infer Th17-like identity.",
+    "challenge": "A broad T-cell label cannot support the proposed Th17-like subtype. No predictive nomination is available.",
+    "request": "Data steward: return source-backed cell type/state, tissue, original term, mapping version and reviewer; pause dependent prediction.",
+    "request_owner": "Data steward",
+    "observations": [],
+    "prerequisites": [
+      {
+        "name": "Scoped scientific rationale",
+        "met": true,
+        "basis": "Invented planning record: target reduction could resolve whether the cultured CD4 phenotype is target-dependent.",
+        "owner": "Biology reviewer",
+        "evidence_id": "annotation-SIM-G0"
+      },
+      {
+        "name": "Assay readiness",
+        "met": true,
+        "basis": "Invented feasibility record: target-reduction and recovery measurements can be scoped in a defined CD4 culture. Patient-state equivalence remains unestablished.",
+        "owner": "Assay lead",
+        "evidence_id": "annotation-SIM-G1"
+      },
+      {
+        "name": "Decision value",
+        "met": true,
+        "basis": "Invented planning record: a controlled functional result would change the priority of independent replication.",
+        "owner": "Biology reviewer",
+        "evidence_id": "annotation-SIM-G2"
+      },
+      {
+        "name": "Resources allocated",
+        "met": true,
+        "basis": "Invented resource record: a small assay allocation is assumed available; this is not an actual budget.",
+        "owner": "Project owner",
+        "evidence_id": "annotation-SIM-G3"
+      }
+    ],
+    "independent_rationale": {
+      "name": "Independent basis for parallel biology",
+      "met": true,
+      "basis": "SIM-E01: fictional prior target-expression and perturbability evidence motivates a cultured-CD4 reduction test, independent of patient-state nomination. Causality and functional benefit remain unknown.",
+      "owner": "Biology reviewer",
+      "evidence_id": "annotation-SIM-E01"
+    }
+  },
+  {
+    "id": "donor",
+    "label": "One donor drives the signal",
+    "data_status": "ready",
+    "model_status": "supported",
+    "conflict": false,
+    "timeout": false,
+    "summary": "Removing the influential donor removes the apparent advantage. Robustness remains unresolved.",
+    "challenge": "One donor changes the average; a subgroup effect and an artefact are competing explanations.",
+    "request": "Analysis: inspect leave-one-donor-out results and donor covariates; biology reviews whether a subgroup hypothesis is justified.",
+    "request_owner": "Analysis lead and biology reviewer",
+    "observations": [
+      {
+        "evidence_id": "donor-SIM-P01",
+        "cell_state": "Th17-like CD4 state",
+        "donor_shifts": {
+          "ILL-D05": 0.8,
+          "ILL-D06": -0.05,
+          "ILL-D07": -0.04,
+          "ILL-D08": -0.06
+        },
+        "simple_baseline": 0.1,
+        "control_shift": 0.03,
+        "identity_preserved": true
+      },
+      {
+        "evidence_id": "donor-SIM-P02",
+        "cell_state": "Other memory CD4 state",
+        "donor_shifts": {
+          "ILL-D05": 0.04,
+          "ILL-D06": 0.05,
+          "ILL-D07": 0.02,
+          "ILL-D08": 0.03
+        },
+        "simple_baseline": 0.06,
+        "control_shift": 0.03,
+        "identity_preserved": true
+      }
+    ],
+    "prerequisites": [
+      {
+        "name": "Scoped scientific rationale",
+        "met": true,
+        "basis": "Invented planning record: target reduction could resolve whether the cultured CD4 phenotype is target-dependent.",
+        "owner": "Biology reviewer",
+        "evidence_id": "donor-SIM-G0"
+      },
+      {
+        "name": "Assay readiness",
+        "met": true,
+        "basis": "Invented feasibility record: target-reduction and recovery measurements can be scoped in a defined CD4 culture. Patient-state equivalence remains unestablished.",
+        "owner": "Assay lead",
+        "evidence_id": "donor-SIM-G1"
+      },
+      {
+        "name": "Decision value",
+        "met": true,
+        "basis": "Invented planning record: a controlled functional result would change the priority of independent replication.",
+        "owner": "Biology reviewer",
+        "evidence_id": "donor-SIM-G2"
+      },
+      {
+        "name": "Resources allocated",
+        "met": true,
+        "basis": "Invented resource record: a small assay allocation is assumed available; this is not an actual budget.",
+        "owner": "Project owner",
+        "evidence_id": "donor-SIM-G3"
+      }
+    ],
+    "independent_rationale": {
+      "name": "Independent basis for parallel biology",
+      "met": true,
+      "basis": "SIM-E01: fictional prior target-expression and perturbability evidence motivates a cultured-CD4 reduction test, independent of patient-state nomination. Causality and functional benefit remain unknown.",
+      "owner": "Biology reviewer",
+      "evidence_id": "donor-SIM-E01"
+    }
+  },
+  {
+    "id": "conflict",
+    "label": "Conflicting scientific evidence",
+    "data_status": "ready",
+    "model_status": "supported",
+    "conflict": true,
+    "timeout": false,
+    "summary": "Illustrative functional evidence conflicts with the predicted state shift; retain both for review.",
+    "challenge": "A predicted shift conflicts with an illustrative functional observation of no effect despite target reduction. Neither observation resolves the other.",
+    "request": "Biology: compare engagement, dose, time, intervention and patient-to-culture state match; retain both records.",
+    "request_owner": "Biology reviewer",
+    "observations": [
+      {
+        "evidence_id": "conflict-SIM-P01",
+        "cell_state": "Th17-like CD4 state",
+        "donor_shifts": {
+          "ILL-D05": 0.3,
+          "ILL-D06": 0.35,
+          "ILL-D07": 0.28,
+          "ILL-D08": 0.32
+        },
+        "simple_baseline": 0.1,
+        "control_shift": 0.03,
+        "identity_preserved": true
+      },
+      {
+        "evidence_id": "conflict-SIM-P02",
+        "cell_state": "Other memory CD4 state",
+        "donor_shifts": {
+          "ILL-D05": 0.04,
+          "ILL-D06": 0.05,
+          "ILL-D07": 0.02,
+          "ILL-D08": 0.03
+        },
+        "simple_baseline": 0.06,
+        "control_shift": 0.03,
+        "identity_preserved": true
+      }
+    ],
+    "prerequisites": [
+      {
+        "name": "Scoped scientific rationale",
+        "met": true,
+        "basis": "Invented planning record: target reduction could resolve whether the cultured CD4 phenotype is target-dependent.",
+        "owner": "Biology reviewer",
+        "evidence_id": "conflict-SIM-G0"
+      },
+      {
+        "name": "Assay readiness",
+        "met": true,
+        "basis": "Invented feasibility record: target-reduction and recovery measurements can be scoped in a defined CD4 culture. Patient-state equivalence remains unestablished.",
+        "owner": "Assay lead",
+        "evidence_id": "conflict-SIM-G1"
+      },
+      {
+        "name": "Decision value",
+        "met": true,
+        "basis": "Invented planning record: a controlled functional result would change the priority of independent replication.",
+        "owner": "Biology reviewer",
+        "evidence_id": "conflict-SIM-G2"
+      },
+      {
+        "name": "Resources allocated",
+        "met": true,
+        "basis": "Invented resource record: a small assay allocation is assumed available; this is not an actual budget.",
+        "owner": "Project owner",
+        "evidence_id": "conflict-SIM-G3"
+      }
+    ],
+    "independent_rationale": {
+      "name": "Independent basis for parallel biology",
+      "met": true,
+      "basis": "SIM-E01: fictional prior target-expression and perturbability evidence motivates a cultured-CD4 reduction test, independent of patient-state nomination. Causality and functional benefit remain unknown.",
+      "owner": "Biology reviewer",
+      "evidence_id": "conflict-SIM-E01"
+    }
+  },
+  {
+    "id": "timeout",
+    "label": "Model service unavailable",
+    "data_status": "ready",
+    "model_status": "supported",
+    "conflict": false,
+    "timeout": true,
+    "summary": "Simulated status check confirms no completed job; one bounded retry also fails. No result is available.",
+    "challenge": "The simulated service returned no result. That says nothing about biological effectiveness.",
+    "request": "Platform owner: investigate after status check and one exhausted idempotent retry; return job status before further submission.",
+    "request_owner": "Platform service owner",
+    "observations": [],
+    "prerequisites": [
+      {
+        "name": "Scoped scientific rationale",
+        "met": true,
+        "basis": "Invented planning record: target reduction could resolve whether the cultured CD4 phenotype is target-dependent.",
+        "owner": "Biology reviewer",
+        "evidence_id": "timeout-SIM-G0"
+      },
+      {
+        "name": "Assay readiness",
+        "met": true,
+        "basis": "Invented feasibility record: target-reduction and recovery measurements can be scoped in a defined CD4 culture. Patient-state equivalence remains unestablished.",
+        "owner": "Assay lead",
+        "evidence_id": "timeout-SIM-G1"
+      },
+      {
+        "name": "Decision value",
+        "met": true,
+        "basis": "Invented planning record: a controlled functional result would change the priority of independent replication.",
+        "owner": "Biology reviewer",
+        "evidence_id": "timeout-SIM-G2"
+      },
+      {
+        "name": "Resources allocated",
+        "met": true,
+        "basis": "Invented resource record: a small assay allocation is assumed available; this is not an actual budget.",
+        "owner": "Project owner",
+        "evidence_id": "timeout-SIM-G3"
+      }
+    ],
+    "independent_rationale": {
+      "name": "Independent basis for parallel biology",
+      "met": true,
+      "basis": "SIM-E01: fictional prior target-expression and perturbability evidence motivates a cultured-CD4 reduction test, independent of patient-state nomination. Causality and functional benefit remain unknown.",
+      "owner": "Biology reviewer",
+      "evidence_id": "timeout-SIM-E01"
+    }
+  },
+  {
+    "id": "exploratory",
+    "label": "Missing intended-use validation",
+    "data_status": "ready",
+    "model_status": "unvalidated",
+    "conflict": false,
+    "timeout": false,
+    "summary": "A model output is available in this scenario, but perturbation accuracy for the intended use is unestablished.",
+    "challenge": "Representation change is available but intended perturbation accuracy has not been established.",
+    "request": "Model specialist: provide relevant perturbation evaluation and failure domains or retain exploration-only status.",
+    "request_owner": "Predictive-model specialist",
+    "observations": [
+      {
+        "evidence_id": "exploratory-SIM-P01",
+        "cell_state": "Th17-like CD4 state",
+        "donor_shifts": {
+          "ILL-D05": 0.3,
+          "ILL-D06": 0.35,
+          "ILL-D07": 0.28,
+          "ILL-D08": 0.32
+        },
+        "simple_baseline": 0.1,
+        "control_shift": 0.03,
+        "identity_preserved": true
+      },
+      {
+        "evidence_id": "exploratory-SIM-P02",
+        "cell_state": "Other memory CD4 state",
+        "donor_shifts": {
+          "ILL-D05": 0.04,
+          "ILL-D06": 0.05,
+          "ILL-D07": 0.02,
+          "ILL-D08": 0.03
+        },
+        "simple_baseline": 0.06,
+        "control_shift": 0.03,
+        "identity_preserved": true
+      }
+    ],
+    "prerequisites": [
+      {
+        "name": "Scoped scientific rationale",
+        "met": true,
+        "basis": "Invented planning record: target reduction could resolve whether the cultured CD4 phenotype is target-dependent.",
+        "owner": "Biology reviewer",
+        "evidence_id": "exploratory-SIM-G0"
+      },
+      {
+        "name": "Assay readiness",
+        "met": true,
+        "basis": "Invented feasibility record: target-reduction and recovery measurements can be scoped in a defined CD4 culture. Patient-state equivalence remains unestablished.",
+        "owner": "Assay lead",
+        "evidence_id": "exploratory-SIM-G1"
+      },
+      {
+        "name": "Decision value",
+        "met": true,
+        "basis": "Invented planning record: a controlled functional result would change the priority of independent replication.",
+        "owner": "Biology reviewer",
+        "evidence_id": "exploratory-SIM-G2"
+      },
+      {
+        "name": "Resources allocated",
+        "met": true,
+        "basis": "Invented resource record: a small assay allocation is assumed available; this is not an actual budget.",
+        "owner": "Project owner",
+        "evidence_id": "exploratory-SIM-G3"
+      }
+    ],
+    "independent_rationale": {
+      "name": "Independent basis for parallel biology",
+      "met": true,
+      "basis": "SIM-E01: fictional prior target-expression and perturbability evidence motivates a cultured-CD4 reduction test, independent of patient-state nomination. Causality and functional benefit remain unknown.",
+      "owner": "Biology reviewer",
+      "evidence_id": "exploratory-SIM-E01"
+    }
+  },
+  {
+    "id": "unsupported",
+    "label": "Unsupported perturbation",
+    "data_status": "ready",
+    "model_status": "unsupported",
+    "conflict": false,
+    "timeout": false,
+    "summary": "The proposed operation is outside the model capability. Do not silently substitute token deletion for partial knockdown.",
+    "challenge": "The proposed operation is unsupported; token deletion cannot silently stand in for partial knockdown.",
+    "request": "Model specialist: identify an approved compatible operation and document its meaning before any run.",
+    "request_owner": "Predictive-model specialist",
+    "observations": [],
+    "prerequisites": [
+      {
+        "name": "Scoped scientific rationale",
+        "met": true,
+        "basis": "Invented planning record: target reduction could resolve whether the cultured CD4 phenotype is target-dependent.",
+        "owner": "Biology reviewer",
+        "evidence_id": "unsupported-SIM-G0"
+      },
+      {
+        "name": "Assay readiness",
+        "met": true,
+        "basis": "Invented feasibility record: target-reduction and recovery measurements can be scoped in a defined CD4 culture. Patient-state equivalence remains unestablished.",
+        "owner": "Assay lead",
+        "evidence_id": "unsupported-SIM-G1"
+      },
+      {
+        "name": "Decision value",
+        "met": true,
+        "basis": "Invented planning record: a controlled functional result would change the priority of independent replication.",
+        "owner": "Biology reviewer",
+        "evidence_id": "unsupported-SIM-G2"
+      },
+      {
+        "name": "Resources allocated",
+        "met": true,
+        "basis": "Invented resource record: a small assay allocation is assumed available; this is not an actual budget.",
+        "owner": "Project owner",
+        "evidence_id": "unsupported-SIM-G3"
+      }
+    ],
+    "independent_rationale": {
+      "name": "Independent basis for parallel biology",
+      "met": true,
+      "basis": "SIM-E01: fictional prior target-expression and perturbability evidence motivates a cultured-CD4 reduction test, independent of patient-state nomination. Causality and functional benefit remain unknown.",
+      "owner": "Biology reviewer",
+      "evidence_id": "unsupported-SIM-E01"
+    }
+  },
+  {
+    "id": "resources",
+    "label": "Parallel route not justified",
+    "data_status": "ready",
+    "model_status": "supported",
+    "conflict": false,
+    "timeout": false,
+    "summary": "A supportive illustrative prediction is available, but assay readiness and resource allocation are missing.",
+    "challenge": "Predictive support does not make an unavailable assay or unallocated resources ready.",
+    "request": "Biology and project owner: confirm assay readiness and resource allocation before approving either route.",
+    "request_owner": "Biology reviewer and project owner",
+    "observations": [
+      {
+        "evidence_id": "resources-SIM-P01",
+        "cell_state": "Th17-like CD4 state",
+        "donor_shifts": {
+          "ILL-D05": 0.3,
+          "ILL-D06": 0.35,
+          "ILL-D07": 0.28,
+          "ILL-D08": 0.32
+        },
+        "simple_baseline": 0.1,
+        "control_shift": 0.03,
+        "identity_preserved": true
+      },
+      {
+        "evidence_id": "resources-SIM-P02",
+        "cell_state": "Other memory CD4 state",
+        "donor_shifts": {
+          "ILL-D05": 0.04,
+          "ILL-D06": 0.05,
+          "ILL-D07": 0.02,
+          "ILL-D08": 0.03
+        },
+        "simple_baseline": 0.06,
+        "control_shift": 0.03,
+        "identity_preserved": true
+      }
+    ],
+    "prerequisites": [
+      {
+        "name": "Scoped scientific rationale",
+        "met": true,
+        "basis": "Invented planning record: target reduction could resolve whether the cultured CD4 phenotype is target-dependent.",
+        "owner": "Biology reviewer",
+        "evidence_id": "resources-SIM-G0"
+      },
+      {
+        "name": "Assay readiness",
+        "met": false,
+        "basis": "Not confirmed in this scenario",
+        "owner": "Assay lead",
+        "evidence_id": "resources-SIM-G1"
+      },
+      {
+        "name": "Decision value",
+        "met": true,
+        "basis": "Invented planning record: a controlled functional result would change the priority of independent replication.",
+        "owner": "Biology reviewer",
+        "evidence_id": "resources-SIM-G2"
+      },
+      {
+        "name": "Resources allocated",
+        "met": false,
+        "basis": "Not confirmed in this scenario",
+        "owner": "Project owner",
+        "evidence_id": "resources-SIM-G3"
+      }
+    ],
+    "independent_rationale": {
+      "name": "Independent basis for parallel biology",
+      "met": true,
+      "basis": "SIM-E01: fictional prior target-expression and perturbability evidence motivates a cultured-CD4 reduction test, independent of patient-state nomination. Causality and functional benefit remain unknown.",
+      "owner": "Biology reviewer",
+      "evidence_id": "resources-SIM-E01"
+    }
+  }
+]

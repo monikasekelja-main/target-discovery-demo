@@ -20,7 +20,9 @@ class GuidedDemoTests(unittest.TestCase):
     def tearDown(self):
         for block in reversed(self.blocks):block.stop()
         self.env.stop()
-    def launch(self):return AppTest.from_file(str(PROJECT_ROOT/'streamlit_app.py'),default_timeout=20).run()
+    def launch(self):
+        at=AppTest.from_file(str(PROJECT_ROOT/'streamlit_app.py'),default_timeout=20).run()
+        return at.radio(key='experience').set_value('Guided demo').run()
     def hashes(self):
         return {str(p.relative_to(PROJECT_ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
                 for folder in ('demo-runs','recorded_examples') for p in (PROJECT_ROOT/folder).rglob('*') if p.is_file()}
