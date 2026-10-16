@@ -18,7 +18,7 @@ python -m streamlit run streamlit_app.py
 On Windows, use `py -3.12 -m venv .venv` and `.venv\Scripts\Activate.ps1`.
 Installing dependencies requires internet access; replaying the saved cases needs no API key.
 
-Choose **My saved runs → demo → demo-A002**. Follow the [saved replay guide](REPLAY_DEMO.md) for the evidence, decision, review and simulated handoff. Optional AI features require your own credentials and may incur costs.
+The app opens directly into a **four-step guided demo**: why investigate, what we learned, what was decided and what happens next. Use **Next** to follow the saved case; **View supporting detail** reveals evidence and provenance. Choose **Explore the workbench** for all scenarios, review controls and the optional evidence assistant. See the [saved replay guide](REPLAY_DEMO.md). Optional AI features require your own credentials and may incur costs.
 
 ## Repository layout
 
@@ -68,6 +68,7 @@ The seed command refuses to overwrite an existing directory. Run from a complete
 - [Scientific assumptions and numerical rules](docs/numerical_reference.md)
 - [Programme context and evidence boundaries](docs/programme_context.md)
 - [Public-copy provenance](PUBLIC_RELEASE.md)
-- [Restructure changes and verification](RESTRUCTURE_NOTES.md)
+- [Guided demo changes and verification](GUIDED_DEMO_NOTES.md)
+- [Earlier restructure changes](RESTRUCTURE_NOTES.md)
 
 The handoff is a local simulation: no message is sent and no experiment is ordered. Shared-donor method agreement does not establish independent replication or antibody blockade equivalence.

@@ -244,6 +244,14 @@ def main():
     [data-testid="stMain"] hr {margin: .25rem 0;}
     </style>''')
 
+    mode=st.radio('Experience', ['Guided demo', 'Explore the workbench'], horizontal=True,
+                  index=1 if os.environ.get('TARGET_DEMO_WORKSPACE') else 0, key='experience', label_visibility='collapsed')
+    if mode=='Guided demo':
+        cancel_on_navigation('Guided demo','demo','demo-A002',PACKAGE/'demo-runs')
+        from target_discovery.ui.guided_demo import render
+        render(challenge)
+        return
+
     st.caption('INVENTED TARGET & DATA  /  LOCAL SIMULATION  /  AI CHECKS ON REQUEST')
     st.title('Target Hypothesis Workbench')
     st.caption('PUBLIC SYNTHETIC REPLAY · Bundled reviews and follow-ups are scripted examples; bundled agent reports use the offline test provider.')
@@ -263,7 +271,8 @@ def main():
     except (ValueError,OSError,sqlite3.Error):
         st.info('No readable saved database here. Choose a bundled workspace, or select the directory containing your existing workflow.sqlite3.');return
     if not runs:st.info('This database contains no saved runs.');return
-    rid=st.sidebar.selectbox('Run',[r['run_id'] for r in runs],key='run_id')
+    run_ids=[r['run_id'] for r in runs]
+    rid=st.sidebar.selectbox('Run',run_ids,index=run_ids.index('demo') if 'demo' in run_ids else 0,key='run_id')
     try:
         run=load_run(workspace,rid)
         ids=[b['assessment_id'] for b in reversed(run['assessments'])]
