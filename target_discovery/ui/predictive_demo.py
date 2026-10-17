@@ -35,7 +35,7 @@ def render():
     st.caption('PATIENT-STUDY DEMO')
     st.title('From patient cells to a justified experiment')
     st.caption('Plaque psoriasis → in-silico perturbation → intervention and cell state → biological test')
-    st.info('Illustrative example — this patient study has not been run. DEMO-R1 and all results are fictional; no model or API is called.')
+    st.info('Illustrative example — this patient study has not been run. DEMO-R1 and all results are fictional; offline mode makes no model or API calls.')
     try:
         study, scenarios = load_examples()
     except (ValueError, OSError) as exc:
@@ -190,15 +190,20 @@ def render():
             st.write('A supportive assay prompts independent replication and specificity work. A precise negative with successful perturbation can lower priority. Failed QC or imprecision remains unresolved. Preserve prediction/experiment disagreement and review intervention and cell-state match.')
             st.write('The existing assay replay is available through “Optional assay example” above. Its invented 32%/29% results are a separate example, not outputs of this proposed study.')
     with st.expander('Ask about this proposal'):
-        st.caption('OFFLINE EXAMPLE ANSWERS · predefined questions, no live AI or external retrieval')
-        st.caption(f'Current context: {nomination.study_id} · {scenario.label} · {route.replace("_", " ")}')
-        question=st.selectbox('Choose a question',QUESTIONS,key='proposal_question')
-        answer=offline_answer(nomination,question,review)
-        st.write(answer['answer'])
-        with st.expander('Answer sources and boundaries'):
-            st.write('Based on: '+', '.join(answer['sources']))
-            st.caption('Read-only explanation of this proposal. No access to the separate assay case; no approval, editing, execution or messaging capability. Selection changes no scientific records.')
-            st.code(answer['binding'],language=None)
+        mode=st.radio('Answer mode',['Offline examples','Live assistant (API)'],key='proposal_answer_mode',horizontal=True)
+        if mode=='Live assistant (API)':
+            from target_discovery.ui.ui_proposal_chat import render as render_live
+            render_live(study,nomination,review)
+        else:
+            st.caption('OFFLINE EXAMPLE ANSWERS · predefined questions, no live AI or external retrieval')
+            st.caption(f'Current context: {nomination.study_id} · {scenario.label} · {route.replace("_", " ")}')
+            question=st.selectbox('Choose a question',QUESTIONS,key='proposal_question')
+            answer=offline_answer(nomination,question,review)
+            st.write(answer['answer'])
+            with st.expander('Answer sources and boundaries'):
+                st.write('Based on: '+', '.join(answer['sources']))
+                st.caption('Read-only explanation of this proposal. No access to the separate assay case; no approval, editing, execution or messaging capability. Selection changes no scientific records.')
+                st.code(answer['binding'],language=None)
     with st.expander('Study detail and evidence boundaries'):
 
         for boundary in study.boundaries: st.write('• '+boundary)

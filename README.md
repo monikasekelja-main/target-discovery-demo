@@ -78,3 +78,9 @@ The seed command refuses to overwrite an existing directory. Run from a complete
 - [Earlier restructure changes](RESTRUCTURE_NOTES.md)
 
 The handoff is a local simulation: no message is sent and no experiment is ordered. Shared-donor method agreement does not establish independent replication or antibody blockade equivalence.
+
+### Optional live proposal questions
+
+Open **Ask about this proposal → Live assistant (API)**. Offline examples remain the default. For live answers, set `OPENAI_API_KEY` in your local server environment, set `TARGET_PROPOSAL_MODEL` to a model available to your API account, and restart Streamlit. Do not paste or commit credentials.
+
+Only clicking **Send to live assistant** makes a paid request. The assistant explains the current proposal and cannot change records, approve work or run experiments. See [proposal-chat boundaries](PREDICTIVE_DEMO.md#optional-live-proposal-chat) for context, limits and checks.

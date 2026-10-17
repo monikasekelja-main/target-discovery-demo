@@ -79,6 +79,16 @@ Each screen now leads with a plain-language takeaway. The evidence screen shows 
 
 Step 3 includes a compact control panel and a four-part trace derived from the current proposal. Orchestration routes the next permitted action; deterministic verification checks prerequisites and evidence comparisons; human reviewers approve scientific scope and resources. This is a replay, not a live LLM orchestration log, and fixed checks do not establish scientific truth.
 
-**Ask about this proposal** is available on all four steps. Five predefined questions cover the next action, orchestrator/verifier roles, human judgement, parallel biology and the assistant boundary. Answers are fixed templates populated from the current study, scenario, route, specialist revision and matching session review. Sources and the exact proposal binding are expandable. No prior answer is cached across proposal changes. Unknown questions are rejected by the helper; there is no free-text live chat.
+**Ask about this proposal** is available on all four steps. Five predefined questions cover the next action, orchestrator/verifier roles, human judgement, parallel biology and the assistant boundary. Answers are fixed templates populated from the current study, scenario, route, specialist revision and matching session review. Sources and the exact proposal binding are expandable. No prior answer is cached across proposal changes. In offline mode, unknown questions are rejected by the helper; no API is called.
 
 The offline explainer has no model, search, execution, editing, approval or messaging capability and never loads the original assay assessment. The original workbench evidence assistant remains separate and unchanged.
+
+## Optional live proposal chat
+
+In **Ask about this proposal**, offline examples remain the default. Select **Live assistant (API)** for free-text questions. The assistant receives only the current synthetic study, proposal, matching session review and up to three recent exchanges. Changing that context clears the conversation; history is session-only and can be cleared explicitly. No original assay assessment is injected.
+
+Set `OPENAI_API_KEY` in the environment of the Streamlit process and restart it. Never enter the key in a question or commit it. Set `TARGET_PROPOSAL_MODEL` to a Responses model available to your API account; it falls back to `TARGET_REVIEW_MODEL` and the workbench default. The form also permits selecting a model. Missing credentials disable submission.
+
+Each explicit submission makes one paid Responses request, with `store=false`, a 2,400-output-token cap, a 45-second request timeout and no automatic retries. There are no search, execution, editing, approval or messaging tools. This does not run the patient study or convert the illustrative orchestrator trace into a live scientific workflow.
+
+Structured answers must include exact excerpts from supplied sources. Schema and excerpt checks reject malformed or ungrounded citations; they do not prove that an interpretation is scientifically correct. Model quality and applicability require human review. API errors are displayed without raw responses or credentials.

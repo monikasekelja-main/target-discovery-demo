@@ -66,3 +66,27 @@ No patient data were accessed, model trained, perturbation executed, API called 
 - Added `target_discovery/predictive/explainer.py` and `tests/test_proposal_explainer.py`; updated the new guided UI and these documentation files. Original scientific evaluator, legacy agent implementation and saved records are unchanged.
 - Step 3 panel and offline question panel inspected in the rendered browser. Answers are explicitly scripted, read-only examples, not live AI.
 - GitHub remains unchanged.
+
+## Optional live proposal chat — 17 October 2026
+
+- Full regression suite: 206 tests passed. Six new tests cover single-request behavior, context binding, invalid citations, missing-key UI, mocked successful submission, context isolation and protected-record preservation.
+- Saved public replay passed: four guided steps and nine saved runs across three workspaces, including review/report/follow-up/handoff bindings; no calls or saved-record mutations.
+- Offline remains the initial mode. Live answers have no tools or persistent writes; context changes discard prior conversation.
+- No real API call was made: OPENAI_API_KEY was absent from the server-launch environment. Mocked integration tests do not establish account access, selected-model availability or live answer quality.
+- GitHub was not updated.
+
+Rendered browser inspection confirmed the initial offline selection, optional live form, disclosure and disabled submission without credentials. All 411 original guided-copy files match their saved baseline. Existing manifest comparison shows only the intended UI and documentation edits; saved evidence, calculations, prompts and records are unchanged.
+
+### Live checks and citation refinement — 17 October 2026
+
+Two browser submissions with gpt-6-astra returned accepted live answers: a supportive-proposal explanation and a request to override the read-only boundary. The explanation retained synthetic-evidence limits and no recorded review; the override request was refused without approval, edits or messaging. Source excerpts were inspected. Switching to the inconclusive scenario cleared the previous conversation.
+
+The first inconclusive-scenario answer was rejected by format/source checks. Its exact rejection cause was not retained. Inspection found that instructions specified excerpt length but omitted the cumulative 25-word-per-source constraint enforced by validation. The proposal-chat-v2 instructions now state that constraint explicitly, and sanitized validation errors identify structure, source, exact-excerpt or quotation-budget failures. This preserves fail-closed behavior and makes no automatic retry.
+
+After this refinement, all 207 regression tests and the saved public replay passed. The original guided copy matches all 411 baseline files. Saved records remain unchanged. The user reports a successful HTTP 200 authentication check; the follow-up browser check could not proceed because port 8507 had no listening server. Acceptance of a live inconclusive-scenario answer remains pending. GitHub has not been updated.
+
+### Completed live inconclusive check — 17 October 2026
+
+After the keyed server restarted, the same inconclusive question was manually submitted once with proposal-chat-v2 and gpt-6-astra. The response passed schema/exact-excerpt/quotation-budget checks. It correctly identified unresolved status, no cell-state nomination, no intervention or proposed test, an ineligible predictive route and no matching human review. Its comparisons matched the proposal: 0.095 versus 0.10 and 1/4 donors for Th17-like cells; 0.035 versus 0.06 and 0/4 for other memory CD4 cells. It assigned comparison of an informative alternative to the Analysis lead and kept an independent parallel rationale separate from predictive support. Source excerpts and rendered output were inspected.
+
+All manifest-listed files matched their pre-request hashes after this live check. No scientific records were modified. Combined live smoke coverage now includes supportive explanation, read-only refusal and an accepted inconclusive explanation, plus conversation clearing on scenario change. These samples are integration checks, not an estimate of model reliability across all questions. The earlier rejected response remains documented above; no automatic retries were introduced. The 207-test regression and saved replay passed after the code refinement. GitHub remains unchanged for user review.
