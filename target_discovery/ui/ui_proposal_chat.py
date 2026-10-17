@@ -18,10 +18,10 @@ def render(study,nomination,review):
         with st.chat_message('user'):st.write(record['question'])
         with st.chat_message('assistant'):
             st.write(record['answer']['answer'])
-            st.caption('Limitations: '+record['answer']['limitations'])
+            st.caption('What this does not establish: '+record['answer']['limitations'])
             with st.expander('Source excerpts and context'):
                 for c in record['answer']['citations']:
-                    st.write('**'+c['source_id']+'**');st.text(c['excerpt'])
+                    st.write('**'+{'boundary':'Demo boundaries','study':'Study plan','proposal':'Current proposal','review':'Human review'}.get(c['source_id'],c['source_id'])+'**');st.text(c['excerpt'])
                 st.caption('Model: '+str(record['model']))
                 st.code(record['binding'],language=None)
     configured=bool(os.environ.get('OPENAI_API_KEY'))
